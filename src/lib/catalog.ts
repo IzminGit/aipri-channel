@@ -1,4 +1,5 @@
 import { catalogSchema, type Catalog } from '../schema'
+import { sortByPublished } from './playlist'
 
 let promise: Promise<Catalog> | undefined
 
@@ -11,8 +12,10 @@ export function loadCatalog(): Promise<Catalog> {
     })
     .then((json) => {
       const catalog = catalogSchema.parse(json)
-      catalog.channels.sort((a, b) => a.number - b.number)
-      return catalog
+      return {
+        ...catalog,
+        channels: catalog.channels.map(sortByPublished).sort((a, b) => a.number - b.number),
+      }
     })
   return promise
 }

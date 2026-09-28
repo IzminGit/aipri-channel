@@ -2,13 +2,14 @@ import { useEffect, useRef } from 'react'
 import { CloseIcon } from './Icons'
 
 const shortcuts: [keys: string[], description: string][] = [
-  [['↑', '↓'], 'チャンネルを切り替える（リモコンのチャンネル＋/−も可）'],
-  [['1', '〜', '9'], 'チャンネル番号を直接選ぶ'],
-  [['G'], '番組表の表示／非表示'],
-  [['F'], '視聴中のチャンネルをお気に入りに追加／解除'],
+  [['↑', '↓', '←', '→'], '番組表の中を移動（Enter で再生）'],
+  [['N', 'P'], '次の曲 / 前の曲'],
+  [['PgUp', 'PgDn'], '前 / 次のチャンネル（リモコンのチャンネル±も可）'],
+  [['1', '〜', '9'], 'チャンネル番号の 1 曲目から再生'],
+  [['F'], '再生中のチャンネルをお気に入りに追加／解除'],
   [['M'], 'ミュートの切替'],
-  [['L'], '放送位置に戻る'],
   [['T'], '表示テーマの切替'],
+  [['Esc'], 'プレビューをやめて再生中の曲の詳細に戻る'],
   [['?'], 'このヘルプを表示'],
 ]
 
@@ -47,7 +48,7 @@ export function ShortcutsDialog({ open, onClose }: { open: boolean; onClose(): v
         <dl className="mt-4 divide-y divide-line">
           {shortcuts.map(([keys, description]) => (
             <div key={description} className="flex items-center gap-4 py-3">
-              <dt className="flex w-28 shrink-0 items-center gap-1">
+              <dt className="flex w-36 shrink-0 flex-wrap items-center gap-1">
                 {keys.map((k) =>
                   k === '〜' ? (
                     <span key={k} className="text-muted">

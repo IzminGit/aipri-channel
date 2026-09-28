@@ -5,6 +5,7 @@
       "slug": "onegai-aipri",
       "name": "おねがいアイプリ CGライブ",
       "shortName": "おねがいアイプリ",
+      "series": "アイプリ",
       "color": "magenta",
       "playlistId": "PL6VN7enyUDE7L20ULWQ1rvatPPgDV9we4"
     },
@@ -13,6 +14,7 @@
       "slug": "himitsu-aipri",
       "name": "ひみつのアイプリ CGライブ",
       "shortName": "ひみつのアイプリ",
+      "series": "アイプリ",
       "color": "light-blue",
       "playlistId": "PL6VN7enyUDE7osGtSwkHjEJpjDNnylB6u"
     },
@@ -21,6 +23,7 @@
       "slug": "idolland-pripara",
       "name": "アイドルランドプリパラ CGライブ",
       "shortName": "アイドルランドプリパラ",
+      "series": "プリパラ",
       "color": "purple",
       "playlistId": "PLlH6DyUO5TnxpqqTI5A6i6cYYIpls-Sxo"
     }

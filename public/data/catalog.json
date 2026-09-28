@@ -1,26 +1,93 @@
 {
-  "generatedAt": "2026-09-29T00:20:00+09:00",
+  "generatedAt": "2026-09-28T16:03:07Z",
   "channels": [
     {
       "number": 1,
       "slug": "onegai-aipri",
       "name": "おねがいアイプリ CGライブ",
       "shortName": "おねがいアイプリ",
+      "series": "アイプリ",
       "color": "magenta",
       "playlistId": "PL6VN7enyUDE7L20ULWQ1rvatPPgDV9we4",
       "playlistTitle": "【アニメ】『おねがいアイプリ』CGライブ",
       "videos": [
-        { "id": "DPEEKvInkTw", "title": "【公式CGライブ】「TOP POWER」熱海ナナ、望永エマ", "durationSec": 129 },
-        { "id": "DMOQilTVOmw", "title": "【公式CGライブ】「勇気のはばたきサイン」勇樹おりびあ、熱海ナナ", "durationSec": 121 },
-        { "id": "I6vCGJDv1lo", "title": "【公式CGライブ】「ネガイ・スペシャリスト」望永エマ", "durationSec": 125 },
-        { "id": "UmEmuxAsoA4", "title": "【公式CGライブ】「TOP POWER」熱海ナナ", "durationSec": 129 },
-        { "id": "Hl96FuGJexg", "title": "【公式CGライブ】「夢色ビリーバー」夢宮あおい、友坂ぐみ", "durationSec": 121 },
-        { "id": "6P403KclEv4", "title": "【公式CGライブ】「フレフレベストフレンズ」友坂ぐみ、勇樹おりびあ", "durationSec": 121 },
-        { "id": "UxtRZrfBaAM", "title": "【公式CGライブ】「勇気のはばたきサイン」勇樹おりびあ", "durationSec": 121 },
-        { "id": "4VZcA09l1XQ", "title": "【公式CGライブ】「トキメキ♡ジャンプ！」好実いのり、夢宮あおい", "durationSec": 123 },
-        { "id": "YrBO6BcnAc0", "title": "【公式CGライブ】「フレフレベストフレンズ」友坂ぐみ", "durationSec": 121 },
-        { "id": "8JK0lH1xoOA", "title": "【公式CGライブ】「夢色ビリーバー」夢宮あおい", "durationSec": 121 },
-        { "id": "kuleEK8aVxM", "title": "【公式CGライブ】「トキメキ♡ジャンプ！」好実いのり", "durationSec": 123 }
+        {
+          "id": "kuleEK8aVxM",
+          "title": "【公式CGライブ】「トキメキ♡ジャンプ！」好実いのり",
+          "durationSec": 123,
+          "publishedAt": "2026-04-23T09:01:09Z",
+          "description": "アニメ『おねがいアイプリ』公式CGライブ「トキメキ♡ジャンプ！」\n\nキラキラライブで　\nみんなの「おねがい」かなえちゃお！\n\nプリティーシリーズの最新作❣\n\n✨￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣\n\nめざせ！キラキラのバズリウムチェンジ！\nみんなのおねがい かなえちゃお！\n\n　　　『おねがいアイプリ』\n＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿✨\n\nテレ東系列6局ネットにて\n2026年4月5日から毎週日曜あさ9時30分〜放送中！\n\nお見逃しなく💗\n\n🎀楽曲情報\n『トキメキ♡ジャンプ！』\n■うた：好実いのり（CV.小川華果）\n■作詞・作曲・編曲：井本光紀(bransic)・和音(bransic)\n\n🎀作品情報\n『おねがいアイプリ』\n■放送：テレ東系列6局ネットにて\n2026年4月5日から毎週日曜あさ9時30分〜放送スタート！\n■原作：タカラトミーアーツ・シンソフィア\n■監督：藤咲淳一・松永昌弘\n■チーフディレクター：\nNam Sung Min\nJeon Byung Cheol \nOh Sun Kyung\nChoi Kyung Won\nKim Seong Hyeon \nChun Doo Hwan \nKwak Soo Hyun \nSo Ho Sung \n■シリーズ構成：市川十億衛門\n■キャラクター原案：梨本裕美（シンソフィア）\n■キャラクターデザイン：仁井学\n■CGディレクター：柳川智\n■音楽：森いづみ (bransic)\n■音響監督：小沼則義\n■アニメーション制作：OLM・DONGWOO A＆E\n■キャスト：\n好実いのり：小川華果／夢宮あおい：叶矢りか　ほか\n\n\n🎀アニメ「おねがいアイプリ」HP\nhttps://aipri.jp/anime/\n\n🎀ゲーム「おねがいアイプリ」「アイプリバース」公式HP\nhttps://aipri.jp/\nhttp://aipri.jp/verse/\n\n🎀おもちゃHP\nhttps://www.takaratomy.co.jp/products/aipri/"
+        },
+        {
+          "id": "8JK0lH1xoOA",
+          "title": "【公式CGライブ】「夢色ビリーバー」夢宮あおい",
+          "durationSec": 121,
+          "publishedAt": "2026-04-23T09:01:25Z",
+          "description": "アニメ『おねがいアイプリ』公式CGライブ「夢色ビリーバー」\n\nキラキラライブで　\nみんなの「おねがい」かなえちゃお！\n\nプリティーシリーズの最新作❣\n\n✨￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣\n\nめざせ！キラキラのバズリウムチェンジ！\nみんなのおねがい かなえちゃお！\n\n　　　『おねがいアイプリ』\n＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿✨\n\nテレ東系列6局ネットにて\n2026年4月5日から毎週日曜あさ9時30分〜放送中！\n\nお見逃しなく💗\n\n🎀楽曲情報\n『夢色ビリーバー』\n■うた：夢宮あおい（CV.叶矢りか）\n■作詞・作曲・編曲：脇眞富（Arte Refact）\n\n🎀作品情報\n『おねがいアイプリ』\n■放送：テレ東系列6局ネットにて\n2026年4月5日から毎週日曜あさ9時30分〜放送スタート！\n■原作：タカラトミーアーツ・シンソフィア\n■監督：藤咲淳一・松永昌弘\n■チーフディレクター：\nNam Sung Min\nJeon Byung Cheol \nOh Sun Kyung\nChoi Kyung Won\nKim Seong Hyeon \nChun Doo Hwan \nKwak Soo Hyun \nSo Ho Sung \n■シリーズ構成：市川十億衛門\n■キャラクター原案：梨本裕美（シンソフィア）\n■キャラクターデザイン：仁井学\n■CGディレクター：柳川智\n■音楽：森いづみ (bransic)\n■音響監督：小沼則義\n■アニメーション制作：OLM・DONGWOO A＆E\n■キャスト：\n好実いのり：小川華果／夢宮あおい：叶矢りか　ほか\n\n\n🎀アニメ「おねがいアイプリ」HP\nhttps://aipri.jp/anime/\n\n🎀ゲーム「おねがいアイプリ」「アイプリバース」公式HP\nhttps://aipri.jp/\nhttp://aipri.jp/verse/\n\n🎀おもちゃHP\nhttps://www.takaratomy.co.jp/products/aipri/"
+        },
+        {
+          "id": "YrBO6BcnAc0",
+          "title": "【公式CGライブ】「フレフレベストフレンズ」友坂ぐみ",
+          "durationSec": 121,
+          "publishedAt": "2026-05-21T09:00:40Z",
+          "description": "アニメ『おねがいアイプリ』公式CGライブ「フレフレベストフレンズ」\n\nキラキラライブで　\nみんなの「おねがい」かなえちゃお！\n\nプリティーシリーズの最新作❣\n\n✨￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣\n\nめざせ！キラキラのバズリウムチェンジ！\nみんなのおねがい かなえちゃお！\n\n　　　『おねがいアイプリ』\n＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿✨\n\nテレ東系列6局ネットにて\n2026年4月5日から毎週日曜あさ9時30分〜放送中！\n\nお見逃しなく💗\n\n🎀楽曲情報\n『フレフレベストフレンズ』\n■うた：友坂ぐみ（CV.丸岡和佳奈）\n■作詞：真崎エリカ\n■作曲・編曲：酒井拓也（Arte Refact）\n\n🎀作品情報\n『おねがいアイプリ』\n■放送：テレ東系列6局ネットにて\n2026年4月5日から毎週日曜あさ9時30分〜放送スタート！\n■原作：タカラトミーアーツ・シンソフィア\n■監督：藤咲淳一・松永昌弘\n■チーフディレクター：\nNam Sung Min\nJeon Byung Cheol \nOh Sun Kyung\nChoi Kyung Won\nKim Seong Hyeon \nChun Doo Hwan \nKwak Soo Hyun \nSo Ho Sung \n■シリーズ構成：市川十億衛門\n■キャラクター原案：梨本裕美（シンソフィア）\n■キャラクターデザイン：仁井学\n■CGディレクター：柳川智\n■音楽：森いづみ (bransic)\n■音響監督：小沼則義\n■アニメーション制作：OLM・DONGWOO A＆E\n■キャスト：\n好実いのり：小川華果／夢宮あおい：叶矢りか　ほか\n\n\n🎀アニメ「おねがいアイプリ」HP\nhttps://aipri.jp/anime/\n\n🎀ゲーム「おねがいアイプリ」「アイプリバース」公式HP\nhttps://aipri.jp/\nhttp://aipri.jp/verse/\n\n🎀おもちゃHP\nhttps://www.takaratomy.co.jp/products/aipri/"
+        },
+        {
+          "id": "4VZcA09l1XQ",
+          "title": "【公式CGライブ】「トキメキ♡ジャンプ！」好実いのり、夢宮あおい",
+          "durationSec": 123,
+          "publishedAt": "2026-05-28T09:00:22Z",
+          "description": "アニメ『おねがいアイプリ』公式CGライブ「トキメキ♡ジャンプ！」\n\nキラキラライブで　\nみんなの「おねがい」かなえちゃお！\n\nプリティーシリーズの最新作❣\n\n✨￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣\n\nめざせ！キラキラのバズリウムチェンジ！\nみんなのおねがい かなえちゃお！\n\n　　　『おねがいアイプリ』\n＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿✨\n\nテレ東系列6局ネットにて\n2026年4月5日から毎週日曜あさ9時30分〜放送中！\n\nお見逃しなく💗\n\n🎀楽曲情報\n『トキメキ♡ジャンプ！』\n■うた：好実いのり（CV.小川華果）、夢宮あおい（CV.叶矢りか）\n■作詞・作曲・編曲：井本光紀(bransic)・和音(bransic)\n\n🎀作品情報\n『おねがいアイプリ』\n■放送：テレ東系列6局ネットにて\n2026年4月5日から毎週日曜あさ9時30分〜放送スタート！\n■原作：タカラトミーアーツ・シンソフィア\n■監督：藤咲淳一・松永昌弘\n■チーフディレクター：\nNam Sung Min\nJeon Byung Cheol \nOh Sun Kyung\nChoi Kyung Won\nKim Seong Hyeon \nChun Doo Hwan \nKwak Soo Hyun \nSo Ho Sung \n■シリーズ構成：市川十億衛門\n■キャラクター原案：梨本裕美（シンソフィア）\n■キャラクターデザイン：仁井学\n■CGディレクター：柳川智\n■音楽：森いづみ (bransic)\n■音響監督：小沼則義\n■アニメーション制作：OLM・DONGWOO A＆E\n■キャスト：\n好実いのり：小川華果／夢宮あおい：叶矢りか　ほか\n\n\n🎀アニメ「おねがいアイプリ」HP\nhttps://aipri.jp/anime/\n\n🎀ゲーム「おねがいアイプリ」「アイプリバース」公式HP\nhttps://aipri.jp/\nhttp://aipri.jp/verse/\n\n🎀おもちゃHP\nhttps://www.takaratomy.co.jp/products/aipri/"
+        },
+        {
+          "id": "UxtRZrfBaAM",
+          "title": "【公式CGライブ】「勇気のはばたきサイン」勇樹おりびあ",
+          "durationSec": 121,
+          "publishedAt": "2026-06-11T09:00:09Z",
+          "description": "アニメ『おねがいアイプリ』公式CGライブ「勇気のはばたきサイン」\n\nキラキラライブで　\nみんなの「おねがい」かなえちゃお！\n\nプリティーシリーズの最新作❣\n\n✨￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣\n\nめざせ！キラキラのバズリウムチェンジ！\nみんなのおねがい かなえちゃお！\n\n　　　『おねがいアイプリ』\n＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿✨\n\nテレ東系列6局ネットにて\n2026年4月5日から毎週日曜あさ9時30分〜放送中！\n\nお見逃しなく💗\n\n🎀楽曲情報\n『勇気のはばたきサイン』\n■うた：勇樹おりびあ（CV.岡村明香）\n■作詞・作曲・編曲：井本光紀(bransic)・和音(bransic)\n\n🎀作品情報\n『おねがいアイプリ』\n■放送：テレ東系列6局ネットにて\n2026年4月5日から毎週日曜あさ9時30分〜放送スタート！\n■原作：タカラトミーアーツ・シンソフィア\n■監督：藤咲淳一・松永昌弘\n■チーフディレクター：\nNam Sung Min\nJeon Byung Cheol \nOh Sun Kyung\nChoi Kyung Won\nKim Seong Hyeon \nChun Doo Hwan \nKwak Soo Hyun \nSo Ho Sung \n■シリーズ構成：市川十億衛門\n■キャラクター原案：梨本裕美（シンソフィア）\n■キャラクターデザイン：仁井学\n■CGディレクター：柳川智\n■音楽：森いづみ (bransic)\n■音響監督：小沼則義\n■アニメーション制作：OLM・DONGWOO A＆E\n■キャスト：\n好実いのり：小川華果／夢宮あおい：叶矢りか　ほか\n\n\n🎀アニメ「おねがいアイプリ」HP\nhttps://aipri.jp/anime/\n\n🎀ゲーム「おねがいアイプリ」「アイプリバース」公式HP\nhttps://aipri.jp/\nhttp://aipri.jp/verse/\n\n🎀おもちゃHP\nhttps://www.takaratomy.co.jp/products/aipri/"
+        },
+        {
+          "id": "6P403KclEv4",
+          "title": "【公式CGライブ】「フレフレベストフレンズ」友坂ぐみ、勇樹おりびあ",
+          "durationSec": 121,
+          "publishedAt": "2026-07-02T09:00:31Z",
+          "description": "アニメ『おねがいアイプリ』公式CGライブ「フレフレベストフレンズ」\n\nキラキラライブで　\nみんなの「おねがい」かなえちゃお！\n\nプリティーシリーズの最新作❣\n\n✨￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣\n\nめざせ！キラキラのバズリウムチェンジ！\nみんなのおねがい かなえちゃお！\n\n　　　『おねがいアイプリ』\n＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿✨\n\nテレ東系列6局ネットにて\n2026年4月5日から毎週日曜あさ9時30分〜放送中！\n\nお見逃しなく💗\n\n🎀楽曲情報\n『フレフレベストフレンズ』\n■うた：友坂ぐみ（CV.丸岡和佳奈）、勇樹おりびあ（CV.岡村明香）\n■作詞：真崎エリカ\n■作曲・編曲：酒井拓也\n\n🎀作品情報\n『おねがいアイプリ』\n■放送：テレ東系列6局ネットにて\n2026年4月5日から毎週日曜あさ9時30分〜放送スタート！\n■原作：タカラトミーアーツ・シンソフィア\n■監督：藤咲淳一・松永昌弘\n■チーフディレクター：\nNam Sung Min\nJeon Byung Cheol \nOh Sun Kyung\nChoi Kyung Won\nKim Seong Hyeon \nChun Doo Hwan \nKwak Soo Hyun \nSo Ho Sung \n■シリーズ構成：市川十億衛門\n■キャラクター原案：梨本裕美（シンソフィア）\n■キャラクターデザイン：仁井学\n■CGディレクター：柳川智\n■音楽：森いづみ (bransic)\n■音響監督：小沼則義\n■アニメーション制作：OLM・DONGWOO A＆E\n■キャスト：\n好実いのり：小川華果／夢宮あおい：叶矢りか　ほか\n\n\n🎀アニメ「おねがいアイプリ」HP\nhttps://aipri.jp/anime/\n\n🎀ゲーム「おねがいアイプリ」「アイプリバース」公式HP\nhttps://aipri.jp/\nhttp://aipri.jp/verse/\n\n🎀おもちゃHP\nhttps://www.takaratomy.co.jp/products/aipri/"
+        },
+        {
+          "id": "Hl96FuGJexg",
+          "title": "【公式CGライブ】「夢色ビリーバー」夢宮あおい、友坂ぐみ",
+          "durationSec": 121,
+          "publishedAt": "2026-07-16T08:00:09Z",
+          "description": "アニメ『おねがいアイプリ』公式CGライブ「夢色ビリーバー」\n\nキラキラライブで　\nみんなの「おねがい」かなえちゃお！\n\nプリティーシリーズの最新作❣\n\n✨￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣\n\nめざせ！キラキラのバズリウムチェンジ！\nみんなのおねがい かなえちゃお！\n\n　　　『おねがいアイプリ』\n＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿✨\n\nテレ東系列6局ネットにて\n2026年4月5日から毎週日曜あさ9時30分〜放送中！\n\nお見逃しなく💗\n\n🎀楽曲情報\n『夢色ビリーバー』\n■うた：夢宮あおい（CV.叶矢りか）、友坂ぐみ（CV.丸岡和佳奈）\n■作詞・作曲・編曲：脇眞富\n\n🎀作品情報\n『おねがいアイプリ』\n■放送：テレ東系列6局ネットにて\n2026年4月5日から毎週日曜あさ9時30分〜放送スタート！\n■原作：タカラトミーアーツ・シンソフィア\n■監督：藤咲淳一・松永昌弘\n■チーフディレクター：\nNam Sung Min\nJeon Byung Cheol \nOh Sun Kyung\nChoi Kyung Won\nKim Seong Hyeon \nChun Doo Hwan \nKwak Soo Hyun \nSo Ho Sung \n■シリーズ構成：市川十億衛門\n■キャラクター原案：梨本裕美（シンソフィア）\n■キャラクターデザイン：仁井学\n■CGディレクター：柳川智\n■音楽：森いづみ (bransic)\n■音響監督：小沼則義\n■アニメーション制作：OLM・DONGWOO A＆E\n■キャスト：\n好実いのり：小川華果／夢宮あおい：叶矢りか　ほか\n\n\n🎀アニメ「おねがいアイプリ」HP\nhttps://aipri.jp/anime/\n\n🎀ゲーム「おねがいアイプリ」「アイプリバース」公式HP\nhttps://aipri.jp/\nhttp://aipri.jp/verse/\n\n🎀おもちゃHP\nhttps://www.takaratomy.co.jp/products/aipri/"
+        },
+        {
+          "id": "UmEmuxAsoA4",
+          "title": "【公式CGライブ】「TOP POWER」熱海ナナ",
+          "durationSec": 129,
+          "publishedAt": "2026-08-13T09:00:16Z",
+          "description": "アニメ『おねがいアイプリ』公式CGライブ「TOP POWER」\n\nキラキラライブで　\nみんなの「おねがい」かなえちゃお！\n\nプリティーシリーズの最新作❣\n\n✨￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣\n\nめざせ！キラキラのバズリウムチェンジ！\nみんなのおねがい かなえちゃお！\n\n　　　『おねがいアイプリ』\n＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿✨\n\nテレ東系列6局ネットにて\n2026年4月5日から毎週日曜あさ9時30分〜放送中！\n\nお見逃しなく💗\n\n🎀楽曲情報\n『TOP POWER』\n■うた：熱海ナナ（CV.藤寺美徳）\n■作詞：児玉雨子\n■作曲：michitomo\n■編曲：田中希（GOLDTAIL）\n\n🎀作品情報\n『おねがいアイプリ』\n■放送：テレ東系列6局ネットにて\n2026年4月5日から毎週日曜あさ9時30分〜放送スタート！\n■原作：タカラトミーアーツ・シンソフィア\n■監督：藤咲淳一・松永昌弘\n■チーフディレクター：\nNam Sung Min\nJeon Byung Cheol \nOh Sun Kyung\nChoi Kyung Won\nKim Seong Hyeon \nChun Doo Hwan \nKwak Soo Hyun \nSo Ho Sung \n■シリーズ構成：市川十億衛門\n■キャラクター原案：梨本裕美（シンソフィア）\n■キャラクターデザイン：仁井学\n■CGディレクター：柳川智\n■音楽：森いづみ (bransic)\n■音響監督：小沼則義\n■アニメーション制作：OLM・DONGWOO A＆E\n■キャスト：\n好実いのり：小川華果／夢宮あおい：叶矢りか　ほか\n\n\n🎀アニメ「おねがいアイプリ」HP\nhttps://aipri.jp/anime/\n\n🎀ゲーム「おねがいアイプリ」「アイプリバース」公式HP\nhttps://aipri.jp/\nhttp://aipri.jp/verse/\n\n🎀おもちゃHP\nhttps://www.takaratomy.co.jp/products/aipri/"
+        },
+        {
+          "id": "I6vCGJDv1lo",
+          "title": "【公式CGライブ】「ネガイ・スペシャリスト」望永エマ",
+          "durationSec": 125,
+          "publishedAt": "2026-08-20T09:00:01Z",
+          "description": "アニメ『おねがいアイプリ』公式CGライブ「ネガイ・スペシャリスト」\n\nキラキラライブで　\nみんなの「おねがい」かなえちゃお！\n\nプリティーシリーズの最新作❣\n\n✨￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣\n\nめざせ！キラキラのバズリウムチェンジ！\nみんなのおねがい かなえちゃお！\n\n　　　『おねがいアイプリ』\n＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿✨\n\nテレ東系列6局ネットにて\n2026年4月5日から毎週日曜あさ9時30分〜放送中！\n\nお見逃しなく💗\n\n🎀楽曲情報\n『ネガイ・スペシャリスト』\n■うた：望永エマ（CV.鈴木みのり）\n■作詞：大熊淳生\n■作曲・編曲：大熊淳生\n\n🎀作品情報\n『おねがいアイプリ』\n■放送：テレ東系列6局ネットにて\n2026年4月5日から毎週日曜あさ9時30分〜放送スタート！\n■原作：タカラトミーアーツ・シンソフィア\n■監督：藤咲淳一・松永昌弘\n■チーフディレクター：\nNam Sung Min\nJeon Byung Cheol \nOh Sun Kyung\nChoi Kyung Won\nKim Seong Hyeon \nChun Doo Hwan \nKwak Soo Hyun \nSo Ho Sung \n■シリーズ構成：市川十億衛門\n■キャラクター原案：梨本裕美（シンソフィア）\n■キャラクターデザイン：仁井学\n■CGディレクター：柳川智\n■音楽：森いづみ (bransic)\n■音響監督：小沼則義\n■アニメーション制作：OLM・DONGWOO A＆E\n■キャスト：\n好実いのり：小川華果／夢宮あおい：叶矢りか　ほか\n\n\n🎀アニメ「おねがいアイプリ」HP\nhttps://aipri.jp/anime/\n\n🎀ゲーム「おねがいアイプリ」「アイプリバース」公式HP\nhttps://aipri.jp/\nhttp://aipri.jp/verse/\n\n🎀おもちゃHP\nhttps://www.takaratomy.co.jp/products/aipri/"
+        },
+        {
+          "id": "DMOQilTVOmw",
+          "title": "【公式CGライブ】「勇気のはばたきサイン」勇樹おりびあ、熱海ナナ",
+          "durationSec": 121,
+          "publishedAt": "2026-08-27T09:00:36Z",
+          "description": "アニメ『おねがいアイプリ』公式CGライブ「勇気のはばたきサイン」\n\nキラキラライブで　\nみんなの「おねがい」かなえちゃお！\n\nプリティーシリーズの最新作❣\n\n✨￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣\n\nめざせ！キラキラのバズリウムチェンジ！\nみんなのおねがい かなえちゃお！\n\n　　　『おねがいアイプリ』\n＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿✨\n\nテレ東系列6局ネットにて\n2026年4月5日から毎週日曜あさ9時30分〜放送中！\n\nお見逃しなく💗\n\n🎀楽曲情報\n『勇気のはばたきサイン』\n■うた：勇樹おりびあ（CV.岡村明香）、熱海ナナ（CV.藤寺美徳）\n■作詞・作曲・編曲：井本光紀(bransic)・和音(bransic)\n\n🎀作品情報\n『おねがいアイプリ』\n■放送：テレ東系列6局ネットにて\n2026年4月5日から毎週日曜あさ9時30分〜放送スタート！\n■原作：タカラトミーアーツ・シンソフィア\n■監督：藤咲淳一・松永昌弘\n■チーフディレクター：\nNam Sung Min\nJeon Byung Cheol \nOh Sun Kyung\nChoi Kyung Won\nKim Seong Hyeon \nChun Doo Hwan \nKwak Soo Hyun \nSo Ho Sung \n■シリーズ構成：市川十億衛門\n■キャラクター原案：梨本裕美（シンソフィア）\n■キャラクターデザイン：仁井学\n■CGディレクター：柳川智\n■音楽：森いづみ (bransic)\n■音響監督：小沼則義\n■アニメーション制作：OLM・DONGWOO A＆E\n■キャスト：\n好実いのり：小川華果／夢宮あおい：叶矢りか　ほか\n\n\n🎀アニメ「おねがいアイプリ」HP\nhttps://aipri.jp/anime/\n\n🎀ゲーム「おねがいアイプリ」「アイプリバース」公式HP\nhttps://aipri.jp/\nhttp://aipri.jp/verse/\n\n🎀おもちゃHP\nhttps://www.takaratomy.co.jp/products/aipri/"
+        },
+        {
+          "id": "DPEEKvInkTw",
+          "title": "【公式CGライブ】「TOP POWER」熱海ナナ、望永エマ",
+          "durationSec": 129,
+          "publishedAt": "2026-09-10T09:00:25Z",
+          "description": "アニメ『おねがいアイプリ』公式CGライブ「TOP POWER」\n\nキラキラライブで　\nみんなの「おねがい」かなえちゃお！\n\nプリティーシリーズの最新作❣\n\n✨￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣\n\nめざせ！キラキラのバズリウムチェンジ！\nみんなのおねがい かなえちゃお！\n\n　　　『おねがいアイプリ』\n＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿✨\n\nテレ東系列6局ネットにて\n2026年4月5日から毎週日曜あさ9時30分〜放送中！\n\nお見逃しなく💗\n\n🎀楽曲情報\n『TOP POWER』\n■うた：熱海ナナ（CV.藤寺美徳）、望永エマ（CV.鈴木みのり）\n■作詞：児玉雨子\n■作曲：michitomo\n■編曲：田中希（GOLDTAIL）\n\n🎀作品情報\n『おねがいアイプリ』\n■放送：テレ東系列6局ネットにて\n2026年4月5日から毎週日曜あさ9時30分〜放送スタート！\n■原作：タカラトミーアーツ・シンソフィア\n■監督：藤咲淳一・松永昌弘\n■チーフディレクター：\nNam Sung Min\nJeon Byung Cheol \nOh Sun Kyung\nChoi Kyung Won\nKim Seong Hyeon \nChun Doo Hwan \nKwak Soo Hyun \nSo Ho Sung \n■シリーズ構成：市川十億衛門\n■キャラクター原案：梨本裕美（シンソフィア）\n■キャラクターデザイン：仁井学\n■CGディレクター：柳川智\n■音楽：森いづみ (bransic)\n■音響監督：小沼則義\n■アニメーション制作：OLM・DONGWOO A＆E\n■キャスト：\n好実いのり：小川華果／夢宮あおい：叶矢りか　ほか\n\n\n🎀アニメ「おねがいアイプリ」HP\nhttps://aipri.jp/anime/\n\n🎀ゲーム「おねがいアイプリ」「アイプリバース」公式HP\nhttps://aipri.jp/\nhttp://aipri.jp/verse/\n\n🎀おもちゃHP\nhttps://www.takaratomy.co.jp/products/aipri/"
+        }
       ]
     },
     {
@@ -28,39 +95,214 @@
       "slug": "himitsu-aipri",
       "name": "ひみつのアイプリ CGライブ",
       "shortName": "ひみつのアイプリ",
+      "series": "アイプリ",
       "color": "light-blue",
       "playlistId": "PL6VN7enyUDE7osGtSwkHjEJpjDNnylB6u",
       "playlistTitle": "【アニメ】『ひみつのアイプリ』CGライブ",
       "videos": [
-        { "id": "yRmssafjXf0", "title": "【公式CGライブ】「キズナ×リンク」ひみつのアイプリ", "durationSec": 232 },
-        { "id": "OkEbAePC7q8", "title": "【公式CGライブ】「レジェンド・ストーリー!!!!」一条寺サクラ、二階堂タマキ、三ツ葉アイリ、四之宮リンリン", "durationSec": 122 },
-        { "id": "nPIWECBH8oU", "title": "【公式CGライブ】「ニュースタージョーカー」一条寺サクラ、二階堂タマキ、三ツ葉アイリ、四之宮リンリン", "durationSec": 122 },
-        { "id": "E_3AhIVSi7k", "title": "【公式CGライブ】「ミライのプリンセス」鈴風つむぎ、リング・クローバー", "durationSec": 124 },
-        { "id": "UjMDZi8gY5I", "title": "【公式CGライブ】「ミラクル☆ツインスマイル」青空ひまり、星川みつき", "durationSec": 118 },
-        { "id": "AJzaGdxyOUE", "title": "【公式CGライブ】「ミライのプリンセス」リング・クローバー", "durationSec": 124 },
-        { "id": "PGUX6ilp5_k", "title": "【公式CGライブ】「わいるど☆すたー」八王子ビビ、真実夜チィ", "durationSec": 112 },
-        { "id": "bKYrUxDgBeQ", "title": "【公式CGライブ】「わいるど☆すたー」八王子ビビ", "durationSec": 112 },
-        { "id": "zPD-5EwhQpo", "title": "【公式CGライブ】「ココロ・アストロノーツ」七浦すばる、七浦おとめ", "durationSec": 120 },
-        { "id": "fFEHIaU9LSU", "title": "【公式CGライブ】「Piece Of Dream」七浦すばる", "durationSec": 118 },
-        { "id": "Oa5NtZzEOi4", "title": "【公式CGライブ】「ぴかぴかマイストーリー」星川みつき", "durationSec": 119 },
-        { "id": "zyTT2P_1HWo", "title": "【公式CGライブ】「ときめきグラビティ」五十嵐じゅりあ、六堂える", "durationSec": 118 },
-        { "id": "yJ7R6jAYNPA", "title": "【公式CGライブ】「わたしの大切にしてたこと」六堂える", "durationSec": 119 },
-        { "id": "pmlmQkBaXBo", "title": "【公式CGライブ】「超Easy Drive☆」五十嵐じゅりあ", "durationSec": 117 },
-        { "id": "01cY2syJlV0", "title": "【公式CGライブ】「キズナ×リンク」青空ひまり、星川みつき", "durationSec": 116 },
-        { "id": "_jKaexgo2cc", "title": "【公式CGライブ】「きらめきのうた」青空ひまり、星川みつき、鈴風つむぎ", "durationSec": 121 },
-        { "id": "_kd0q-eyWww", "title": "【公式CGライブ】「ニュースタージョーカー」ダークサクラ、ダークタマキ、ダークアイリ、ダークリンリン", "durationSec": 122 },
-        { "id": "GBMFY6zPwOE", "title": "【公式CGライブ】「GIRA GIRA STAR」ダークチィ", "durationSec": 115 },
-        { "id": "UXi-vtm3aAg", "title": "【公式CGライブ】「パステルステップデイズ」青空ひまり", "durationSec": 117 },
-        { "id": "9P9t6Cjpr6c", "title": "【公式CGライブ】「きらめきのうた」鈴風つむぎ", "durationSec": 121 },
-        { "id": "tzY7D7hgIcs", "title": "【公式CGライブ】「GIRA GIRA STAR」真実夜チィ", "durationSec": 115 },
-        { "id": "VEJQi8bHhK4", "title": "【公式CGライブ】「Perfect☆STARs」一条寺サクラ、二階堂タマキ、三ツ葉アイリ、四之宮リンリン", "durationSec": 121 },
-        { "id": "w3leuKxKSDo", "title": "【公式CGライブ】「ネバギバラバー」三ツ葉アイリ、四之宮リンリン", "durationSec": 122 },
-        { "id": "-iIG4VX9yog", "title": "【公式CGライブ】「We're The World」青空ひまり、星川みつき、鈴風つむぎ", "durationSec": 121 },
-        { "id": "8qvYnjzSuDE", "title": "【公式CGライブ】「ヒカリノコトバ」鈴風つむぎ", "durationSec": 127 },
-        { "id": "OSh0gl96UO4", "title": "【公式CGライブ】「ムテキDUOエナジー」青空ひまり、星川みつき", "durationSec": 119 },
-        { "id": "BWyYn2SXkLc", "title": "【公式CGライブ】「Stand Get Up」一条寺サクラ、二階堂タマキ", "durationSec": 114 },
-        { "id": "K0Dgzn2CpmY", "title": "【公式CGライブ】「シークレット・ドリーム」星川みつき", "durationSec": 108 },
-        { "id": "q9ssDOYLjGA", "title": "【公式CGライブ】「P.O.P.P.Y」青空ひまり", "durationSec": 117 }
+        {
+          "id": "q9ssDOYLjGA",
+          "title": "【公式CGライブ】「P.O.P.P.Y」青空ひまり",
+          "durationSec": 117,
+          "publishedAt": "2024-05-17T04:25:02Z",
+          "description": "アニメ『ひみつのアイプリ』公式CGライブ「P.O.P.P.Y」\n\n『一緒にアイプリしちゃお🎵』\n\nプリティーシリーズの最新作❣\n\n✨￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣\nわたしたちのムテキなライブで\nめざせ！キラキラのバズリウムチェンジ！\n\n　　　『ひみつのアイプリ』\n＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿✨\n\n毎週日曜日ごぜん10時～\nテレ東系列6局ネットにて放送中です❣\n配信情報などくわしくはアニメHPをチェックしてくださいね👀🔍\n\n🎀楽曲情報\n『P.O.P.P.Y』\n■作詞・作曲・編曲：Nika Lenz(Arte Refact)\n■うた：青空ひまり（cv.藤寺美徳）\n\n🎀作品情報\n『ひみつのアイプリ』\n■放送：2024年4月 テレ東系列６局ネットにて放送スタート\n■原作：タカラトミーアーツ／シンソフィア\n■監督：藤咲淳一、山口健太郎\n■チーフディレクター：Park Chi Man、Nam Sung Min、Choi Hun Cheol、Shin Gi Chuel\n■シリーズ構成：市川十億衛門\n■キャラクター原案：梨本裕美（シンソフィア）\n■キャラクターデザイン：永野佑貴\n■CGディレクター：柳川智\n■音楽：森いづみ (bransic)\n■音響監督：小沼則義\n■アニメーション制作：OLM・DONGWOO A＆E\n■キャスト：\n青空ひまり：藤寺美徳\n星川みつき：平塚紗依\n鈴風つむぎ：久保ユリカ\n一条寺サクラ：日比優理香\n二階堂タマキ：鈴木杏奈\n三ツ葉アイリ：徳井青空\n四之宮リンリン：和多田美咲\n真実夜チィ：大地葉\n\n🎀アニメ「ひみつのアイプリ」公式HP\nhttps://aipri.jp/anime/\n\n🎀ゲーム「ひみつのアイプリ」「アイプリバース」公式HP\nhttps://aipri.jp/\nhttp://aipri.jp/verse/\n\n🎀おもちゃHP\nhttps://www.takaratomy.co.jp/products/himitsunoaipri/"
+        },
+        {
+          "id": "K0Dgzn2CpmY",
+          "title": "【公式CGライブ】「シークレット・ドリーム」星川みつき",
+          "durationSec": 108,
+          "publishedAt": "2024-05-17T04:25:38Z",
+          "description": "アニメ『ひみつのアイプリ』公式CGライブ「シークレット・ドリーム」\n\n『一緒にアイプリしちゃお🎵』\n\nプリティーシリーズの最新作❣\n\n✨￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣\nわたしたちのムテキなライブで\nめざせ！キラキラのバズリウムチェンジ！\n\n　　　『ひみつのアイプリ』\n＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿✨\n\n毎週日曜日ごぜん10時～\nテレ東系列6局ネットにて放送中です❣\n配信情報などくわしくはアニメHPをチェックしてくださいね👀🔍\n\n🎀楽曲情報\n『シークレット・ドリーム』\n■作詞：松井洋平\n■作曲：本多友紀（Arte Refact）\n■編曲：大熊淳生（Arte Refact）\n■うた：星川みつき（cv.平塚紗依）\n\n🎀作品情報\n『ひみつのアイプリ』\n■放送：2024年4月 テレ東系列６局ネットにて放送スタート\n■原作：タカラトミーアーツ／シンソフィア\n■監督：藤咲淳一、山口健太郎\n■チーフディレクター：Park Chi Man、Nam Sung Min、Choi Hun Cheol、Shin Gi Chuel\n■シリーズ構成：市川十億衛門\n■キャラクター原案：梨本裕美（シンソフィア）\n■キャラクターデザイン：永野佑貴\n■CGディレクター：柳川智\n■音楽：森いづみ (bransic)\n■音響監督：小沼則義\n■アニメーション制作：OLM・DONGWOO A＆E\n■キャスト：\n青空ひまり：藤寺美徳\n星川みつき：平塚紗依\n鈴風つむぎ：久保ユリカ\n一条寺サクラ：日比優理香\n二階堂タマキ：鈴木杏奈\n三ツ葉アイリ：徳井青空\n四之宮リンリン：和多田美咲\n真実夜チィ：大地葉\n\n🎀アニメ「ひみつのアイプリ」公式HP\nhttps://aipri.jp/anime/\n\n🎀ゲーム「ひみつのアイプリ」「アイプリバース」公式HP\nhttps://aipri.jp/\nhttp://aipri.jp/verse/\n\n🎀おもちゃHP\nhttps://www.takaratomy.co.jp/products/himitsunoaipri/"
+        },
+        {
+          "id": "BWyYn2SXkLc",
+          "title": "【公式CGライブ】「Stand Get Up」一条寺サクラ、二階堂タマキ",
+          "durationSec": 114,
+          "publishedAt": "2024-05-23T10:00:07Z",
+          "description": "アニメ『ひみつのアイプリ』公式CGライブ「Stand Get Up」\n\n『一緒にアイプリしちゃお🎵』\n\nプリティーシリーズの最新作❣\n\n✨￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣\nわたしたちのムテキなライブで\nめざせ！キラキラのバズリウムチェンジ！\n\n　　　『ひみつのアイプリ』\n＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿✨\n\n毎週日曜日ごぜん10時～\nテレ東系列6局ネットにて放送中です❣\n配信情報などくわしくはアニメHPをチェックしてくださいね👀🔍\n\n🎀楽曲情報\n『Stand Get Up』\n■作詞・作曲・編曲：Nika Lenz（Arte Refact）\n■うた：一条寺サクラ（CV.日比優理香）、二階堂タマキ（CV.鈴木杏奈）\n\n🎀作品情報\n『ひみつのアイプリ』\n■放送：2024年4月 テレ東系列６局ネットにて放送スタート\n■原作：タカラトミーアーツ／シンソフィア\n■監督：藤咲淳一、山口健太郎\n■チーフディレクター：Park Chi Man、Nam Sung Min、Choi Hun Cheol、Shin Gi Chuel\n■シリーズ構成：市川十億衛門\n■キャラクター原案：梨本裕美（シンソフィア）\n■キャラクターデザイン：永野佑貴\n■CGディレクター：柳川智\n■音楽：森いづみ (bransic)\n■音響監督：小沼則義\n■アニメーション制作：OLM・DONGWOO A＆E\n■キャスト：\n青空ひまり：藤寺美徳\n星川みつき：平塚紗依\n鈴風つむぎ：久保ユリカ\n一条寺サクラ：日比優理香\n二階堂タマキ：鈴木杏奈\n三ツ葉アイリ：徳井青空\n四之宮リンリン：和多田美咲\n真実夜チィ：大地葉\n\n\n\n🎀アニメ「ひみつのアイプリ」公式HP\nhttps://aipri.jp/anime/\n\n🎀ゲーム「ひみつのアイプリ」「アイプリバース」公式HP\nhttps://aipri.jp/\nhttp://aipri.jp/verse/\n\n🎀おもちゃHP\nhttps://www.takaratomy.co.jp/products/himitsunoaipri/"
+        },
+        {
+          "id": "OSh0gl96UO4",
+          "title": "【公式CGライブ】「ムテキDUOエナジー」青空ひまり、星川みつき",
+          "durationSec": 119,
+          "publishedAt": "2024-05-30T09:00:26Z",
+          "description": "アニメ『ひみつのアイプリ』公式CGライブ「ムテキDUOエナジー」\n\n『一緒にアイプリしちゃお🎵』\n\nプリティーシリーズの最新作❣\n\n✨￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣\nわたしたちのムテキなライブで\nめざせ！キラキラのバズリウムチェンジ！\n\n　　　『ひみつのアイプリ』\n＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿✨\n\n毎週日曜日ごぜん10時～\nテレ東系列6局ネットにて放送中です❣\n配信情報などくわしくはアニメHPをチェックしてくださいね👀🔍\n\n🎀楽曲情報\n『ムテキDUOエナジー』\n■作詞・作曲・編曲：大熊淳生（Arte Refact）\n■うた：青空ひまり（CV.藤寺美徳）、星川みつき（CV.平塚紗依）\n\n🎀作品情報\n『ひみつのアイプリ』\n■放送：2024年4月 テレ東系列６局ネットにて放送スタート\n■原作：タカラトミーアーツ／シンソフィア\n■監督：藤咲淳一、山口健太郎\n■チーフディレクター：Park Chi Man、Nam Sung Min、Choi Hun Cheol、Shin Gi Chuel\n■シリーズ構成：市川十億衛門\n■キャラクター原案：梨本裕美（シンソフィア）\n■キャラクターデザイン：永野佑貴\n■CGディレクター：柳川智\n■音楽：森いづみ (bransic)\n■音響監督：小沼則義\n■アニメーション制作：OLM・DONGWOO A＆E\n■キャスト：\n青空ひまり：藤寺美徳\n星川みつき：平塚紗依\n鈴風つむぎ：久保ユリカ\n一条寺サクラ：日比優理香\n二階堂タマキ：鈴木杏奈\n三ツ葉アイリ：徳井青空\n四之宮リンリン：和多田美咲\n真実夜チィ：大地葉\n\n🎀アニメ「ひみつのアイプリ」公式HP\nhttps://aipri.jp/anime/\n\n🎀ゲーム「ひみつのアイプリ」「アイプリバース」公式HP\nhttps://aipri.jp/\nhttp://aipri.jp/verse/\n\n🎀おもちゃHP\nhttps://www.takaratomy.co.jp/products/himitsunoaipri/\""
+        },
+        {
+          "id": "8qvYnjzSuDE",
+          "title": "【公式CGライブ】「ヒカリノコトバ」鈴風つむぎ",
+          "durationSec": 127,
+          "publishedAt": "2024-07-04T09:00:08Z",
+          "description": "アニメ『ひみつのアイプリ』公式CGライブ「ヒカリノコトバ」\n\n『一緒にアイプリしちゃお🎵』\n\nプリティーシリーズの最新作❣\n\n✨￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣\nわたしたちのムテキなライブで\nめざせ！キラキラのバズリウムチェンジ！\n\n　　　『ひみつのアイプリ』\n＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿✨\n\n毎週日曜日ごぜん10時～\nテレ東系列6局ネットにて放送中です❣\n配信情報などくわしくはアニメHPをチェックしてくださいね👀🔍\n\n🎀楽曲情報\n『ヒカリノコトバ』\n■作詞・作曲・編曲：矢野達也\n■うた：鈴風つむぎ（CV.久保ユリカ）\n\n🎀作品情報\n『ひみつのアイプリ』\n■放送：2024年4月 テレ東系列６局ネットにて放送スタート\n■原作：タカラトミーアーツ／シンソフィア\n■監督：藤咲淳一、山口健太郎\n■チーフディレクター：Park Chi Man、Nam Sung Min、Choi Hun Cheol、Shin Gi Chuel\n■シリーズ構成：市川十億衛門\n■キャラクター原案：梨本裕美（シンソフィア）\n■キャラクターデザイン：永野佑貴\n■CGディレクター：柳川智\n■音楽：森いづみ (bransic)\n■音響監督：小沼則義\n■アニメーション制作：OLM・DONGWOO A＆E\n■キャスト：\n青空ひまり：藤寺美徳\n星川みつき：平塚紗依\n鈴風つむぎ：久保ユリカ\n一条寺サクラ：日比優理香\n二階堂タマキ：鈴木杏奈\n三ツ葉アイリ：徳井青空\n四之宮リンリン：和多田美咲\n真実夜チィ：大地葉\n\n\n\n🎀アニメ「ひみつのアイプリ」公式HP\nhttps://aipri.jp/anime/\n\n🎀ゲーム「ひみつのアイプリ」「アイプリバース」公式HP\nhttps://aipri.jp/\nhttp://aipri.jp/verse/\n\n🎀おもちゃHP\nhttps://www.takaratomy.co.jp/products/himitsunoaipri/"
+        },
+        {
+          "id": "-iIG4VX9yog",
+          "title": "【公式CGライブ】「We're The World」青空ひまり、星川みつき、鈴風つむぎ",
+          "durationSec": 121,
+          "publishedAt": "2024-08-01T09:00:00Z",
+          "description": "アニメ『ひみつのアイプリ』公式CGライブ「We're The World」\n\n『一緒にアイプリしちゃお🎵』\n\nプリティーシリーズの最新作❣\n\n✨￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣\nわたしたちのムテキなライブで\nめざせ！キラキラのバズリウムチェンジ！\n\n　　　『ひみつのアイプリ』\n＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿✨\n\n毎週日曜日ごぜん10時～\nテレ東系列6局ネットにて放送中です❣\n配信情報などくわしくはアニメHPをチェックしてくださいね👀🔍\n\n🎀楽曲情報\n『We're The World』\n■作詞：本多友紀（Arte Refact）\n■作曲：本多友紀（Arte Refact）\n■編曲：脇眞富（Arte Refact）\n■うた：青空ひまり（CV.藤寺美徳）、星川みつき（CV.平塚紗依）、鈴風つむぎ（CV.久保ユリカ）\n\n🎀作品情報\n『ひみつのアイプリ』\n■放送：2024年4月 テレ東系列６局ネットにて放送スタート\n■原作：タカラトミーアーツ／シンソフィア\n■監督：藤咲淳一、山口健太郎\n■チーフディレクター：Park Chi Man、Nam Sung Min、Choi Hun Cheol、Shin Gi Chuel\n■シリーズ構成：市川十億衛門\n■キャラクター原案：梨本裕美（シンソフィア）\n■キャラクターデザイン：永野佑貴\n■CGディレクター：柳川智\n■音楽：森いづみ (bransic)\n■音響監督：小沼則義\n■アニメーション制作：OLM・DONGWOO A＆E\n■キャスト：\n青空ひまり：藤寺美徳\n星川みつき：平塚紗依\n鈴風つむぎ：久保ユリカ\n一条寺サクラ：日比優理香\n二階堂タマキ：鈴木杏奈\n三ツ葉アイリ：徳井青空\n四之宮リンリン：和多田美咲\n真実夜チィ：大地葉\n\n\n\n🎀アニメ「ひみつのアイプリ」公式HP\nhttps://aipri.jp/anime/\n\n🎀ゲーム「ひみつのアイプリ」「アイプリバース」公式HP\nhttps://aipri.jp/\nhttp://aipri.jp/verse/\n\n🎀おもちゃHP\nhttps://www.takaratomy.co.jp/products/himitsunoaipri/"
+        },
+        {
+          "id": "w3leuKxKSDo",
+          "title": "【公式CGライブ】「ネバギバラバー」三ツ葉アイリ、四之宮リンリン",
+          "durationSec": 122,
+          "publishedAt": "2024-08-08T09:00:49Z",
+          "description": "アニメ『ひみつのアイプリ』公式CGライブ「ネバギバラバー」\n\n『一緒にアイプリしちゃお🎵』\n\nプリティーシリーズの最新作❣\n\n✨￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣\nわたしたちのムテキなライブで\nめざせ！キラキラのバズリウムチェンジ！\n\n　　　『ひみつのアイプリ』\n＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿✨\n\n毎週日曜日ごぜん10時～\nテレ東系列6局ネットにて放送中です❣\n配信情報などくわしくはアニメHPをチェックしてくださいね👀🔍\n\n🎀楽曲情報\n『ネバギバラバー』\n■作詞：真崎エリカ\n■作曲：矢鴇つかさ（Arte Refact）\n■編曲：矢鴇つかさ（Arte Refact）\n■うた：三ツ葉アイリ（徳井青空）、四之宮リンリン（和多田美咲）\n\n🎀作品情報\n『ひみつのアイプリ』\n■放送：2024年4月 テレ東系列６局ネットにて放送スタート\n■原作：タカラトミーアーツ／シンソフィア\n■監督：藤咲淳一、山口健太郎\n■チーフディレクター：Park Chi Man、Nam Sung Min、Choi Hun Cheol、Shin Gi Chuel\n■シリーズ構成：市川十億衛門\n■キャラクター原案：梨本裕美（シンソフィア）\n■キャラクターデザイン：永野佑貴\n■CGディレクター：柳川智\n■音楽：森いづみ (bransic)\n■音響監督：小沼則義\n■アニメーション制作：OLM・DONGWOO A＆E\n■キャスト：\n青空ひまり：藤寺美徳\n星川みつき：平塚紗依\n鈴風つむぎ：久保ユリカ\n一条寺サクラ：日比優理香\n二階堂タマキ：鈴木杏奈\n三ツ葉アイリ：徳井青空\n四之宮リンリン：和多田美咲\n真実夜チィ：大地葉\n\n\n\n🎀アニメ「ひみつのアイプリ」公式HP\nhttps://aipri.jp/anime/\n\n🎀ゲーム「ひみつのアイプリ」「アイプリバース」公式HP\nhttps://aipri.jp/\nhttp://aipri.jp/verse/\n\n🎀おもちゃHP\nhttps://www.takaratomy.co.jp/products/himitsunoaipri/"
+        },
+        {
+          "id": "VEJQi8bHhK4",
+          "title": "【公式CGライブ】「Perfect☆STARs」一条寺サクラ、二階堂タマキ、三ツ葉アイリ、四之宮リンリン",
+          "durationSec": 121,
+          "publishedAt": "2024-10-10T09:00:33Z",
+          "description": "アニメ『ひみつのアイプリ』公式CGライブ「Perfect☆STARs」\n\n『一緒にアイプリしちゃお🎵』\n\nプリティーシリーズの最新作❣\n\n✨￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣\nわたしたちのムテキなライブで\nめざせ！キラキラのバズリウムチェンジ！\n\n　　　『ひみつのアイプリ』\n＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿✨\n\n毎週日曜日ごぜん10時～\nテレ東系列6局ネットにて放送中です❣\n配信情報などくわしくはアニメHPをチェックしてくださいね👀🔍\n\n🎀楽曲情報\n『Perfect☆STARs』\n■作詞：もにしなの（GOLDTAIL）\n■作曲：michitomo\n■編曲：田中 希（GOLDTAIL）\n■うた：一条寺サクラ（CV.日比優理香）、二階堂タマキ（CV.鈴木杏奈）、三ツ葉アイリ（CV.徳井青空）、四之宮リンリン（CV.和多田美咲）\n\n🎀作品情報\n『ひみつのアイプリ』\n■放送：2024年4月 テレ東系列６局ネットにて放送スタート\n■原作：タカラトミーアーツ／シンソフィア\n■監督：藤咲淳一、山口健太郎\n■チーフディレクター：Park Chi Man、Nam Sung Min、Choi Hun Cheol、Shin Gi Chuel\n■シリーズ構成：市川十億衛門\n■キャラクター原案：梨本裕美（シンソフィア）\n■キャラクターデザイン：永野佑貴\n■CGディレクター：柳川智\n■音楽：森いづみ (bransic)\n■音響監督：小沼則義\n■アニメーション制作：OLM・DONGWOO A＆E\n■キャスト：\n青空ひまり：藤寺美徳\n星川みつき：平塚紗依\n鈴風つむぎ：久保ユリカ\n一条寺サクラ：日比優理香\n二階堂タマキ：鈴木杏奈\n三ツ葉アイリ：徳井青空\n四之宮リンリン：和多田美咲\n真実夜チィ：大地葉\n\n🎀アニメ「ひみつのアイプリ」公式HP\nhttps://aipri.jp/anime/\n\n🎀ゲーム「ひみつのアイプリ」「アイプリバース」公式HP\nhttps://aipri.jp/\nhttp://aipri.jp/verse/\n\n🎀おもちゃHP\nhttps://www.takaratomy.co.jp/products/himitsunoaipri/\n\n🎀楽曲情報\n『Perfect STARs』\n■作詞：もにしなの（GOLDTAIL）\n■作曲：michitomo\n■編曲：田中 希（GOLDTAIL）\n■うた：一条寺サクラ（CV.日比優理香）、二階堂タマキ（CV.鈴木杏奈）、三ツ葉アイリ（CV.徳井青空）、四之宮リンリン（CV.和多田美咲）\n\n🎀作品情報\n『ひみつのアイプリ』\n■放送：2024年4月 テレ東系列６局ネットにて放送スタート\n■原作：タカラトミーアーツ／シンソフィア\n■監督：藤咲淳一、山口健太郎\n■チーフディレクター：Park Chi Man、Nam Sung Min、Choi Hun Cheol、Shin Gi Chuel\n■シリーズ構成：市川十億衛門\n■キャラクター原案：梨本裕美（シンソフィア）\n■キャラクターデザイン：永野佑貴\n■CGディレクター：柳川智\n■音楽：森いづみ (bransic)\n■音響監督：小沼則義\n■アニメーション制作：OLM・DONGWOO A＆E\n■キャスト：\n青空ひまり：藤寺美徳\n星川みつき：平塚紗依\n鈴風つむぎ：久保ユリカ\n一条寺サクラ：日比優理香\n二階堂タマキ：鈴木杏奈\n三ツ葉アイリ：徳井青空\n四之宮リンリン：和多田美咲\n真実夜チィ：大地葉\n\n🎀アニメ「ひみつのアイプリ」公式HP\nhttps://aipri.jp/anime/\n\n🎀ゲーム「ひみつのアイプリ」「アイプリバース」公式HP\nhttps://aipri.jp/\nhttp://aipri.jp/verse/\n\n🎀おもちゃHP\nhttps://www.takaratomy.co.jp/products/himitsunoaipri/"
+        },
+        {
+          "id": "tzY7D7hgIcs",
+          "title": "【公式CGライブ】「GIRA GIRA STAR」真実夜チィ",
+          "durationSec": 115,
+          "publishedAt": "2024-11-14T09:00:56Z",
+          "description": "アニメ『ひみつのアイプリ』公式CGライブ「GIRA GIRA STAR」\n\n『一緒にアイプリしちゃお🎵』\n\nプリティーシリーズの最新作❣\n\n✨￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣\nわたしたちのムテキなライブで\nめざせ！キラキラのバズリウムチェンジ！\n\n　　　『ひみつのアイプリ』\n＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿✨\n\n毎週日曜日ごぜん10時～\nテレ東系列6局ネットにて放送中です❣\n配信情報などくわしくはアニメHPをチェックしてくださいね👀🔍\n\n🎀楽曲情報\n『GIRA GIRA STAR』\n■作詞：mekakushe, 笹川真生 \n■作曲・編曲：笹川真生\n■うた：真実夜チィ（CV.大地葉）\n\n🎀作品情報\n『ひみつのアイプリ』\n■放送：2024年4月 テレ東系列６局ネットにて放送スタート\n■原作：タカラトミーアーツ／シンソフィア\n■監督：藤咲淳一、山口健太郎\n■チーフディレクター：Park Chi Man、Nam Sung Min、Choi Hun Cheol、Shin Gi Chuel\n■シリーズ構成：市川十億衛門\n■キャラクター原案：梨本裕美（シンソフィア）\n■キャラクターデザイン：永野佑貴\n■CGディレクター：柳川智\n■音楽：森いづみ (bransic)\n■音響監督：小沼則義\n■アニメーション制作：OLM・DONGWOO A＆E\n■キャスト：\n青空ひまり：藤寺美徳\n星川みつき：平塚紗依\n鈴風つむぎ：久保ユリカ\n一条寺サクラ：日比優理香\n二階堂タマキ：鈴木杏奈\n三ツ葉アイリ：徳井青空\n四之宮リンリン：和多田美咲\n真実夜チィ：大地葉\n\n\n\n🎀アニメ「ひみつのアイプリ」公式HP\nhttps://aipri.jp/anime/\n\n🎀ゲーム「ひみつのアイプリ」「アイプリバース」公式HP\nhttps://aipri.jp/\nhttp://aipri.jp/verse/\n\n🎀おもちゃHP\nhttps://www.takaratomy.co.jp/products/himitsunoaipri/"
+        },
+        {
+          "id": "9P9t6Cjpr6c",
+          "title": "【公式CGライブ】「きらめきのうた」鈴風つむぎ",
+          "durationSec": 121,
+          "publishedAt": "2024-12-12T09:00:09Z",
+          "description": "アニメ『ひみつのアイプリ』公式CGライブ「きらめきのうた」\n\n『一緒にアイプリしちゃお🎵』\n\nプリティーシリーズの最新作❣\n\n✨￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣\nわたしたちのムテキなライブで\nめざせ！キラキラのバズリウムチェンジ！\n\n　　　『ひみつのアイプリ』\n＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿✨\n\n毎週日曜日ごぜん10時～\nテレ東系列6局ネットにて放送中です❣\n配信情報などくわしくはアニメHPをチェックしてくださいね👀🔍\n\n🎀楽曲情報\n『きらめきのうた』\n■作詞：amira \n■作曲・編曲：田子剛、井本光紀(bransic)\n■ストリングスアレンジ： 森いづみ(bransic)\n■うた：鈴風つむぎ（CV.久保ユリカ）\n\n🎀作品情報\n『ひみつのアイプリ』\n■放送：2024年4月 テレ東系列６局ネットにて放送スタート\n■原作：タカラトミーアーツ／シンソフィア\n■監督：藤咲淳一、山口健太郎\n■チーフディレクター：Park Chi Man、Nam Sung Min、Choi Hun Cheol、Shin Gi Chuel\n■シリーズ構成：市川十億衛門\n■キャラクター原案：梨本裕美（シンソフィア）\n■キャラクターデザイン：永野佑貴\n■CGディレクター：柳川智\n■音楽：森いづみ (bransic)\n■音響監督：小沼則義\n■アニメーション制作：OLM・DONGWOO A＆E\n■キャスト：\n青空ひまり：藤寺美徳\n星川みつき：平塚紗依\n鈴風つむぎ：久保ユリカ\n一条寺サクラ：日比優理香\n二階堂タマキ：鈴木杏奈\n三ツ葉アイリ：徳井青空\n四之宮リンリン：和多田美咲\n真実夜チィ：大地葉\n\n\n\n🎀アニメ「ひみつのアイプリ」公式HP\nhttps://aipri.jp/anime/\n\n🎀ゲーム「ひみつのアイプリ」「アイプリバース」公式HP\nhttps://aipri.jp/\nhttp://aipri.jp/verse/\n\n🎀おもちゃHP\nhttps://www.takaratomy.co.jp/products/himitsunoaipri/"
+        },
+        {
+          "id": "UXi-vtm3aAg",
+          "title": "【公式CGライブ】「パステルステップデイズ」青空ひまり",
+          "durationSec": 117,
+          "publishedAt": "2025-01-16T09:00:25Z",
+          "description": "アニメ『ひみつのアイプリ』公式CGライブ「パステルステップデイズ」\n\n『一緒にアイプリしちゃお🎵』\n\nプリティーシリーズの最新作❣\n\n✨￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣\nわたしたちのムテキなライブで\nめざせ！キラキラのバズリウムチェンジ！\n\n　　　『ひみつのアイプリ』\n＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿✨\n\n毎週日曜日ごぜん10時～\nテレ東系列6局ネットにて放送中です❣\n配信情報などくわしくはアニメHPをチェックしてくださいね👀🔍\n\n🎀楽曲情報\n『パステルステップデイズ』\n■うた：青空ひまり（CV.藤寺美徳）\n■作詞：真崎エリカ\n■作曲・編曲：矢鴇つかさ（Arte Refact）\n\n🎀作品情報\n『ひみつのアイプリ』\n■放送：2024年4月 テレ東系列６局ネットにて放送スタート\n■原作：タカラトミーアーツ／シンソフィア\n■監督：藤咲淳一、山口健太郎\n■チーフディレクター：Park Chi Man、Nam Sung Min、Choi Hun Cheol、Shin Gi Chuel\n■シリーズ構成：市川十億衛門\n■キャラクター原案：梨本裕美（シンソフィア）\n■キャラクターデザイン：永野佑貴\n■CGディレクター：柳川智\n■音楽：森いづみ (bransic)\n■音響監督：小沼則義\n■アニメーション制作：OLM・DONGWOO A＆E\n■キャスト：\n青空ひまり：藤寺美徳\n星川みつき：平塚紗依\n鈴風つむぎ：久保ユリカ\n一条寺サクラ：日比優理香\n二階堂タマキ：鈴木杏奈\n三ツ葉アイリ：徳井青空\n四之宮リンリン：和多田美咲\n真実夜チィ：大地葉\n\n\n\n🎀アニメ「ひみつのアイプリ」公式HP\nhttps://aipri.jp/anime/\n\n🎀ゲーム「ひみつのアイプリ」「アイプリバース」公式HP\nhttps://aipri.jp/\nhttp://aipri.jp/verse/\n\n🎀おもちゃHP\nhttps://www.takaratomy.co.jp/products/himitsunoaipri/"
+        },
+        {
+          "id": "GBMFY6zPwOE",
+          "title": "【公式CGライブ】「GIRA GIRA STAR」ダークチィ",
+          "durationSec": 115,
+          "publishedAt": "2025-01-23T10:00:16Z",
+          "description": "アニメ『ひみつのアイプリ』公式CGライブ「GIRA GIRA STAR」\n\n『一緒にアイプリしちゃお🎵』\n\nプリティーシリーズの最新作❣\n\n✨￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣\nわたしたちのムテキなライブで\nめざせ！キラキラのバズリウムチェンジ！\n\n　　　『ひみつのアイプリ』\n＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿✨\n\n毎週日曜日ごぜん10時～\nテレ東系列6局ネットにて放送中です❣\n配信情報などくわしくはアニメHPをチェックしてくださいね👀🔍\n\n🎀楽曲情報\n『GIRA GIRA STAR』\n■うた：ダークチィ（CV.大地葉）\n■作詞：mekakushe, 笹川真生 \n■作曲・編曲：笹川真生\n\n\n🎀作品情報\n『ひみつのアイプリ』\n■放送：2024年4月 テレ東系列６局ネットにて放送スタート\n■原作：タカラトミーアーツ／シンソフィア\n■監督：藤咲淳一、山口健太郎\n■チーフディレクター：Park Chi Man、Nam Sung Min、Choi Hun Cheol、Shin Gi Chuel\n■シリーズ構成：市川十億衛門\n■キャラクター原案：梨本裕美（シンソフィア）\n■キャラクターデザイン：永野佑貴\n■CGディレクター：柳川智\n■音楽：森いづみ (bransic)\n■音響監督：小沼則義\n■アニメーション制作：OLM・DONGWOO A＆E\n■キャスト：\n青空ひまり：藤寺美徳\n星川みつき：平塚紗依\n鈴風つむぎ：久保ユリカ\n一条寺サクラ：日比優理香\n二階堂タマキ：鈴木杏奈\n三ツ葉アイリ：徳井青空\n四之宮リンリン：和多田美咲\n真実夜チィ：大地葉\n\n\n\n🎀アニメ「ひみつのアイプリ」公式HP\nhttps://aipri.jp/anime/\n\n🎀ゲーム「ひみつのアイプリ」「アイプリバース」公式HP\nhttps://aipri.jp/\nhttp://aipri.jp/verse/\n\n🎀おもちゃHP\nhttps://www.takaratomy.co.jp/products/himitsunoaipri/"
+        },
+        {
+          "id": "_kd0q-eyWww",
+          "title": "【公式CGライブ】「ニュースタージョーカー」ダークサクラ、ダークタマキ、ダークアイリ、ダークリンリン",
+          "durationSec": 122,
+          "publishedAt": "2025-02-06T09:00:41Z",
+          "description": "アニメ『ひみつのアイプリ』公式CGライブ「ニュースタージョーカー」\n\n『一緒にアイプリしちゃお🎵』\n\nプリティーシリーズの最新作❣\n\n✨￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣\nわたしたちのムテキなライブで\nめざせ！キラキラのバズリウムチェンジ！\n\n　　　『ひみつのアイプリ』\n＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿✨\n\n毎週日曜日ごぜん10時～\nテレ東系列6局ネットにて放送中です❣\n配信情報などくわしくはアニメHPをチェックしてくださいね👀🔍\n\n🎀楽曲情報\n『ニュースタージョーカー』\n■うた：ダークサクラ（CV.日比優理香）、ダークタマキ（CV.鈴木杏奈）、\nダークアイリ（CV.徳井青空）、ダークリンリン（CV.和多田美咲）\n■作詞：真崎エリカ\n■作曲：本多友紀（Arte Refact）\n■編曲：脇眞富（Arte Refact）\n\n\n🎀作品情報\n『ひみつのアイプリ』\n■放送：2024年4月 テレ東系列６局ネットにて放送スタート\n■原作：タカラトミーアーツ／シンソフィア\n■監督：藤咲淳一、山口健太郎\n■チーフディレクター：Park Chi Man、Nam Sung Min、Choi Hun Cheol、Shin Gi Chuel\n■シリーズ構成：市川十億衛門\n■キャラクター原案：梨本裕美（シンソフィア）\n■キャラクターデザイン：永野佑貴\n■CGディレクター：柳川智\n■音楽：森いづみ (bransic)\n■音響監督：小沼則義\n■アニメーション制作：OLM・DONGWOO A＆E\n■キャスト：\n青空ひまり：藤寺美徳\n星川みつき：平塚紗依\n鈴風つむぎ：久保ユリカ\n一条寺サクラ：日比優理香\n二階堂タマキ：鈴木杏奈\n三ツ葉アイリ：徳井青空\n四之宮リンリン：和多田美咲\n真実夜チィ：大地葉\n\n\n\n🎀アニメ「ひみつのアイプリ」公式HP\nhttps://aipri.jp/anime/\n\n🎀ゲーム「ひみつのアイプリ」「アイプリバース」公式HP\nhttps://aipri.jp/\nhttp://aipri.jp/verse/\n\n🎀おもちゃHP\nhttps://www.takaratomy.co.jp/products/himitsunoaipri/"
+        },
+        {
+          "id": "_jKaexgo2cc",
+          "title": "【公式CGライブ】「きらめきのうた」青空ひまり、星川みつき、鈴風つむぎ",
+          "durationSec": 121,
+          "publishedAt": "2025-03-20T09:00:45Z",
+          "description": "アニメ『ひみつのアイプリ』公式CGライブ「きらめきのうた」\n\n『一緒にアイプリしちゃお🎵』\n\nプリティーシリーズの最新作❣\n\n✨￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣\nわたしたちのムテキなライブで\nめざせ！キラキラのバズリウムチェンジ！\n\n　　　『ひみつのアイプリ』\n＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿✨\n\n毎週日曜日ごぜん10時～\nテレ東系列6局ネットにて放送中です❣\n配信情報などくわしくはアニメHPをチェックしてくださいね👀🔍\n\n🎀楽曲情報\n『きらめきのうた』\n■作詞：amira \n■作曲・編曲：田子剛、井本光紀(bransic)\n■ストリングスアレンジ： 森いづみ(bransic)\n■うた：青空ひまり（CV.藤寺美徳）、星川みつき（CV.平塚紗依）、鈴風つむぎ（CV.久保ユリカ）\n\n🎀作品情報\n『ひみつのアイプリ』\n■放送：2024年4月 テレ東系列６局ネットにて放送スタート\n■原作：タカラトミーアーツ／シンソフィア\n■監督：藤咲淳一、山口健太郎\n■チーフディレクター：Park Chi Man、Nam Sung Min、Choi Hun Cheol、Shin Gi Chuel\n■シリーズ構成：市川十億衛門\n■キャラクター原案：梨本裕美（シンソフィア）\n■キャラクターデザイン：永野佑貴\n■CGディレクター：柳川智\n■音楽：森いづみ (bransic)\n■音響監督：小沼則義\n■アニメーション制作：OLM・DONGWOO A＆E\n■キャスト：\n青空ひまり：藤寺美徳\n星川みつき：平塚紗依\n鈴風つむぎ：久保ユリカ\n一条寺サクラ：日比優理香\n二階堂タマキ：鈴木杏奈\n三ツ葉アイリ：徳井青空\n四之宮リンリン：和多田美咲\n真実夜チィ：大地葉\n\n\n\n🎀アニメ「ひみつのアイプリ」公式HP\nhttps://aipri.jp/anime/\n\n🎀ゲーム「ひみつのアイプリ」「アイプリバース」公式HP\nhttps://aipri.jp/\nhttp://aipri.jp/verse/\n\n🎀おもちゃHP\nhttps://www.takaratomy.co.jp/products/himitsunoaipri/"
+        },
+        {
+          "id": "01cY2syJlV0",
+          "title": "【公式CGライブ】「キズナ×リンク」青空ひまり、星川みつき",
+          "durationSec": 116,
+          "publishedAt": "2025-04-17T09:00:00Z",
+          "description": "アニメ『ひみつのアイプリ』公式CGライブ「キズナ×リンク」\n\n✨￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣\nわたしたちのムテキなライブで\nめざせ！キラキラのバズリウムチェンジ！\n\n　　　『ひみつのアイプリ』\n＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿✨\n\nテレ東系列6局ネットにて\n2025年4月6日から\n毎週日曜あさ9時30分〜放送中❣\n\n放送時間が変わるので\n注意してくださいね📢⚠\n\n🎀楽曲情報\n『キズナ×リンク』\n■作詞・作曲：本多友紀（Arte Refact）\n■編曲：Nika Lenz（Arte Refact）\n■うた：青空ひまり（CV.藤寺美徳）、星川みつき（CV.平塚紗依）\n\n🎀作品情報\n『ひみつのアイプリ』\n■放送：2025年4月6日(日)あさ9時30分～テレ東系列6局ネットにて放送\n■原作：タカラトミーアーツ・シンソフィア\n■監督：藤咲淳一・山口健太郎\n■チーフディレクター：Nam Sung Min、Shin Gi Chuel、An Jae Ho、Jeon Byeong Cheol、Kim Seong Hyeon、Oh Seon Gyeong、Choi Gyeong Won\n■シリーズ構成：市川十億衛門\n■キャラクター原案：梨本裕美（シンソフィア）\n■キャラクターデザイン：永野佑貴\n■CGディレクター：柳川智\n■音楽：森いづみ (bransic)\n■音響監督：小沼則義\n■アニメーション制作：OLM・DONGWOO A＆E\n■キャスト：\n青空ひまり：藤寺美徳／星川みつき：平塚紗依　ほか\n\n🎀主題歌\nオープニング主題歌『Ring Ring Ring feat. ひまり』／Ｐ丸様。\nエンディング主題歌『ひみつのふふふ』／超ときめき♡宣伝部\n\n🎀アニメ「ひみつのアイプリ」公式HP\nhttps://aipri.jp/anime/"
+        },
+        {
+          "id": "pmlmQkBaXBo",
+          "title": "【公式CGライブ】「超Easy Drive☆」五十嵐じゅりあ",
+          "durationSec": 117,
+          "publishedAt": "2025-05-01T09:01:17Z",
+          "description": "アニメ『ひみつのアイプリ』公式CGライブ「超Easy Drive☆」\n\n✨￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣\nわたしたちのムテキなライブで\nめざせ！キラキラのバズリウムチェンジ！\n\n　　　『ひみつのアイプリ』\n＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿✨\n\nテレ東系列6局ネットにて\n2025年4月6日から\n毎週日曜あさ9時30分〜放送中❣\n\n放送時間が変わるので\n注意してくださいね📢⚠\n\n🎀楽曲情報\n『超Easy Drive☆』\n■うた：五十嵐じゅりあ（CV.土屋李央）\n■作詞：SUNNY-PLAY\n■作曲：SUNNY-PLAY, 岡部 波音\n■編曲：SUNNY-PLAY\n\n🎀作品情報\n『ひみつのアイプリ』\n■放送：2025年4月6日(日)あさ9時30分～テレ東系列6局ネットにて放送\n■原作：タカラトミーアーツ・シンソフィア\n■監督：藤咲淳一・山口健太郎\n■チーフディレクター：Nam Sung Min、Shin Gi Chuel、An Jae Ho、Jeon Byeong Cheol、Kim Seong Hyeon、Oh Seon Gyeong、Choi Gyeong Won\n■シリーズ構成：市川十億衛門\n■キャラクター原案：梨本裕美（シンソフィア）\n■キャラクターデザイン：永野佑貴\n■CGディレクター：柳川智\n■音楽：森いづみ (bransic)\n■音響監督：小沼則義\n■アニメーション制作：OLM・DONGWOO A＆E\n■キャスト：\n青空ひまり：藤寺美徳／星川みつき：平塚紗依　ほか\n\n🎀主題歌\nオープニング主題歌『Ring Ring Ring feat. ひまり』／Ｐ丸様。\nエンディング主題歌『ひみつのふふふ』／超ときめき♡宣伝部\n\n🎀アニメ「ひみつのアイプリ」公式HP\nhttps://aipri.jp/anime/"
+        },
+        {
+          "id": "yJ7R6jAYNPA",
+          "title": "【公式CGライブ】「わたしの大切にしてたこと」六堂える",
+          "durationSec": 119,
+          "publishedAt": "2025-05-01T09:01:33Z",
+          "description": "アニメ『ひみつのアイプリ』公式CGライブ「わたしの大切にしてたこと」\n\n✨￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣\nわたしたちのムテキなライブで\nめざせ！キラキラのバズリウムチェンジ！\n\n　　　『ひみつのアイプリ』\n＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿✨\n\nテレ東系列6局ネットにて\n2025年4月6日から\n毎週日曜あさ9時30分〜放送中❣\n\n放送時間が変わるので\n注意してくださいね📢⚠\n\n🎀楽曲情報\n『わたしの大切にしてたこと』\n■うた：六堂える（CV.川口莉奈）\n■作詞・作曲 ・編曲：OGAWA RYO\n\n🎀作品情報\n『ひみつのアイプリ』\n■放送：2025年4月6日(日)あさ9時30分～テレ東系列6局ネットにて放送\n■原作：タカラトミーアーツ・シンソフィア\n■監督：藤咲淳一・山口健太郎\n■チーフディレクター：Nam Sung Min、Shin Gi Chuel、An Jae Ho、Jeon Byeong Cheol、Kim Seong Hyeon、Oh Seon Gyeong、Choi Gyeong Won\n■シリーズ構成：市川十億衛門\n■キャラクター原案：梨本裕美（シンソフィア）\n■キャラクターデザイン：永野佑貴\n■CGディレクター：柳川智\n■音楽：森いづみ (bransic)\n■音響監督：小沼則義\n■アニメーション制作：OLM・DONGWOO A＆E\n■キャスト：\n青空ひまり：藤寺美徳／星川みつき：平塚紗依　ほか\n\n🎀主題歌\nオープニング主題歌『Ring Ring Ring feat. ひまり』／Ｐ丸様。\nエンディング主題歌『ひみつのふふふ』／超ときめき♡宣伝部\n\n🎀アニメ「ひみつのアイプリ」公式HP\nhttps://aipri.jp/anime/"
+        },
+        {
+          "id": "zyTT2P_1HWo",
+          "title": "【公式CGライブ】「ときめきグラビティ」五十嵐じゅりあ、六堂える",
+          "durationSec": 118,
+          "publishedAt": "2025-05-22T09:01:32Z",
+          "description": "アニメ『ひみつのアイプリ』公式CGライブ「ときめきグラビティ」\n\n✨￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣\nわたしたちのムテキなライブで\nめざせ！キラキラのバズリウムチェンジ！\n\n　　　『ひみつのアイプリ』\n＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿✨\n\nテレ東系列6局ネットにて\n2025年4月6日から\n毎週日曜あさ9時30分〜放送中❣\n\n放送時間が変わるので\n注意してくださいね📢⚠\n\n🎀楽曲情報\n『ときめきグラビティ』\n■うた：五十嵐じゅりあ（CV.土屋李央）、六堂える（CV.川口莉奈）\n■作詞・作曲 ・編曲：OGAWA RYO\n\n🎀作品情報\n『ひみつのアイプリ』\n■放送：2025年4月6日(日)あさ9時30分～テレ東系列6局ネットにて放送\n■原作：タカラトミーアーツ・シンソフィア\n■監督：藤咲淳一・山口健太郎\n■チーフディレクター：Nam Sung Min、Shin Gi Chuel、An Jae Ho、Jeon Byeong Cheol、Kim Seong Hyeon、Oh Seon Gyeong、Choi Gyeong Won\n■シリーズ構成：市川十億衛門\n■キャラクター原案：梨本裕美（シンソフィア）\n■キャラクターデザイン：永野佑貴\n■CGディレクター：柳川智\n■音楽：森いづみ (bransic)\n■音響監督：小沼則義\n■アニメーション制作：OLM・DONGWOO A＆E\n■キャスト：\n青空ひまり：藤寺美徳／星川みつき：平塚紗依　ほか\n\n🎀主題歌\nオープニング主題歌『Ring Ring Ring feat. ひまり』／Ｐ丸様。\nエンディング主題歌『ひみつのふふふ』／超ときめき♡宣伝部\n\n🎀アニメ「ひみつのアイプリ」公式HP\nhttps://aipri.jp/anime/"
+        },
+        {
+          "id": "Oa5NtZzEOi4",
+          "title": "【公式CGライブ】「ぴかぴかマイストーリー」星川みつき",
+          "durationSec": 119,
+          "publishedAt": "2025-06-26T09:00:36Z",
+          "description": "アニメ『ひみつのアイプリ』公式CGライブ「ぴかぴかマイストーリー」\n\n✨￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣\nわたしたちのムテキなライブで\nめざせ！キラキラのバズリウムチェンジ！\n\n　　　『ひみつのアイプリ』\n＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿✨\n\nテレ東系列6局ネットにて\n2025年4月6日から\n毎週日曜あさ9時30分〜放送中❣\n\n放送時間が変わるので\n注意してくださいね📢⚠\n\n🎀楽曲情報\n『ぴかぴかマイストーリー』\n■うた：星川みつき（CV.平塚紗依）\n■作詞：nozomi*\n■作曲：Kyosuke Yamanaka,nozomi*\n■編曲：Kyosuke Yamanaka\n\n🎀作品情報\n『ひみつのアイプリ』\n■放送：2025年4月6日(日)あさ9時30分～テレ東系列6局ネットにて放送\n■原作：タカラトミーアーツ・シンソフィア\n■監督：藤咲淳一・山口健太郎\n■チーフディレクター：Nam Sung Min、Shin Gi Chuel、An Jae Ho、Jeon Byeong Cheol、Kim Seong Hyeon、Oh Seon Gyeong、Choi Gyeong Won\n■シリーズ構成：市川十億衛門\n■キャラクター原案：梨本裕美（シンソフィア）\n■キャラクターデザイン：永野佑貴\n■CGディレクター：柳川智\n■音楽：森いづみ (bransic)\n■音響監督：小沼則義\n■アニメーション制作：OLM・DONGWOO A＆E\n■キャスト：\n青空ひまり：藤寺美徳／星川みつき：平塚紗依　ほか\n\n🎀主題歌\nオープニング主題歌『Ring Ring Ring feat. ひまり』／Ｐ丸様。\nエンディング主題歌『ひみつのふふふ』／超ときめき♡宣伝部\n\n🎀アニメ「ひみつのアイプリ」公式HP\nhttps://aipri.jp/anime/"
+        },
+        {
+          "id": "fFEHIaU9LSU",
+          "title": "【公式CGライブ】「Piece Of Dream」七浦すばる",
+          "durationSec": 118,
+          "publishedAt": "2025-07-03T09:01:04Z",
+          "description": "アニメ『ひみつのアイプリ』公式CGライブ「Piece Of Dream」\n\n✨￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣\nわたしたちのムテキなライブで\nめざせ！キラキラのバズリウムチェンジ！\n\n　　　『ひみつのアイプリ』\n＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿✨\n\nテレ東系列6局ネットにて\n2025年4月6日から\n毎週日曜あさ9時30分〜放送中❣\n\n放送時間が変わるので\n注意してくださいね📢⚠\n\n🎀楽曲情報\n『Piece Of Dream』\n■うた：七浦すばる（CV.小林竜之）\n■作詞：Yohei Abe\n■作曲：Yohei Abe,Haruna\n■編曲：Yohei Abe\n\n🎀作品情報\n『ひみつのアイプリ』\n■放送：2025年4月6日(日)あさ9時30分～テレ東系列6局ネットにて放送\n■原作：タカラトミーアーツ・シンソフィア\n■監督：藤咲淳一・山口健太郎\n■チーフディレクター：Nam Sung Min、Shin Gi Chuel、An Jae Ho、Jeon Byeong Cheol、Kim Seong Hyeon、Oh Seon Gyeong、Choi Gyeong Won\n■シリーズ構成：市川十億衛門\n■キャラクター原案：梨本裕美（シンソフィア）\n■キャラクターデザイン：永野佑貴\n■CGディレクター：柳川智\n■音楽：森いづみ (bransic)\n■音響監督：小沼則義\n■アニメーション制作：OLM・DONGWOO A＆E\n■キャスト：\n青空ひまり：藤寺美徳／星川みつき：平塚紗依　ほか\n\n🎀主題歌\nオープニング主題歌『Ring Ring Ring feat. ひまり』／Ｐ丸様。\nエンディング主題歌『ひみつのふふふ』／超ときめき♡宣伝部\n\n🎀アニメ「ひみつのアイプリ」公式HP\nhttps://aipri.jp/anime/"
+        },
+        {
+          "id": "zPD-5EwhQpo",
+          "title": "【公式CGライブ】「ココロ・アストロノーツ」七浦すばる、七浦おとめ",
+          "durationSec": 120,
+          "publishedAt": "2025-07-10T09:01:28Z",
+          "description": "アニメ『ひみつのアイプリ』公式CGライブ「Piece Of Dream」\n\n✨￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣\nわたしたちのムテキなライブで\nめざせ！キラキラのバズリウムチェンジ！\n\n　　　『ひみつのアイプリ』\n＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿✨\n\nテレ東系列6局ネットにて\n2025年4月6日から\n毎週日曜あさ9時30分〜放送中❣\n\n放送時間が変わるので\n注意してくださいね📢⚠\n\n🎀楽曲情報\n『ココロ・アストロノーツ』\n■うた：七浦すばる（CV.小林竜之）七浦おとめ（CV.大森綺星）\n■作詞：児玉雨子\n■作曲：michitomo\n■編曲：新山俊也（GOLDTAIL）\n\n🎀作品情報\n『ひみつのアイプリ』\n■放送：2025年4月6日(日)あさ9時30分～テレ東系列6局ネットにて放送\n■原作：タカラトミーアーツ・シンソフィア\n■監督：藤咲淳一・山口健太郎\n■チーフディレクター：Nam Sung Min、Shin Gi Chuel、An Jae Ho、Jeon Byeong Cheol、Kim Seong Hyeon、Oh Seon Gyeong、Choi Gyeong Won\n■シリーズ構成：市川十億衛門\n■キャラクター原案：梨本裕美（シンソフィア）\n■キャラクターデザイン：永野佑貴\n■CGディレクター：柳川智\n■音楽：森いづみ (bransic)\n■音響監督：小沼則義\n■アニメーション制作：OLM・DONGWOO A＆E\n■キャスト：\n青空ひまり：藤寺美徳／星川みつき：平塚紗依　ほか\n\n🎀主題歌\nオープニング主題歌『Ring Ring Ring feat. ひまり』／Ｐ丸様。\nエンディング主題歌『ひみつのふふふ』／超ときめき♡宣伝部\n\n🎀アニメ「ひみつのアイプリ」公式HP\nhttps://aipri.jp/anime/"
+        },
+        {
+          "id": "bKYrUxDgBeQ",
+          "title": "【公式CGライブ】「わいるど☆すたー」八王子ビビ",
+          "durationSec": 112,
+          "publishedAt": "2025-08-21T09:00:51Z",
+          "description": "アニメ『ひみつのアイプリ』公式CGライブ「わいるど☆すたー」\n\n✨￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣\nわたしたちのムテキなライブで\nめざせ！キラキラのバズリウムチェンジ！\n\n　　　『ひみつのアイプリ』\n＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿✨\n\nテレ東系列6局ネットにて\n2025年4月6日から\n毎週日曜あさ9時30分〜放送中❣\n\n放送時間が変わるので\n注意してくださいね📢⚠\n\n🎀楽曲情報\n『わいるど☆すたー』\n■うた：八王子ビビ（CV.寺澤百花）\n■作詞：大熊淳生（Arte Refact）\n■作曲：大熊淳生（Arte Refact）\n■編曲：大熊淳生（Arte Refact）\n\n🎀作品情報\n『ひみつのアイプリ』\n■放送：2025年4月6日(日)あさ9時30分～テレ東系列6局ネットにて放送\n■原作：タカラトミーアーツ・シンソフィア\n■監督：藤咲淳一・山口健太郎\n■チーフディレクター：Nam Sung Min、Shin Gi Chuel、An Jae Ho、Jeon Byeong Cheol、Kim Seong Hyeon、Oh Seon Gyeong、Choi Gyeong Won\n■シリーズ構成：市川十億衛門\n■キャラクター原案：梨本裕美（シンソフィア）\n■キャラクターデザイン：永野佑貴\n■CGディレクター：柳川智\n■音楽：森いづみ (bransic)\n■音響監督：小沼則義\n■アニメーション制作：OLM・DONGWOO A＆E\n■キャスト：\n青空ひまり：藤寺美徳／星川みつき：平塚紗依　ほか\n\n🎀主題歌\nオープニング主題歌『Ring Ring Ring feat. ひまり』／Ｐ丸様。\nエンディング主題歌『ひみつのふふふ』／超ときめき♡宣伝部\n\n🎀アニメ「ひみつのアイプリ」公式HP\nhttps://aipri.jp/anime/"
+        },
+        {
+          "id": "PGUX6ilp5_k",
+          "title": "【公式CGライブ】「わいるど☆すたー」八王子ビビ、真実夜チィ",
+          "durationSec": 112,
+          "publishedAt": "2025-09-18T09:00:40Z",
+          "description": "アニメ『ひみつのアイプリ』公式CGライブ「わいるど☆すたー」\n\n✨￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣\nわたしたちのムテキなライブで\nめざせ！キラキラのバズリウムチェンジ！\n\n　　　『ひみつのアイプリ』\n＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿✨\n\nテレ東系列6局ネットにて\n2025年4月6日から\n毎週日曜あさ9時30分〜放送中❣\n\n放送時間が変わるので\n注意してくださいね📢⚠\n\n🎀楽曲情報\n『わいるど☆すたー』\n■うた：八王子ビビ（CV.寺澤百花）、真実夜チィ（CV.大地葉）\n■作詞：大熊淳生（Arte Refact）\n■作曲：大熊淳生（Arte Refact）\n■編曲：大熊淳生（Arte Refact）\n\n🎀作品情報\n『ひみつのアイプリ』\n■放送：2025年4月6日(日)あさ9時30分～テレ東系列6局ネットにて放送\n■原作：タカラトミーアーツ・シンソフィア\n■監督：藤咲淳一・山口健太郎\n■チーフディレクター：Nam Sung Min、Shin Gi Chuel、An Jae Ho、Jeon Byeong Cheol、Kim Seong Hyeon、Oh Seon Gyeong、Choi Gyeong Won\n■シリーズ構成：市川十億衛門\n■キャラクター原案：梨本裕美（シンソフィア）\n■キャラクターデザイン：永野佑貴\n■CGディレクター：柳川智\n■音楽：森いづみ (bransic)\n■音響監督：小沼則義\n■アニメーション制作：OLM・DONGWOO A＆E\n■キャスト：\n青空ひまり：藤寺美徳／星川みつき：平塚紗依　ほか\n\n🎀主題歌\nオープニング主題歌『Ring Ring Ring feat. ひまり』／Ｐ丸様。\nエンディング主題歌『ひみつのふふふ』／超ときめき♡宣伝部\n\n🎀アニメ「ひみつのアイプリ」公式HP\nhttps://aipri.jp/anime/"
+        },
+        {
+          "id": "AJzaGdxyOUE",
+          "title": "【公式CGライブ】「ミライのプリンセス」リング・クローバー",
+          "durationSec": 124,
+          "publishedAt": "2025-10-23T09:00:14Z",
+          "description": "アニメ『ひみつのアイプリ』公式CGライブ「ミライのプリンセス」\n\n✨￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣\nわたしたちのムテキなライブで\nめざせ！キラキラのバズリウムチェンジ！\n\n　　　『ひみつのアイプリ』\n＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿✨\n\nテレ東系列6局ネットにて\n2025年4月6日から\n毎週日曜あさ9時30分〜放送中❣\n\n放送時間が変わるので\n注意してくださいね📢⚠\n\n🎀楽曲情報\n『ミライのプリンセス』\n■うた：リング・クローバー（CV.喜多村英梨）\n■作詞：真崎エリカ（Arte Refact）\n■作曲・編曲：矢鴇つかさ（Arte Refact）\n\n🎀作品情報\n『ひみつのアイプリ』\n■放送：2025年4月6日(日)あさ9時30分～テレ東系列6局ネットにて放送\n■原作：タカラトミーアーツ・シンソフィア\n■監督：藤咲淳一・山口健太郎\n■チーフディレクター：Nam Sung Min、Shin Gi Chuel、An Jae Ho、Jeon Byeong Cheol、Kim Seong Hyeon、Oh Seon Gyeong、Choi Gyeong Won\n■シリーズ構成：市川十億衛門\n■キャラクター原案：梨本裕美（シンソフィア）\n■キャラクターデザイン：永野佑貴\n■CGディレクター：柳川智\n■音楽：森いづみ (bransic)\n■音響監督：小沼則義\n■アニメーション制作：OLM・DONGWOO A＆E\n■キャスト：\n青空ひまり：藤寺美徳／星川みつき：平塚紗依　ほか\n\n🎀主題歌\nオープニング主題歌『Ring Ring Ring feat. ひまり』／Ｐ丸様。\nエンディング主題歌『ひみつのふふふ』／超ときめき♡宣伝部\n\n🎀アニメ「ひみつのアイプリ」公式HP\nhttps://aipri.jp/anime/"
+        },
+        {
+          "id": "UjMDZi8gY5I",
+          "title": "【公式CGライブ】「ミラクル☆ツインスマイル」青空ひまり、星川みつき",
+          "durationSec": 118,
+          "publishedAt": "2025-10-30T09:00:58Z",
+          "description": "アニメ『ひみつのアイプリ』公式CGライブ「ミラクル☆ツインスマイル」\n\n✨￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣\nわたしたちのムテキなライブで\nめざせ！キラキラのバズリウムチェンジ！\n\n　　　『ひみつのアイプリ』\n＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿✨\n\nテレ東系列6局ネットにて\n2025年4月6日から\n毎週日曜あさ9時30分〜放送中❣\n\n放送時間が変わるので\n注意してくださいね📢⚠\n\n🎀楽曲情報\n『ミラクル☆ツインスマイル』\n■うた：青空ひまり（CV.藤寺美徳）、星川みつき（CV.平塚紗依）\n■作詞：amira\n■作曲・編曲：井本光紀(bransic)・⽵ノ下和⾳(bransic)\n\n🎀作品情報\n『ひみつのアイプリ』\n■放送：2025年4月6日(日)あさ9時30分～テレ東系列6局ネットにて放送\n■原作：タカラトミーアーツ・シンソフィア\n■監督：藤咲淳一・山口健太郎\n■チーフディレクター：Nam Sung Min、Shin Gi Chuel、An Jae Ho、Jeon Byeong Cheol、Kim Seong Hyeon、Oh Seon Gyeong、Choi Gyeong Won\n■シリーズ構成：市川十億衛門\n■キャラクター原案：梨本裕美（シンソフィア）\n■キャラクターデザイン：永野佑貴\n■CGディレクター：柳川智\n■音楽：森いづみ (bransic)\n■音響監督：小沼則義\n■アニメーション制作：OLM・DONGWOO A＆E\n■キャスト：\n青空ひまり：藤寺美徳／星川みつき：平塚紗依　ほか\n\n🎀主題歌\nオープニング主題歌『Ring Ring Ring feat. ひまり』／Ｐ丸様。\nエンディング主題歌『ひみつのふふふ』／超ときめき♡宣伝部\n\n🎀アニメ「ひみつのアイプリ」公式HP\nhttps://aipri.jp/anime/"
+        },
+        {
+          "id": "E_3AhIVSi7k",
+          "title": "【公式CGライブ】「ミライのプリンセス」鈴風つむぎ、リング・クローバー",
+          "durationSec": 124,
+          "publishedAt": "2025-12-04T09:00:32Z",
+          "description": "アニメ『ひみつのアイプリ』公式CGライブ「ミライのプリンセス」\n\n✨￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣\nわたしたちのムテキなライブで\nめざせ！キラキラのバズリウムチェンジ！\n\n　　　『ひみつのアイプリ』\n＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿✨\n\nテレ東系列6局ネットにて\n2025年4月6日から\n毎週日曜あさ9時30分〜放送中❣\n\n放送時間が変わるので\n注意してくださいね📢⚠\n\n🎀楽曲情報\n『ミライのプリンセス』\n■うた：鈴風つむぎ（CV.久保ユリカ）、リング・クローバー（CV.喜多村英梨）\n■作詞：真崎エリカ（Arte Refact）\n■作曲・編曲：矢鴇つかさ（Arte Refact）\n\n🎀作品情報\n『ひみつのアイプリ』\n■放送：2025年4月6日(日)あさ9時30分～テレ東系列6局ネットにて放送\n■原作：タカラトミーアーツ・シンソフィア\n■監督：藤咲淳一・山口健太郎\n■チーフディレクター：Nam Sung Min、Shin Gi Chuel、An Jae Ho、Jeon Byeong Cheol、Kim Seong Hyeon、Oh Seon Gyeong、Choi Gyeong Won\n■シリーズ構成：市川十億衛門\n■キャラクター原案：梨本裕美（シンソフィア）\n■キャラクターデザイン：永野佑貴\n■CGディレクター：柳川智\n■音楽：森いづみ (bransic)\n■音響監督：小沼則義\n■アニメーション制作：OLM・DONGWOO A＆E\n■キャスト：\n青空ひまり：藤寺美徳／星川みつき：平塚紗依　ほか\n\n🎀主題歌\nオープニング主題歌『どきどき　きらめき　バズリウム』／Ｐ丸様。\nエンディング主題歌『シンデレラのラララ♡』／超ときめき♡宣伝部\n\n🎀アニメ「ひみつのアイプリ」公式HP\nhttps://aipri.jp/anime/"
+        },
+        {
+          "id": "nPIWECBH8oU",
+          "title": "【公式CGライブ】「ニュースタージョーカー」一条寺サクラ、二階堂タマキ、三ツ葉アイリ、四之宮リンリン",
+          "durationSec": 122,
+          "publishedAt": "2025-12-25T09:01:18Z",
+          "description": "アニメ『ひみつのアイプリ』公式CGライブ「ニュースタージョーカー」\n\n✨￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣\nわたしたちのムテキなライブで\nめざせ！キラキラのバズリウムチェンジ！\n\n　　　『ひみつのアイプリ』\n＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿✨\n\nテレ東系列6局ネットにて\n2025年4月6日から\n毎週日曜あさ9時30分〜放送中❣\n\n放送時間が変わるので\n注意してくださいね📢⚠\n\n🎀楽曲情報\n『ニュースタージョーカー』\n■うた：一条寺サクラ（CV.日比優理香）、二階堂タマキ（CV.鈴木杏奈）、三ツ葉アイリ（CV.徳井青空）、四之宮リンリン（CV.和多田美咲）\n■作詞：真崎エリカ\n■作曲：本多友紀（Arte Refact）\n■編曲：脇眞富（Arte Refact）\n\n🎀作品情報\n『ひみつのアイプリ』\n■放送：2025年4月6日(日)あさ9時30分～テレ東系列6局ネットにて放送\n■原作：タカラトミーアーツ・シンソフィア\n■監督：藤咲淳一・山口健太郎\n■チーフディレクター：Nam Sung Min、Shin Gi Chuel、An Jae Ho、Jeon Byeong Cheol、Kim Seong Hyeon、Oh Seon Gyeong、Choi Gyeong Won\n■シリーズ構成：市川十億衛門\n■キャラクター原案：梨本裕美（シンソフィア）\n■キャラクターデザイン：永野佑貴\n■CGディレクター：柳川智\n■音楽：森いづみ (bransic)\n■音響監督：小沼則義\n■アニメーション制作：OLM・DONGWOO A＆E\n■キャスト：\n青空ひまり：藤寺美徳／星川みつき：平塚紗依　ほか\n\n🎀主題歌\nオープニング主題歌『どきどき　きらめき　バズリウム』／Ｐ丸様。\nエンディング主題歌『シンデレラのラララ♡』／超ときめき♡宣伝部\n\n🎀アニメ「ひみつのアイプリ」公式HP\nhttps://aipri.jp/anime/"
+        },
+        {
+          "id": "OkEbAePC7q8",
+          "title": "【公式CGライブ】「レジェンド・ストーリー!!!!」一条寺サクラ、二階堂タマキ、三ツ葉アイリ、四之宮リンリン",
+          "durationSec": 122,
+          "publishedAt": "2026-01-15T09:00:40Z",
+          "description": "アニメ『ひみつのアイプリ』公式CGライブ「レジェンド・ストーリー!!!!」\n\n✨￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣\nわたしたちのムテキなライブで\nめざせ！キラキラのバズリウムチェンジ！\n\n　　　『ひみつのアイプリ』\n＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿✨\n\nテレ東系列6局ネットにて\n2025年4月6日から\n毎週日曜あさ9時30分〜放送中❣\n\n放送時間が変わるので\n注意してくださいね📢⚠\n\n🎀楽曲情報\n『レジェンド・ストーリー!!!!』\n■うた：一条寺サクラ（CV.日比優理香）、二階堂タマキ（CV.鈴木杏奈）、三ツ葉アイリ（CV.徳井青空）、四之宮リンリン（CV.和多田美咲）\n■作詞：松井洋平\n■作曲・編曲：青柳諒（Arte Refact）\n\n🎀作品情報\n『ひみつのアイプリ』\n■放送：2025年4月6日(日)あさ9時30分～テレ東系列6局ネットにて放送\n■原作：タカラトミーアーツ・シンソフィア\n■監督：藤咲淳一・山口健太郎\n■チーフディレクター：Nam Sung Min、Shin Gi Chuel、An Jae Ho、Jeon Byeong Cheol、Kim Seong Hyeon、Oh Seon Gyeong、Choi Gyeong Won\n■シリーズ構成：市川十億衛門\n■キャラクター原案：梨本裕美（シンソフィア）\n■キャラクターデザイン：永野佑貴\n■CGディレクター：柳川智\n■音楽：森いづみ (bransic)\n■音響監督：小沼則義\n■アニメーション制作：OLM・DONGWOO A＆E\n■キャスト：\n青空ひまり：藤寺美徳／星川みつき：平塚紗依　ほか\n\n🎀主題歌\nオープニング主題歌『どきどき　きらめき　バズリウム』／Ｐ丸様。\nエンディング主題歌『シンデレラのラララ♡』／超ときめき♡宣伝部\n\n🎀アニメ「ひみつのアイプリ」公式HP\nhttps://aipri.jp/anime/"
+        },
+        {
+          "id": "yRmssafjXf0",
+          "title": "【公式CGライブ】「キズナ×リンク」ひみつのアイプリ",
+          "durationSec": 232,
+          "publishedAt": "2026-03-29T01:00:51Z",
+          "description": "アニメ『ひみつのアイプリ』公式CGライブ「キズナ×リンク」\n\n✨￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣\nわたしたちのムテキなライブで\nめざせ！キラキラのバズリウムチェンジ！\n\n　　　『ひみつのアイプリ』\n＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿✨\n\nテレ東系列6局ネットにて\n2025年4月6日から\n毎週日曜あさ9時30分〜放送中❣\n\n放送時間が変わるので\n注意してくださいね📢⚠\n\n🎀楽曲情報\n『キズナ×リンク』\n■うた：ひみつのアイプリ\n青空ひまり（CV.藤寺美徳）、星川みつき（CV.平塚紗依）\n五十嵐じゅりあ（CV.土屋李央）、六堂える（CV.川口莉奈）\n七浦すばる（CV.小林竜之）七浦おとめ（CV.大森綺星）\n八王子ビビ（CV.寺澤百花）、真実夜チィ（CV.大地葉）\n鈴風つむぎ（CV.久保ユリカ）、リング・クローバー（CV.喜多村英梨）\n一条寺サクラ（CV.日比優理香）、二階堂タマキ（CV.鈴木杏奈）、三ツ葉アイリ（CV.徳井青空）、四之宮リンリン（CV.和多田美咲）\n更科わこ（CV.齊藤なぎさ）\n■作詞・作曲：本多友紀（Arte Refact）\n■編曲：Nika Lenz（Arte Refact）\n\n🎀作品情報\n『ひみつのアイプリ』\n■放送：2025年4月6日(日)あさ9時30分～テレ東系列6局ネットにて放送\n■原作：タカラトミーアーツ・シンソフィア\n■監督：藤咲淳一・山口健太郎\n■チーフディレクター：Nam Sung Min、Shin Gi Chuel、An Jae Ho、Jeon Byeong Cheol、Kim Seong Hyeon、Oh Seon Gyeong、Choi Gyeong Won\n■シリーズ構成：市川十億衛門\n■キャラクター原案：梨本裕美（シンソフィア）\n■キャラクターデザイン：永野佑貴\n■CGディレクター：柳川智\n■音楽：森いづみ (bransic)\n■音響監督：小沼則義\n■アニメーション制作：OLM・DONGWOO A＆E\n■キャスト：\n青空ひまり：藤寺美徳／星川みつき：平塚紗依　ほか\n\n🎀主題歌\nオープニング主題歌『どきどき　きらめき　バズリウム』／Ｐ丸様。\nエンディング主題歌『シンデレラのラララ♡』／超ときめき♡宣伝部\n\n🎀アニメ「ひみつのアイプリ」公式HP\nhttps://aipri.jp/anime/"
+        }
       ]
     },
     {
@@ -68,16 +310,53 @@
       "slug": "idolland-pripara",
       "name": "アイドルランドプリパラ CGライブ",
       "shortName": "アイドルランドプリパラ",
+      "series": "プリパラ",
       "color": "purple",
       "playlistId": "PLlH6DyUO5TnxpqqTI5A6i6cYYIpls-Sxo",
       "playlistTitle": "🎀アイドルランドプリパラ🎀公式CGライブ",
       "videos": [
-        { "id": "5zIwGPlB76g", "title": "🎀公式CGライブ『チョコレートアイスクリーム・トルネード』", "durationSec": 152 },
-        { "id": "vw4Ae9h3HG4", "title": "🎀公式CGライブ『カオティックハリケーン』香田澄あまり", "durationSec": 152 },
-        { "id": "1TlywISCfKI", "title": "🎀公式CGライブ『OPENDREAMLAND!』SoLaMi♡SMILE", "durationSec": 149 },
-        { "id": "NHD2mT1sJ14", "title": "🎀公式CGライブ＃01『OPENDREAMLAND!』ノンテロップVer　SoLaMi♡SMILE", "durationSec": 92 },
-        { "id": "LQD2njkI5r4", "title": "🎀公式CGライブ『究極合神アマリオン 一破滅と創造の狂想曲一』", "durationSec": 217 },
-        { "id": "gHKAExQLF7o", "title": "🎀公式CGライブ『ポォロン♪あまやどりのうた』", "durationSec": 156 }
+        {
+          "id": "5zIwGPlB76g",
+          "title": "🎀公式CGライブ『チョコレートアイスクリーム・トルネード』",
+          "durationSec": 152,
+          "publishedAt": "2022-06-29T10:30:01Z",
+          "description": "アイドルランドプリパラに降臨した\nダークアイドル・マリオのCGライブシーンをお届けします✨\n\n『チョコレートアイスクリーム・トルネード』\n作詞・作曲・編曲：川崎智哉\n歌：マリオ（CV.橘　龍丸）"
+        },
+        {
+          "id": "vw4Ae9h3HG4",
+          "title": "🎀公式CGライブ『カオティックハリケーン』香田澄あまり",
+          "durationSec": 152,
+          "publishedAt": "2023-02-06T08:28:43Z",
+          "description": "香田澄あまりさんのCGライブをお届けします！\nみなさんもハリケーンで飛ばされちゃってください！！"
+        },
+        {
+          "id": "1TlywISCfKI",
+          "title": "🎀公式CGライブ『OPENDREAMLAND!』SoLaMi♡SMILE",
+          "durationSec": 149,
+          "publishedAt": "2023-02-09T08:15:00Z",
+          "description": "SoLaMi♡SMILE『OPEN DREAM LAND!』のCGライブが公開です！"
+        },
+        {
+          "id": "NHD2mT1sJ14",
+          "title": "🎀公式CGライブ＃01『OPENDREAMLAND!』ノンテロップVer　SoLaMi♡SMILE",
+          "durationSec": 92,
+          "publishedAt": "2023-02-17T07:58:01Z",
+          "description": "アイドルランド1話のエンドロールに流れた『OPENDREAMLAND!』をノンテロップで配信いたします！\n0話ののライブでは見れなかった部分の振り付けもありますのでそちらも一緒にご覧ください！"
+        },
+        {
+          "id": "LQD2njkI5r4",
+          "title": "🎀公式CGライブ『究極合神アマリオン 一破滅と創造の狂想曲一』",
+          "durationSec": 217,
+          "publishedAt": "2024-04-18T08:01:00Z",
+          "description": "『究極合神アマリオン 一破滅と創造の狂想曲一』\n作詞・作曲・編曲：川崎智哉\n歌：香田澄あまり（CV.飯田里穂）\n　　マリオ（CV.橘　龍丸）"
+        },
+        {
+          "id": "gHKAExQLF7o",
+          "title": "🎀公式CGライブ『ポォロン♪あまやどりのうた』",
+          "durationSec": 156,
+          "publishedAt": "2024-04-18T10:24:59Z",
+          "description": "再投稿をさせていただきました。\n\n『ポォロン♪あまやどりのうた』\n作詞：藤原優樹 (SUPA LOVE)\n作曲・編曲：高橋涼 (SUPA LOVE)\n歌：香田澄あまり（CV.飯田里穂\n　　ポォロロ（CV.林鼓子"
+        }
       ]
     }
   ]

@@ -20,6 +20,8 @@ export const channelConfigSchema = z.object({
   slug: z.string().regex(/^[a-z0-9-]+$/),
   name: z.string().min(1),
   shortName: z.string().min(1),
+  /** シリーズ名（番組表の絞り込みタブに使う） */
+  series: z.string().min(1),
   color: z.enum(channelColors),
   playlistId: z.string().min(1),
 })
@@ -34,6 +36,8 @@ export const videoSchema = z.object({
   id: z.string().length(11),
   title: z.string(),
   durationSec: z.number().int().positive(),
+  publishedAt: z.iso.datetime({ offset: true }),
+  description: z.string(),
 })
 
 export const channelSchema = channelConfigSchema.extend({

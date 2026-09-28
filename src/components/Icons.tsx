@@ -101,3 +101,10 @@ export const LogoMark = (p: IconProps) => (
     <circle cx="9" cy="12" r="1.1" fill="#ff8eff" />
   </svg>
 )
+
+/** 再生中インジケーター（イコライザー） */
+export const PlayingIcon = (p: IconProps) => (
+  <Svg {...p}>
+    <path d="M4 20V10h3v10H4Zm6.5 0V4h3v16h-3ZM17 20v-7h3v7h-3Z" />
+  </Svg>
+)

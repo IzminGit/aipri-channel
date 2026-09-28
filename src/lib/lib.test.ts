@@ -1,81 +1,86 @@
 import { describe, expect, it } from 'vitest'
-import type { Channel } from '../schema'
+import type { Channel, Video } from '../schema'
 import { parseIsoDuration } from './duration'
-import { broadcastDayStart, DAY, slotAt, slotsBetween, upcoming } from './schedule'
+import { splitLinks } from './format'
+import { moveCursor, nextInChannel, prevInChannel, sortByPublished } from './playlist'
 import { parseTitle } from './title'
 
-const channel: Channel = {
-  number: 1,
-  slug: 'test',
-  name: 'テスト',
-  shortName: 'テスト',
+const video = (id: string, publishedAt: string): Video => ({
+  id: id.padEnd(11, 'x'),
+  title: id,
+  durationSec: 120,
+  publishedAt,
+  description: '',
+})
+
+const channel = (number: number, count: number): Channel => ({
+  number,
+  slug: `ch${number}`,
+  name: `ch${number}`,
+  shortName: `ch${number}`,
+  series: 'テスト',
   color: 'magenta',
   playlistId: 'PLx',
   playlistTitle: 'x',
-  videos: [
-    { id: 'aaaaaaaaaaa', title: 'A', durationSec: 100 },
-    { id: 'bbbbbbbbbbb', title: 'B', durationSec: 50 },
-    { id: 'ccccccccccc', title: 'C', durationSec: 150 },
-  ],
-}
+  videos: Array.from({ length: count }, (_, i) =>
+    video(`v${number}-${i}`, `2026-01-${String(i + 1).padStart(2, '0')}T00:00:00Z`),
+  ),
+})
 
-// 2026-09-29 05:00 JST
-const dayStart = Date.parse('2026-09-29T05:00:00+09:00')
-
-describe('broadcastDayStart', () => {
-  it('5:00 JST で日付が切り替わる', () => {
-    expect(broadcastDayStart(dayStart)).toBe(dayStart)
-    expect(broadcastDayStart(dayStart - 1)).toBe(dayStart - DAY)
-    expect(broadcastDayStart(Date.parse('2026-09-30T04:59:59+09:00'))).toBe(dayStart)
+describe('nextInChannel / prevInChannel', () => {
+  const ch = channel(1, 3)
+  it('次の曲へ進み、最終曲の次は 1 曲目に戻る', () => {
+    expect(nextInChannel(ch, 0)).toBe(1)
+    expect(nextInChannel(ch, 2)).toBe(0)
+  })
+  it('前の曲へ戻り、1 曲目の前は最終曲', () => {
+    expect(prevInChannel(ch, 1)).toBe(0)
+    expect(prevInChannel(ch, 0)).toBe(2)
   })
 })
 
-describe('slotAt', () => {
-  it('放送日の開始はプレイリスト先頭', () => {
-    const s = slotAt(channel, dayStart)!
-    expect(s.video.title).toBe('A')
-    expect(s.start).toBe(dayStart)
-    expect(s.end).toBe(dayStart + 100_000)
-  })
-
-  it('再生時間に従って番組が進み、ループする', () => {
-    expect(slotAt(channel, dayStart + 100_000)!.video.title).toBe('B')
-    expect(slotAt(channel, dayStart + 149_999)!.video.title).toBe('B')
-    expect(slotAt(channel, dayStart + 150_000)!.video.title).toBe('C')
-    const loop = slotAt(channel, dayStart + 300_000 + 10_000)!
-    expect(loop.video.title).toBe('A')
-    expect(loop.start).toBe(dayStart + 300_000)
-  })
-
-  it('放送日の終わりで番組は打ち切られる', () => {
-    const s = slotAt(channel, dayStart + DAY - 1)!
-    expect(s.end).toBe(dayStart + DAY)
-    expect(slotAt(channel, dayStart + DAY)!.start).toBe(dayStart + DAY)
-  })
-
-  it('動画がなければ null', () => {
-    expect(slotAt({ ...channel, videos: [] }, dayStart)).toBeNull()
+describe('sortByPublished', () => {
+  it('公開日の古い順に並べる', () => {
+    const ch = {
+      ...channel(1, 0),
+      videos: [
+        video('new', '2026-09-10T09:00:25Z'),
+        video('old', '2024-05-17T01:00:00Z'),
+        video('mid', '2025-01-01T00:00:00Z'),
+      ],
+    }
+    expect(sortByPublished(ch).videos.map((v) => v.title)).toEqual(['old', 'mid', 'new'])
   })
 })
 
-describe('slotsBetween / upcoming', () => {
-  it('隙間なく連続した番組を返す', () => {
-    const slots = slotsBetween(channel, dayStart + 50_000, dayStart + 700_000)
-    expect(slots[0].start).toBe(dayStart)
-    for (let i = 1; i < slots.length; i++) expect(slots[i].start).toBe(slots[i - 1].end)
-    expect(slots.at(-1)!.end).toBeGreaterThanOrEqual(dayStart + 700_000)
+describe('moveCursor', () => {
+  const cols = [channel(1, 5), channel(2, 2), channel(3, 4)]
+  it('上下は同じチャンネル内で端に止まる', () => {
+    expect(moveCursor(cols, { channel: 1, index: 0 }, 'ArrowUp')).toEqual({ channel: 1, index: 0 })
+    expect(moveCursor(cols, { channel: 1, index: 3 }, 'ArrowDown')).toEqual({ channel: 1, index: 4 })
+    expect(moveCursor(cols, { channel: 1, index: 4 }, 'ArrowDown')).toEqual({ channel: 1, index: 4 })
   })
+  it('左右は隣のチャンネル。曲数が少なければ最終曲', () => {
+    expect(moveCursor(cols, { channel: 1, index: 4 }, 'ArrowRight')).toEqual({ channel: 2, index: 1 })
+    expect(moveCursor(cols, { channel: 2, index: 1 }, 'ArrowRight')).toEqual({ channel: 3, index: 1 })
+    expect(moveCursor(cols, { channel: 3, index: 1 }, 'ArrowRight')).toEqual({ channel: 3, index: 1 })
+    expect(moveCursor(cols, { channel: 1, index: 2 }, 'ArrowLeft')).toEqual({ channel: 1, index: 2 })
+  })
+  it('Home / End', () => {
+    expect(moveCursor(cols, { channel: 3, index: 2 }, 'Home')).toEqual({ channel: 3, index: 0 })
+    expect(moveCursor(cols, { channel: 3, index: 0 }, 'End')).toEqual({ channel: 3, index: 3 })
+  })
+})
 
-  it('放送日をまたいでも先頭から再開する', () => {
-    const slots = slotsBetween(channel, dayStart + DAY - 60_000, dayStart + DAY + 1)
-    expect(slots.at(-1)!.video.title).toBe('A')
-    expect(slots.at(-1)!.start).toBe(dayStart + DAY)
+describe('splitLinks', () => {
+  it('URL を分割する', () => {
+    expect(splitLinks('HP\nhttps://aipri.jp/anime/\n以上')).toEqual([
+      { text: 'HP\n' },
+      { text: 'https://aipri.jp/anime/', href: 'https://aipri.jp/anime/' },
+      { text: '\n以上' },
+    ])
   })
-
-  it('upcoming は現在 + count 件', () => {
-    const list = upcoming(channel, dayStart + 10_000, 3)
-    expect(list.map((s) => s.video.title)).toEqual(['A', 'B', 'C', 'A'])
-  })
+  it('URL がなければそのまま', () => expect(splitLinks('説明')).toEqual([{ text: '説明' }]))
 })
 
 describe('parseIsoDuration', () => {

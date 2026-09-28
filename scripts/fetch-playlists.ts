@@ -7,6 +7,7 @@
  * - API キーがない場合は何もせず終了（既存の catalog.json をそのまま使う）
  * - 取得に失敗したチャンネルは前回のデータを維持する
  * - 非公開・削除済み・埋め込み不可の動画は除外する
+ * - 動画は公開日の古い順に並べる
  * - 内容に変化がなければファイルを書き換えない（無駄なコミットを防ぐ）
  */
 import { readFile, writeFile } from 'node:fs/promises'
@@ -43,7 +44,7 @@ interface PlaylistItemsResponse {
 interface VideosResponse {
   items: {
     id: string
-    snippet: { title: string }
+    snippet: { title: string; description: string; publishedAt: string }
     contentDetails: { duration: string }
     status: { privacyStatus: string; embeddable: boolean; uploadStatus: string }
   }[]
@@ -83,8 +84,17 @@ async function fetchChannel(config: ChannelConfig): Promise<Channel> {
     if (v.status.uploadStatus !== 'processed') continue
     const durationSec = parseIsoDuration(v.contentDetails.duration)
     if (durationSec <= 0) continue // ライブ配信・プレミア公開待ちなど
-    videos.push({ id, title: v.snippet.title, durationSec })
+    videos.push({
+      id,
+      title: v.snippet.title,
+      durationSec,
+      publishedAt: v.snippet.publishedAt,
+      description: v.snippet.description,
+    })
   }
+
+  // 番組表は公開日の古い順に並べる
+  videos.sort((a, b) => a.publishedAt.localeCompare(b.publishedAt))
 
   const playlist = await api<PlaylistsResponse>('playlists', { part: 'snippet', id: config.playlistId })
   return {

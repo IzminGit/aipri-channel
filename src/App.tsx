@@ -1,147 +1,189 @@
 import { use, useCallback, useEffect, useMemo, useRef, useState } from 'react'
-import { ChannelList } from './components/ChannelList'
-import { Guide } from './components/Guide'
 import { Header, type ThemePreference } from './components/Header'
-import { NowPlaying } from './components/NowPlaying'
-import { Player, type PlayerHandle, type PlayerSource } from './components/Player'
+import { InfoPanel } from './components/InfoPanel'
+import { Player, type PlayerHandle } from './components/Player'
+import { ProgramGuide } from './components/ProgramGuide'
+import { ALL_TAB, FAVORITES_TAB, SeriesTabs } from './components/SeriesTabs'
 import { ShortcutsDialog } from './components/ShortcutsDialog'
-import { UpNext } from './components/UpNext'
-import { currentTime, useNow } from './hooks/useNow'
 import { useStoredState } from './hooks/useStoredState'
 import { useTheme } from './hooks/useTheme'
 import { loadCatalog } from './lib/catalog'
-import { slotAt, upcoming, type Slot } from './lib/schedule'
+import { cellId, nextInChannel, prevInChannel, samePosition, type Position } from './lib/playlist'
 import { parseTitle } from './lib/title'
 
-interface VodState {
-  channelNumber: number
-  slot: Slot
-  origin: number
-}
-
 const THEME_ORDER: ThemePreference[] = ['system', 'light', 'dark']
+/** 番組表からマウスが離れてから、詳細表示を再生中の曲に戻すまでの時間 */
+const PREVIEW_LINGER = 900
 
-function readChannelParam(): number | null {
-  const n = Number(new URLSearchParams(location.search).get('ch'))
-  return Number.isInteger(n) && n > 0 ? n : null
+function readUrlPosition(): { channel: number | null; index: number } {
+  const params = new URLSearchParams(location.search)
+  const ch = Number(params.get('ch'))
+  const n = Number(params.get('n'))
+  return {
+    channel: Number.isInteger(ch) && ch > 0 ? ch : null,
+    index: Number.isInteger(n) && n > 0 ? n - 1 : 0,
+  }
 }
 
 export default function App() {
   const catalog = use(loadCatalog())
-  const now = useNow()
   const [theme, setTheme] = useTheme()
   const [favorites, setFavorites] = useStoredState<number[]>('favorites', [])
-  const [guideOpen, setGuideOpen] = useStoredState('guide-open', true)
-  const [lastChannel, setLastChannel] = useStoredState<number | null>('last-channel', null)
+  const [tab, setTab] = useStoredState<string>('tab', ALL_TAB)
+  const [lastPosition, setLastPosition] = useStoredState<Position | null>('last-position', null)
   const [shortcutsOpen, setShortcutsOpen] = useState(false)
-  const [vod, setVod] = useState<VodState | null>(null)
+  const [active, setActive] = useState(false)
+  const [preview, setPreview] = useState<Position | null>(null)
   const playerRef = useRef<PlayerHandle>(null)
+  const lingerTimer = useRef(0)
+
+  const findChannel = useCallback((n: number) => catalog.channels.find((c) => c.number === n), [catalog.channels])
+  const isValid = useCallback(
+    (p: Position | null): p is Position => !!p && (findChannel(p.channel)?.videos.length ?? 0) > p.index,
+    [findChannel],
+  )
+
+  const [playing, setPlaying] = useState<Position>(() => {
+    const url = readUrlPosition()
+    if (url.channel !== null) {
+      const candidate = { channel: url.channel, index: url.index }
+      if (isValid(candidate)) return candidate
+      if (isValid({ channel: url.channel, index: 0 })) return { channel: url.channel, index: 0 }
+    }
+    if (isValid(lastPosition)) return lastPosition
+    const first = catalog.channels.find((c) => c.videos.length > 0) ?? catalog.channels[0]
+    return { channel: first.number, index: 0 }
+  })
 
   // お気に入りを先頭に、それ以外はチャンネル番号順
-  const channels = useMemo(() => {
+  const ordered = useMemo(() => {
     const fav = new Set(favorites)
     return [...catalog.channels].sort(
       (a, b) => Number(fav.has(b.number)) - Number(fav.has(a.number)) || a.number - b.number,
     )
   }, [catalog.channels, favorites])
 
-  const exists = (n: number | null) => n !== null && catalog.channels.some((c) => c.number === n)
-  const [selected, setSelected] = useState<number>(() => {
-    const fromUrl = readChannelParam()
-    if (exists(fromUrl)) return fromUrl!
-    if (exists(lastChannel)) return lastChannel!
-    return channels[0].number
-  })
+  const series = useMemo(() => [...new Set(catalog.channels.map((c) => c.series))], [catalog.channels])
+  const currentTab = tab === ALL_TAB || tab === FAVORITES_TAB || series.includes(tab) ? tab : ALL_TAB
+  const columns = useMemo(
+    () =>
+      ordered.filter((c) =>
+        currentTab === ALL_TAB
+          ? true
+          : currentTab === FAVORITES_TAB
+            ? favorites.includes(c.number)
+            : c.series === currentTab,
+      ),
+    [ordered, currentTab, favorites],
+  )
 
-  const channel = catalog.channels.find((c) => c.number === selected) ?? channels[0]
-  const liveSlot = slotAt(channel, now)
-  const activeVod = vod?.channelNumber === channel.number ? vod : null
-  const displaySlot = activeVod?.slot ?? liveSlot
+  const playingChannel = findChannel(playing.channel)!
+  const playingVideo = playingChannel.videos[playing.index]
+  const shown = isValid(preview) ? preview : playing
+  const shownChannel = findChannel(shown.channel)!
+  const shownVideo = shownChannel.videos[shown.index]
 
-  // URL（?ch=）と最後に見たチャンネルを同期
+  // URL（?ch=&n=）と最後に再生した位置を同期
   useEffect(() => {
     const url = new URL(location.href)
-    url.searchParams.set('ch', String(selected))
+    url.searchParams.set('ch', String(playing.channel))
+    url.searchParams.set('n', String(playing.index + 1))
     history.replaceState(null, '', url)
-    setLastChannel(selected)
-  }, [selected, setLastChannel])
-
-  const liveVideoId = liveSlot?.video.id
-  const liveStart = liveSlot?.start
-  const source = useMemo<PlayerSource | null>(() => {
-    if (activeVod) return { mode: 'vod', videoId: activeVod.slot.video.id, origin: activeVod.origin }
-    if (!liveVideoId || liveStart === undefined) return null
-    return { mode: 'live', videoId: liveVideoId, origin: liveStart }
-  }, [activeVod, liveVideoId, liveStart])
+    setLastPosition(playing)
+  }, [playing, setLastPosition])
 
   useEffect(() => {
-    if (!displaySlot) return
-    const { song } = parseTitle(displaySlot.video.title)
-    document.title = `${song} - ${channel.number}ch ${channel.shortName} | アイプリチャンネル`
-  }, [displaySlot, channel])
+    const { song } = parseTitle(playingVideo.title)
+    document.title = `${song} - ${playingChannel.shortName} | アイプリチャンネル`
+  }, [playingVideo, playingChannel])
 
-  const tune = useCallback((n: number) => {
-    setSelected(n)
-    setVod(null)
+  const play = useCallback((pos: Position) => {
+    window.clearTimeout(lingerTimer.current)
+    setPlaying(pos)
+    setPreview(null)
+    setActive(true)
   }, [])
 
-  const playVod = useCallback((slot: Slot) => {
-    setSelected(slot.channelNumber)
-    setVod({ channelNumber: slot.channelNumber, slot, origin: currentTime() })
+  const step = useCallback(
+    (dir: 1 | -1) =>
+      setPlaying((p) => {
+        const ch = findChannel(p.channel)!
+        return { ...p, index: dir === 1 ? nextInChannel(ch, p.index) : prevInChannel(ch, p.index) }
+      }),
+    [findChannel],
+  )
+
+  const startPreview = useCallback((pos: Position) => {
+    window.clearTimeout(lingerTimer.current)
+    setPreview(pos)
   }, [])
+  const endPreview = useCallback(() => {
+    window.clearTimeout(lingerTimer.current)
+    lingerTimer.current = window.setTimeout(() => setPreview(null), PREVIEW_LINGER)
+  }, [])
+  const holdPreview = useCallback(() => window.clearTimeout(lingerTimer.current), [])
 
   const toggleFavorite = useCallback(
     (n: number) => setFavorites(favorites.includes(n) ? favorites.filter((f) => f !== n) : [...favorites, n]),
     [favorites, setFavorites],
   )
 
-  // キーボード / テレビのリモコン操作
+  // キーボード / テレビのリモコン操作（番組表内の矢印キーは ProgramGuide が処理）
   const digitBuffer = useRef({ value: '', timer: 0 })
   useEffect(() => {
     const onKeyDown = (e: KeyboardEvent) => {
       if (e.ctrlKey || e.metaKey || e.altKey || e.isComposing) return
       const target = e.target
-      if (
-        target instanceof Element &&
-        target.closest('input:not([type=radio]), textarea, select, [contenteditable=true]')
-      )
-        return
+      if (target instanceof Element) {
+        if (target.closest('input:not([type=radio]), textarea, select, [contenteditable=true]')) return
+        if (target.closest('[role=grid]') && e.key.startsWith('Arrow')) return
+      }
       if (shortcutsOpen && e.key !== '?') return
 
-      const step = (dir: 1 | -1) => {
-        const i = channels.findIndex((c) => c.number === selected)
-        tune(channels[(i + dir + channels.length) % channels.length].number)
+      const switchChannel = (dir: 1 | -1) => {
+        const list = columns.some((c) => c.number === playing.channel) ? columns : ordered
+        const i = list.findIndex((c) => c.number === playing.channel)
+        const next = list[(i + dir + list.length) % list.length]
+        if (next?.videos.length) play({ channel: next.number, index: 0 })
       }
 
       switch (e.key) {
         case 'ArrowUp':
-        case 'ChannelUp':
-        case 'PageUp':
-          step(-1)
-          break
         case 'ArrowDown':
-        case 'ChannelDown':
+        case 'ArrowLeft':
+        case 'ArrowRight': {
+          const cell =
+            document.getElementById(cellId(playing)) ??
+            (columns[0] ? document.getElementById(cellId({ channel: columns[0].number, index: 0 })) : null)
+          cell?.focus()
+          break
+        }
+        case 'PageUp':
+        case 'ChannelUp':
+          switchChannel(-1)
+          break
         case 'PageDown':
+        case 'ChannelDown':
+          switchChannel(1)
+          break
+        case 'n':
+        case 'N':
+        case 'MediaTrackNext':
           step(1)
           break
-        case 'g':
-        case 'G':
-        case 'Guide':
-          setGuideOpen(!guideOpen)
+        case 'p':
+        case 'P':
+        case 'MediaTrackPrevious':
+          step(-1)
           break
         case 'f':
         case 'F':
-          toggleFavorite(selected)
+          toggleFavorite(playing.channel)
           break
         case 'm':
         case 'M':
         case 'AudioVolumeMute':
           playerRef.current?.toggleMute()
-          break
-        case 'l':
-        case 'L':
-        case 'Live':
-          playerRef.current?.syncToLive()
           break
         case 't':
         case 'T':
@@ -150,20 +192,25 @@ export default function App() {
         case '?':
           setShortcutsOpen((o) => !o)
           break
+        case 'Escape':
+          window.clearTimeout(lingerTimer.current)
+          setPreview(null)
+          return
         default: {
           if (!/^\d$/.test(e.key)) return
-          // 複数桁のチャンネル番号入力（1.2 秒以内に続けて押す）
+          // チャンネル番号の直接入力（複数桁は 1.2 秒以内に続けて押す）
           const buf = digitBuffer.current
           window.clearTimeout(buf.timer)
           buf.value = (buf.value + e.key).slice(-3)
-          const n = Number(buf.value)
-          const exact = catalog.channels.some((c) => c.number === n)
-          const longer = catalog.channels.some((c) => String(c.number).startsWith(buf.value) && c.number !== n)
+          const exists = (n: number) => catalog.channels.some((c) => c.number === n && c.videos.length > 0)
+          const longer = catalog.channels.some(
+            (c) => String(c.number).startsWith(buf.value) && String(c.number) !== buf.value,
+          )
           const commit = () => {
-            if (catalog.channels.some((c) => c.number === Number(buf.value))) tune(Number(buf.value))
+            if (exists(Number(buf.value))) play({ channel: Number(buf.value), index: 0 })
             buf.value = ''
           }
-          if (exact && !longer) commit()
+          if (exists(Number(buf.value)) && !longer) commit()
           else buf.timer = window.setTimeout(commit, 1200)
           break
         }
@@ -172,107 +219,80 @@ export default function App() {
     }
     window.addEventListener('keydown', onKeyDown)
     return () => window.removeEventListener('keydown', onKeyDown)
-  }, [
-    catalog.channels,
-    channels,
-    guideOpen,
-    selected,
-    setGuideOpen,
-    setTheme,
-    shortcutsOpen,
-    theme,
-    toggleFavorite,
-    tune,
-  ])
+  }, [catalog.channels, columns, ordered, playing, play, setTheme, shortcutsOpen, step, theme, toggleFavorite])
 
-  const nextSlots = liveSlot ? upcoming(channel, now, 4).slice(1) : []
+  const infoProps = {
+    channel: shownChannel,
+    video: shownVideo,
+    index: shown.index,
+    isPlaying: samePosition(shown, playing),
+    favorite: favorites.includes(shownChannel.number),
+    onPlay: () => play(shown),
+    onToggleFavorite: () => toggleFavorite(shownChannel.number),
+  }
 
   return (
-    <>
+    <div className="flex h-dvh flex-col overflow-hidden">
       <a
-        href="#main"
+        href="#guide"
         className="sr-only z-50 rounded-8 bg-accent px-4 py-3 text-accent-fg focus:not-sr-only focus:fixed focus:top-2 focus:left-2"
       >
-        本文へスキップ
+        番組表へスキップ
       </a>
-      <Header
-        now={now}
-        guideOpen={guideOpen}
-        theme={theme}
-        onToggleGuide={() => setGuideOpen(!guideOpen)}
-        onThemeChange={setTheme}
-        onShowShortcuts={() => setShortcutsOpen(true)}
-      />
+      <Header theme={theme} onThemeChange={setTheme} onShowShortcuts={() => setShortcutsOpen(true)} />
 
-      <main
-        id="main"
-        className="mx-auto grid max-w-[1440px] grid-cols-1 gap-x-8 gap-y-8 px-4 py-4 [grid-template-areas:'now'_'channels'_'next'] sm:py-6 lg:grid-cols-[minmax(0,1fr)_22rem] lg:grid-rows-[auto_1fr] lg:px-6 lg:[grid-template-areas:'now_channels'_'next_channels']"
+      {/* 上段：プレーヤー（左）と番組の詳細（右）。番組表をスクロールしても固定 */}
+      <section
+        aria-label="プレーヤー"
+        className="grid shrink-0 lg:h-[min(46dvh,calc((100vw-26rem)*0.5625))] lg:grid-cols-[minmax(0,1fr)_26rem] 2xl:h-[min(50dvh,calc((100vw-30rem)*0.5625))] 2xl:grid-cols-[minmax(0,1fr)_30rem]"
       >
-        <div className="min-w-0 [grid-area:now]">
-          {source && displaySlot ? (
-            <>
-              <Player
-                ref={playerRef}
-                source={source}
-                title={displaySlot.video.title}
-                onEnded={() => setVod(null)}
-                onReturnToLive={() => setVod(null)}
-              />
-              <NowPlaying
-                channel={channel}
-                current={displaySlot}
-                isVod={activeVod !== null}
-                now={now}
-                favorite={favorites.includes(channel.number)}
-                onToggleFavorite={() => toggleFavorite(channel.number)}
-              />
-            </>
-          ) : (
-            <p className="rounded-8 bg-surface p-8 text-center text-std-16N-170 text-muted">
-              このチャンネルは現在放送していません。
-            </p>
-          )}
-        </div>
-        <div className="min-w-0 [grid-area:next]">
-          <UpNext upcoming={nextSlots} onPlayVod={playVod} />
-        </div>
-        <div className="[grid-area:channels]">
-          <ChannelList
-            channels={channels}
-            selected={channel.number}
-            favorites={favorites}
-            now={now}
-            onSelect={tune}
-            onToggleFavorite={toggleFavorite}
+        <div className="aspect-video lg:aspect-auto lg:h-full">
+          <Player
+            ref={playerRef}
+            videoId={playingVideo.id}
+            title={playingVideo.title}
+            active={active}
+            onActivate={() => setActive(true)}
+            onEnded={() => step(1)}
           />
         </div>
+        <div className="min-h-0 max-lg:hidden">
+          <InfoPanel {...infoProps} onPointerEnter={holdPreview} onPointerLeave={endPreview} />
+        </div>
+      </section>
+      <div className="lg:hidden">
+        <InfoPanel
+          {...infoProps}
+          channel={playingChannel}
+          video={playingVideo}
+          index={playing.index}
+          isPlaying
+          compact
+        />
+      </div>
+
+      <SeriesTabs series={series} value={currentTab} favoriteCount={favorites.length} onChange={setTab} />
+
+      {/* 下段：番組表（ここだけスクロール） */}
+      <main id="guide" className="flex min-h-0 flex-1 flex-col">
+        <ProgramGuide
+          columns={columns}
+          playing={playing}
+          preview={isValid(preview) ? preview : null}
+          favorites={favorites}
+          onPlay={play}
+          onPreview={startPreview}
+          onPreviewEnd={endPreview}
+          onToggleFavorite={toggleFavorite}
+        />
       </main>
 
-      {guideOpen && (
-        <Guide
-          channels={channels}
-          selected={channel.number}
-          favorites={favorites}
-          now={now}
-          onTune={tune}
-          onPlayVod={playVod}
-        />
-      )}
-
-      <footer className="border-t border-line bg-surface">
-        <div className="mx-auto max-w-[1440px] space-y-2 px-4 py-8 text-std-16N-170 text-muted lg:px-6">
-          <p>
-            本サイトは非公式のファンサイトです。映像は各公式 YouTube
-            チャンネルが公開している動画を埋め込みで再生しており、 権利は各権利者に帰属します。
-          </p>
-          <p>
-            番組データ更新：
-            <time dateTime={catalog.generatedAt}>{new Date(catalog.generatedAt).toLocaleString('ja-JP')}</time>
-          </p>
-        </div>
+      <footer className="shrink-0 truncate border-t border-line bg-bg px-3 py-1.5 text-oln-14N-100 text-muted lg:px-4">
+        非公式ファンサイトです。映像の権利は各権利者に帰属します。 ・ 番組データ更新：
+        <time dateTime={catalog.generatedAt}>{new Date(catalog.generatedAt).toLocaleDateString('ja-JP')}</time>
       </footer>
 
       <ShortcutsDialog open={shortcutsOpen} onClose={() => setShortcutsOpen(false)} />
-    </>
+    </div>
   )
 }
