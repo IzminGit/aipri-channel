@@ -1,0 +1,28 @@
+{
+  "channels": [
+    {
+      "number": 1,
+      "slug": "onegai-aipri",
+      "name": "おねがいアイプリ CGライブ",
+      "shortName": "おねがいアイプリ",
+      "color": "magenta",
+      "playlistId": "PL6VN7enyUDE7L20ULWQ1rvatPPgDV9we4"
+    },
+    {
+      "number": 2,
+      "slug": "himitsu-aipri",
+      "name": "ひみつのアイプリ CGライブ",
+      "shortName": "ひみつのアイプリ",
+      "color": "light-blue",
+      "playlistId": "PL6VN7enyUDE7osGtSwkHjEJpjDNnylB6u"
+    },
+    {
+      "number": 3,
+      "slug": "idolland-pripara",
+      "name": "アイドルランドプリパラ CGライブ",
+      "shortName": "アイドルランドプリパラ",
+      "color": "purple",
+      "playlistId": "PLlH6DyUO5TnxpqqTI5A6i6cYYIpls-Sxo"
+    }
+  ]
+}

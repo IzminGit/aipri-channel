@@ -1,0 +1,84 @@
+{
+  "generatedAt": "2026-09-29T00:20:00+09:00",
+  "channels": [
+    {
+      "number": 1,
+      "slug": "onegai-aipri",
+      "name": "おねがいアイプリ CGライブ",
+      "shortName": "おねがいアイプリ",
+      "color": "magenta",
+      "playlistId": "PL6VN7enyUDE7L20ULWQ1rvatPPgDV9we4",
+      "playlistTitle": "【アニメ】『おねがいアイプリ』CGライブ",
+      "videos": [
+        { "id": "DPEEKvInkTw", "title": "【公式CGライブ】「TOP POWER」熱海ナナ、望永エマ", "durationSec": 129 },
+        { "id": "DMOQilTVOmw", "title": "【公式CGライブ】「勇気のはばたきサイン」勇樹おりびあ、熱海ナナ", "durationSec": 121 },
+        { "id": "I6vCGJDv1lo", "title": "【公式CGライブ】「ネガイ・スペシャリスト」望永エマ", "durationSec": 125 },
+        { "id": "UmEmuxAsoA4", "title": "【公式CGライブ】「TOP POWER」熱海ナナ", "durationSec": 129 },
+        { "id": "Hl96FuGJexg", "title": "【公式CGライブ】「夢色ビリーバー」夢宮あおい、友坂ぐみ", "durationSec": 121 },
+        { "id": "6P403KclEv4", "title": "【公式CGライブ】「フレフレベストフレンズ」友坂ぐみ、勇樹おりびあ", "durationSec": 121 },
+        { "id": "UxtRZrfBaAM", "title": "【公式CGライブ】「勇気のはばたきサイン」勇樹おりびあ", "durationSec": 121 },
+        { "id": "4VZcA09l1XQ", "title": "【公式CGライブ】「トキメキ♡ジャンプ！」好実いのり、夢宮あおい", "durationSec": 123 },
+        { "id": "YrBO6BcnAc0", "title": "【公式CGライブ】「フレフレベストフレンズ」友坂ぐみ", "durationSec": 121 },
+        { "id": "8JK0lH1xoOA", "title": "【公式CGライブ】「夢色ビリーバー」夢宮あおい", "durationSec": 121 },
+        { "id": "kuleEK8aVxM", "title": "【公式CGライブ】「トキメキ♡ジャンプ！」好実いのり", "durationSec": 123 }
+      ]
+    },
+    {
+      "number": 2,
+      "slug": "himitsu-aipri",
+      "name": "ひみつのアイプリ CGライブ",
+      "shortName": "ひみつのアイプリ",
+      "color": "light-blue",
+      "playlistId": "PL6VN7enyUDE7osGtSwkHjEJpjDNnylB6u",
+      "playlistTitle": "【アニメ】『ひみつのアイプリ』CGライブ",
+      "videos": [
+        { "id": "yRmssafjXf0", "title": "【公式CGライブ】「キズナ×リンク」ひみつのアイプリ", "durationSec": 232 },
+        { "id": "OkEbAePC7q8", "title": "【公式CGライブ】「レジェンド・ストーリー!!!!」一条寺サクラ、二階堂タマキ、三ツ葉アイリ、四之宮リンリン", "durationSec": 122 },
+        { "id": "nPIWECBH8oU", "title": "【公式CGライブ】「ニュースタージョーカー」一条寺サクラ、二階堂タマキ、三ツ葉アイリ、四之宮リンリン", "durationSec": 122 },
+        { "id": "E_3AhIVSi7k", "title": "【公式CGライブ】「ミライのプリンセス」鈴風つむぎ、リング・クローバー", "durationSec": 124 },
+        { "id": "UjMDZi8gY5I", "title": "【公式CGライブ】「ミラクル☆ツインスマイル」青空ひまり、星川みつき", "durationSec": 118 },
+        { "id": "AJzaGdxyOUE", "title": "【公式CGライブ】「ミライのプリンセス」リング・クローバー", "durationSec": 124 },
+        { "id": "PGUX6ilp5_k", "title": "【公式CGライブ】「わいるど☆すたー」八王子ビビ、真実夜チィ", "durationSec": 112 },
+        { "id": "bKYrUxDgBeQ", "title": "【公式CGライブ】「わいるど☆すたー」八王子ビビ", "durationSec": 112 },
+        { "id": "zPD-5EwhQpo", "title": "【公式CGライブ】「ココロ・アストロノーツ」七浦すばる、七浦おとめ", "durationSec": 120 },
+        { "id": "fFEHIaU9LSU", "title": "【公式CGライブ】「Piece Of Dream」七浦すばる", "durationSec": 118 },
+        { "id": "Oa5NtZzEOi4", "title": "【公式CGライブ】「ぴかぴかマイストーリー」星川みつき", "durationSec": 119 },
+        { "id": "zyTT2P_1HWo", "title": "【公式CGライブ】「ときめきグラビティ」五十嵐じゅりあ、六堂える", "durationSec": 118 },
+        { "id": "yJ7R6jAYNPA", "title": "【公式CGライブ】「わたしの大切にしてたこと」六堂える", "durationSec": 119 },
+        { "id": "pmlmQkBaXBo", "title": "【公式CGライブ】「超Easy Drive☆」五十嵐じゅりあ", "durationSec": 117 },
+        { "id": "01cY2syJlV0", "title": "【公式CGライブ】「キズナ×リンク」青空ひまり、星川みつき", "durationSec": 116 },
+        { "id": "_jKaexgo2cc", "title": "【公式CGライブ】「きらめきのうた」青空ひまり、星川みつき、鈴風つむぎ", "durationSec": 121 },
+        { "id": "_kd0q-eyWww", "title": "【公式CGライブ】「ニュースタージョーカー」ダークサクラ、ダークタマキ、ダークアイリ、ダークリンリン", "durationSec": 122 },
+        { "id": "GBMFY6zPwOE", "title": "【公式CGライブ】「GIRA GIRA STAR」ダークチィ", "durationSec": 115 },
+        { "id": "UXi-vtm3aAg", "title": "【公式CGライブ】「パステルステップデイズ」青空ひまり", "durationSec": 117 },
+        { "id": "9P9t6Cjpr6c", "title": "【公式CGライブ】「きらめきのうた」鈴風つむぎ", "durationSec": 121 },
+        { "id": "tzY7D7hgIcs", "title": "【公式CGライブ】「GIRA GIRA STAR」真実夜チィ", "durationSec": 115 },
+        { "id": "VEJQi8bHhK4", "title": "【公式CGライブ】「Perfect☆STARs」一条寺サクラ、二階堂タマキ、三ツ葉アイリ、四之宮リンリン", "durationSec": 121 },
+        { "id": "w3leuKxKSDo", "title": "【公式CGライブ】「ネバギバラバー」三ツ葉アイリ、四之宮リンリン", "durationSec": 122 },
+        { "id": "-iIG4VX9yog", "title": "【公式CGライブ】「We're The World」青空ひまり、星川みつき、鈴風つむぎ", "durationSec": 121 },
+        { "id": "8qvYnjzSuDE", "title": "【公式CGライブ】「ヒカリノコトバ」鈴風つむぎ", "durationSec": 127 },
+        { "id": "OSh0gl96UO4", "title": "【公式CGライブ】「ムテキDUOエナジー」青空ひまり、星川みつき", "durationSec": 119 },
+        { "id": "BWyYn2SXkLc", "title": "【公式CGライブ】「Stand Get Up」一条寺サクラ、二階堂タマキ", "durationSec": 114 },
+        { "id": "K0Dgzn2CpmY", "title": "【公式CGライブ】「シークレット・ドリーム」星川みつき", "durationSec": 108 },
+        { "id": "q9ssDOYLjGA", "title": "【公式CGライブ】「P.O.P.P.Y」青空ひまり", "durationSec": 117 }
+      ]
+    },
+    {
+      "number": 3,
+      "slug": "idolland-pripara",
+      "name": "アイドルランドプリパラ CGライブ",
+      "shortName": "アイドルランドプリパラ",
+      "color": "purple",
+      "playlistId": "PLlH6DyUO5TnxpqqTI5A6i6cYYIpls-Sxo",
+      "playlistTitle": "🎀アイドルランドプリパラ🎀公式CGライブ",
+      "videos": [
+        { "id": "5zIwGPlB76g", "title": "🎀公式CGライブ『チョコレートアイスクリーム・トルネード』", "durationSec": 152 },
+        { "id": "vw4Ae9h3HG4", "title": "🎀公式CGライブ『カオティックハリケーン』香田澄あまり", "durationSec": 152 },
+        { "id": "1TlywISCfKI", "title": "🎀公式CGライブ『OPENDREAMLAND!』SoLaMi♡SMILE", "durationSec": 149 },
+        { "id": "NHD2mT1sJ14", "title": "🎀公式CGライブ＃01『OPENDREAMLAND!』ノンテロップVer　SoLaMi♡SMILE", "durationSec": 92 },
+        { "id": "LQD2njkI5r4", "title": "🎀公式CGライブ『究極合神アマリオン 一破滅と創造の狂想曲一』", "durationSec": 217 },
+        { "id": "gHKAExQLF7o", "title": "🎀公式CGライブ『ポォロン♪あまやどりのうた』", "durationSec": 156 }
+      ]
+    }
+  ]
+}

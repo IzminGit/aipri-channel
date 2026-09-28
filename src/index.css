@@ -1,0 +1,126 @@
+@import 'tailwindcss';
+@import '@digital-go-jp/tailwind-theme-plugin/v4';
+
+/* ダークモードは <html data-theme="dark"> で切り替える（OS 設定は main.tsx 側で解決） */
+@custom-variant dark (&:where([data-theme='dark'], [data-theme='dark'] *));
+
+/*
+ * セマンティックトークン。値はすべてデジタル庁デザインシステム（DADS）の
+ * プリミティブカラーから選び、ライト/ダークで差し替える。
+ */
+:root {
+  --app-bg: var(--color-white);
+  --app-surface: var(--color-solid-gray-50);
+  --app-raised: var(--color-white);
+  --app-fg: var(--color-solid-gray-900);
+  --app-muted: var(--color-solid-gray-600);
+  --app-border: var(--color-solid-gray-200);
+  --app-border-strong: var(--color-solid-gray-420);
+  --app-accent: var(--color-key-900);
+  --app-accent-hover: var(--color-key-1000);
+  --app-accent-fg: var(--color-white);
+  --app-accent-subtle: var(--color-key-50);
+  --app-link: var(--color-key-1000);
+  --app-live: var(--color-red-900);
+  --app-focus-ring: var(--color-yellow-300);
+  --app-focus-outline: var(--color-black);
+  --app-past: var(--color-solid-gray-100);
+  color-scheme: light;
+}
+
+[data-theme='dark'] {
+  --app-bg: var(--color-solid-gray-900);
+  --app-surface: #232323;
+  --app-raised: var(--color-solid-gray-800);
+  --app-fg: var(--color-white);
+  --app-muted: var(--color-solid-gray-300);
+  --app-border: var(--color-solid-gray-700);
+  --app-border-strong: var(--color-solid-gray-500);
+  --app-accent: var(--color-key-300);
+  --app-accent-hover: var(--color-key-200);
+  --app-accent-fg: var(--color-key-1200);
+  --app-accent-subtle: #1c2440;
+  --app-link: var(--color-key-300);
+  --app-live: var(--color-red-300);
+  --app-focus-ring: var(--color-yellow-300);
+  --app-focus-outline: var(--color-white);
+  --app-past: #1f1f1f;
+  color-scheme: dark;
+}
+
+@theme inline {
+  --color-bg: var(--app-bg);
+  --color-surface: var(--app-surface);
+  --color-raised: var(--app-raised);
+  --color-fg: var(--app-fg);
+  --color-muted: var(--app-muted);
+  --color-line: var(--app-border);
+  --color-line-strong: var(--app-border-strong);
+  --color-accent: var(--app-accent);
+  --color-accent-hover: var(--app-accent-hover);
+  --color-accent-fg: var(--app-accent-fg);
+  --color-accent-subtle: var(--app-accent-subtle);
+  --color-link: var(--app-link);
+  --color-live: var(--app-live);
+  --color-past: var(--app-past);
+}
+
+/* DADS のフォーカスリング（黒アウトライン + 黄色リング） */
+@utility focus-ring {
+  &:focus-visible {
+    outline: 4px solid var(--app-focus-outline);
+    outline-offset: 2px;
+    box-shadow: 0 0 0 2px var(--app-focus-ring);
+  }
+}
+
+@layer base {
+  html {
+    background: var(--app-bg);
+    color: var(--app-fg);
+    font-family: var(--font-sans);
+    -webkit-text-size-adjust: 100%;
+    font-feature-settings: 'palt' 0;
+  }
+
+  body {
+    min-height: 100dvh;
+    background: var(--app-bg);
+  }
+
+  button:not(:disabled) {
+    cursor: pointer;
+  }
+
+  :where(a, button, [tabindex]):focus-visible {
+    outline: 4px solid var(--app-focus-outline);
+    outline-offset: 2px;
+    box-shadow: 0 0 0 2px var(--app-focus-ring);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      transition-duration: 0.01ms !important;
+      animation-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+/* チャンネル色（lib/colors.ts の channelStyle と併用） */
+.ch-scope {
+  --ch: var(--ch-strong);
+  --ch-bg: var(--ch-tint);
+}
+[data-theme='dark'] .ch-scope {
+  --ch: var(--ch-soft);
+  --ch-bg: color-mix(in srgb, var(--ch-soft) 16%, transparent);
+}
+
+/* 番組表のスクロールバーを目立たせすぎない */
+.guide-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: var(--app-border-strong) transparent;
+}
