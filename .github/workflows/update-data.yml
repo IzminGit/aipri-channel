@@ -1,0 +1,48 @@
+name: Update playlist data
+
+# YouTube Data API から番組データを取得し、変化があれば catalog.json をコミットする。
+# main への push をきっかけに Vercel が自動で再デプロイする。
+on:
+  schedule:
+    # 毎日 05:17 JST（放送日の切替直後）
+    - cron: '17 20 * * *'
+  push:
+    branches: [main]
+    paths: [channels.config.json]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-data
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+
+      - name: Fetch playlists
+        env:
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+        run: npm run fetch-data
+
+      - name: Commit if changed
+        run: |
+          if git diff --quiet -- public/data/catalog.json; then
+            echo "番組データに変更はありません"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/data/catalog.json
+          git commit -m "chore(data): プレイリスト情報を更新"
+          git pull --rebase
+          git push

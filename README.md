@@ -30,7 +30,7 @@
 - Zod（番組データのスキーマ検証。アプリと取得スクリプトで共有）
 - vite-plugin-pwa（Workbox）
 - Vitest / oxlint / Prettier
-- GitHub Actions → GitHub Pages
+- Vercel（ホスティング・PR ごとのプレビュー）+ GitHub Actions（CI・番組データの定期更新）
 
 ```
 channels.config.json        チャンネル（プレイリスト）の設定 ← 人が編集する
@@ -60,7 +60,8 @@ src/
 
    `color` は `blue` `light-blue` `cyan` `green` `lime` `yellow` `orange` `red` `magenta` `purple` から選択します。
 
-2. GitHub Actions が YouTube Data API で動画一覧・再生時間を取得し、`catalog.json` を更新してデプロイします。
+2. GitHub Actions が YouTube Data API で動画一覧・再生時間を取得して `catalog.json` をコミットし、
+   それを受けて Vercel が自動で再デプロイします。
    以降も毎日 5:17 (JST) に自動で更新されます（非公開・埋め込み不可の動画は自動で除外）。
 
 ## 初回セットアップ
@@ -68,8 +69,11 @@ src/
 1. [Google Cloud Console](https://console.cloud.google.com/) で **YouTube Data API v3** を有効化し、API キーを発行
    （「API の制限」で YouTube Data API v3 のみに絞るのがおすすめ）
 2. リポジトリの **Settings → Secrets and variables → Actions** に `YOUTUBE_API_KEY` として登録
-3. **Settings → Pages → Build and deployment → Source** を **GitHub Actions** に設定
-4. Actions タブから「Build & Deploy」を手動実行（または main に push）
+3. [Vercel](https://vercel.com/new) で **Add New… → Project** からこのリポジトリを Import
+   （フレームワーク・ビルド設定は `vercel.json` で指定済みなので、そのまま Deploy で OK）
+4. Actions タブから「Update playlist data」を手動実行すると、最新の番組データが反映されます
+
+以降は main への push で本番、プルリクエストでプレビュー環境が自動でデプロイされます。
 
 API キーが未設定でも、コミット済みの `catalog.json` でサイトは動作します。
 

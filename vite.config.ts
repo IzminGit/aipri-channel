@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react'
 import { defineConfig } from 'vite'
 import { VitePWA } from 'vite-plugin-pwa'
 
-// GitHub Pages ではリポジトリ名のサブパス（/aipri-channel/）で配信される
+// サブパスで配信する場合のみ BASE_PATH を指定（Vercel はルート配信のため不要）
 const base = process.env.BASE_PATH ?? '/'
 
 export default defineConfig({
