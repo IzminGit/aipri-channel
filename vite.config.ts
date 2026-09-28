@@ -17,7 +17,7 @@ export default defineConfig({
       manifest: {
         name: 'アイプリチャンネル — CGライブ番組表',
         short_name: 'アイプリch',
-        description: 'アイプリ・プリパラの公式CGライブを番組表から視聴できる非公式ファンサイト',
+        description: 'プリティーシリーズ・プリキュア・アイカツの公式動画を番組表から視聴できる非公式ファンサイト',
         lang: 'ja',
         start_url: base,
         scope: base,

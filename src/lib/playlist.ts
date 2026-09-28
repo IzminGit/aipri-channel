@@ -50,6 +50,25 @@ export function moveCursor(
   }
 }
 
+/**
+ * 番組表の列の並び：シリーズ順（左から）→ 同じシリーズ内はプレイリスト作成日の新しい順。
+ * チャンネル番号は並べた順に 1 から振り直す（番組表・キーボード操作の番号と一致させる）
+ */
+export function arrangeChannels(channels: Channel[], seriesOrder: string[]): Channel[] {
+  const rank = (s: string) => {
+    const i = seriesOrder.indexOf(s)
+    return i === -1 ? seriesOrder.length : i
+  }
+  return [...channels]
+    .sort(
+      (a, b) =>
+        rank(a.series) - rank(b.series) ||
+        Date.parse(b.playlistCreatedAt) - Date.parse(a.playlistCreatedAt) ||
+        a.number - b.number,
+    )
+    .map((c, i) => ({ ...c, number: i + 1 }))
+}
+
 /** 公開日の古い順 */
 export function sortByPublished(channel: Channel): Channel {
   return {
@@ -73,6 +92,7 @@ export function buildFavorites(channels: Channel[], ids: string[]): Channel {
     color: 'yellow',
     playlistId: '',
     playlistTitle: 'お気に入り',
+    playlistCreatedAt: '1970-01-01T00:00:00Z',
     videos: ids.flatMap((id) => byId.get(id) ?? []),
   }
 }

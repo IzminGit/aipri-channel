@@ -50,7 +50,7 @@ interface VideosResponse {
   }[]
 }
 interface PlaylistsResponse {
-  items: { snippet: { title: string } }[]
+  items: { snippet: { title: string; publishedAt: string } }[]
 }
 
 async function fetchChannel(config: ChannelConfig): Promise<Channel> {
@@ -100,6 +100,8 @@ async function fetchChannel(config: ChannelConfig): Promise<Channel> {
   return {
     ...config,
     playlistTitle: playlist.items[0]?.snippet.title ?? config.name,
+    // プレイリストの作成日（番組表ではシリーズ内をこの新しい順に並べる）
+    playlistCreatedAt: playlist.items[0]?.snippet.publishedAt ?? new Date(0).toISOString(),
     videos,
   }
 }
@@ -137,13 +139,16 @@ async function main() {
   }
   if (failures === config.channels.length) throw new Error('すべてのチャンネルの取得に失敗しました')
 
-  const unchanged = previous && JSON.stringify(previous.channels) === JSON.stringify(channels)
+  const unchanged =
+    previous &&
+    JSON.stringify(previous.channels) === JSON.stringify(channels) &&
+    JSON.stringify(previous.series) === JSON.stringify(config.series)
   if (unchanged) {
     console.log('変更なし')
     return
   }
 
-  const catalog = catalogSchema.parse({ generatedAt: new Date().toISOString(), channels })
+  const catalog = catalogSchema.parse({ generatedAt: new Date().toISOString(), series: config.series, channels })
   await writeFile(CATALOG_PATH, `${JSON.stringify(catalog, null, 2)}\n`)
   console.log(`catalog.json を更新しました (${channels.length} チャンネル)`)
 }
