@@ -1,14 +1,24 @@
 import { use, useCallback, useEffect, useMemo, useRef, useState } from 'react'
-import { Header, type ThemePreference } from './components/Header'
 import { InfoPanel } from './components/InfoPanel'
 import { Player, type PlayerHandle } from './components/Player'
 import { ProgramGuide } from './components/ProgramGuide'
-import { ALL_TAB, FAVORITES_TAB, SeriesTabs } from './components/SeriesTabs'
 import { ShortcutsDialog } from './components/ShortcutsDialog'
+import { Toolbar, type ThemePreference } from './components/Toolbar'
 import { useStoredState } from './hooks/useStoredState'
 import { useTheme } from './hooks/useTheme'
 import { loadCatalog } from './lib/catalog'
-import { cellId, nextInChannel, prevInChannel, samePosition, type Position } from './lib/playlist'
+import {
+  buildFavorites,
+  cellId,
+  FAVORITES,
+  moveItem,
+  nextInChannel,
+  originOf,
+  prevInChannel,
+  samePosition,
+  toggleId,
+  type Position,
+} from './lib/playlist'
 import { parseTitle } from './lib/title'
 
 const THEME_ORDER: ThemePreference[] = ['system', 'light', 'dark']
@@ -17,10 +27,10 @@ const PREVIEW_LINGER = 900
 
 function readUrlPosition(): { channel: number | null; index: number } {
   const params = new URLSearchParams(location.search)
-  const ch = Number(params.get('ch'))
+  const ch = params.get('ch')
   const n = Number(params.get('n'))
   return {
-    channel: Number.isInteger(ch) && ch > 0 ? ch : null,
+    channel: ch !== null && /^\d+$/.test(ch) ? Number(ch) : null,
     index: Number.isInteger(n) && n > 0 ? n - 1 : 0,
   }
 }
@@ -28,8 +38,7 @@ function readUrlPosition(): { channel: number | null; index: number } {
 export default function App() {
   const catalog = use(loadCatalog())
   const [theme, setTheme] = useTheme()
-  const [favorites, setFavorites] = useStoredState<number[]>('favorites', [])
-  const [tab, setTab] = useStoredState<string>('tab', ALL_TAB)
+  const [storedFavorites, setStoredFavorites] = useStoredState<string[]>('favorite-songs', [])
   const [lastPosition, setLastPosition] = useStoredState<Position | null>('last-position', null)
   const [shortcutsOpen, setShortcutsOpen] = useState(false)
   const [active, setActive] = useState(false)
@@ -37,7 +46,18 @@ export default function App() {
   const playerRef = useRef<PlayerHandle>(null)
   const lingerTimer = useRef(0)
 
-  const findChannel = useCallback((n: number) => catalog.channels.find((c) => c.number === n), [catalog.channels])
+  // お気に入り列（曲単位・並び順あり）。先頭の列として表示する
+  const favorites = useMemo(
+    () => buildFavorites(catalog.channels, storedFavorites),
+    [catalog.channels, storedFavorites],
+  )
+  const favoriteIds = useMemo(() => new Set(favorites.videos.map((v) => v.id)), [favorites])
+  const columns = useMemo(() => [favorites, ...catalog.channels], [favorites, catalog.channels])
+
+  const findChannel = useCallback(
+    (n: number) => (n === FAVORITES ? favorites : catalog.channels.find((c) => c.number === n)),
+    [favorites, catalog.channels],
+  )
   const isValid = useCallback(
     (p: Position | null): p is Position => !!p && (findChannel(p.channel)?.videos.length ?? 0) > p.index,
     [findChannel],
@@ -46,8 +66,7 @@ export default function App() {
   const [playing, setPlaying] = useState<Position>(() => {
     const url = readUrlPosition()
     if (url.channel !== null) {
-      const candidate = { channel: url.channel, index: url.index }
-      if (isValid(candidate)) return candidate
+      if (isValid({ channel: url.channel, index: url.index })) return { channel: url.channel, index: url.index }
       if (isValid({ channel: url.channel, index: 0 })) return { channel: url.channel, index: 0 }
     }
     if (isValid(lastPosition)) return lastPosition
@@ -55,35 +74,13 @@ export default function App() {
     return { channel: first.number, index: 0 }
   })
 
-  // お気に入りを先頭に、それ以外はチャンネル番号順
-  const ordered = useMemo(() => {
-    const fav = new Set(favorites)
-    return [...catalog.channels].sort(
-      (a, b) => Number(fav.has(b.number)) - Number(fav.has(a.number)) || a.number - b.number,
-    )
-  }, [catalog.channels, favorites])
-
-  const series = useMemo(() => [...new Set(catalog.channels.map((c) => c.series))], [catalog.channels])
-  const currentTab = tab === ALL_TAB || tab === FAVORITES_TAB || series.includes(tab) ? tab : ALL_TAB
-  const columns = useMemo(
-    () =>
-      ordered.filter((c) =>
-        currentTab === ALL_TAB
-          ? true
-          : currentTab === FAVORITES_TAB
-            ? favorites.includes(c.number)
-            : c.series === currentTab,
-      ),
-    [ordered, currentTab, favorites],
-  )
-
   const playingChannel = findChannel(playing.channel)!
   const playingVideo = playingChannel.videos[playing.index]
   const shown = isValid(preview) ? preview : playing
   const shownChannel = findChannel(shown.channel)!
   const shownVideo = shownChannel.videos[shown.index]
 
-  // URL（?ch=&n=）と最後に再生した位置を同期
+  // URL（?ch=&n=）と最後に再生した位置を同期（お気に入り列は ch=0）
   useEffect(() => {
     const url = new URL(location.href)
     url.searchParams.set('ch', String(playing.channel))
@@ -113,6 +110,32 @@ export default function App() {
     [findChannel],
   )
 
+  /**
+   * お気に入りを更新する。お気に入り列を再生中なら、同じ曲を指し続けるよう位置を合わせ、
+   * 列から外れた場合は元のチャンネルでの位置に切り替える（再生は途切れない）
+   */
+  const updateFavorites = useCallback(
+    (next: string[]) => {
+      setStoredFavorites(next)
+      setPreview(null)
+      if (playing.channel !== FAVORITES) return
+      const id = playingVideo.id
+      const index = buildFavorites(catalog.channels, next).videos.findIndex((v) => v.id === id)
+      const pos = index !== -1 ? { channel: FAVORITES, index } : originOf(catalog.channels, id)
+      if (pos && !samePosition(pos, playing)) setPlaying(pos)
+    },
+    [catalog.channels, playing, playingVideo.id, setStoredFavorites],
+  )
+  const currentIds = useMemo(() => favorites.videos.map((v) => v.id), [favorites])
+  const toggleFavorite = useCallback(
+    (videoId: string) => updateFavorites(toggleId(currentIds, videoId)),
+    [currentIds, updateFavorites],
+  )
+  const moveFavorite = useCallback(
+    (from: number, to: number) => updateFavorites(moveItem(currentIds, from, to)),
+    [currentIds, updateFavorites],
+  )
+
   const startPreview = useCallback((pos: Position) => {
     window.clearTimeout(lingerTimer.current)
     setPreview(pos)
@@ -123,12 +146,7 @@ export default function App() {
   }, [])
   const holdPreview = useCallback(() => window.clearTimeout(lingerTimer.current), [])
 
-  const toggleFavorite = useCallback(
-    (n: number) => setFavorites(favorites.includes(n) ? favorites.filter((f) => f !== n) : [...favorites, n]),
-    [favorites, setFavorites],
-  )
-
-  // キーボード / テレビのリモコン操作（番組表内の矢印キーは ProgramGuide が処理）
+  // キーボード / テレビのリモコン操作（番組表内の矢印・F・Shift+↑↓ は ProgramGuide が処理）
   const digitBuffer = useRef({ value: '', timer: 0 })
   useEffect(() => {
     const onKeyDown = (e: KeyboardEvent) => {
@@ -141,10 +159,10 @@ export default function App() {
       if (shortcutsOpen && e.key !== '?') return
 
       const switchChannel = (dir: 1 | -1) => {
-        const list = columns.some((c) => c.number === playing.channel) ? columns : ordered
+        const list = columns.filter((c) => c.videos.length > 0)
         const i = list.findIndex((c) => c.number === playing.channel)
         const next = list[(i + dir + list.length) % list.length]
-        if (next?.videos.length) play({ channel: next.number, index: 0 })
+        if (next) play({ channel: next.number, index: 0 })
       }
 
       switch (e.key) {
@@ -152,9 +170,10 @@ export default function App() {
         case 'ArrowDown':
         case 'ArrowLeft':
         case 'ArrowRight': {
+          const first = columns.find((c) => c.videos.length > 0)
           const cell =
             document.getElementById(cellId(playing)) ??
-            (columns[0] ? document.getElementById(cellId({ channel: columns[0].number, index: 0 })) : null)
+            (first ? document.getElementById(cellId({ channel: first.number, index: 0 })) : null)
           cell?.focus()
           break
         }
@@ -178,7 +197,7 @@ export default function App() {
           break
         case 'f':
         case 'F':
-          toggleFavorite(playing.channel)
+          toggleFavorite(playingVideo.id)
           break
         case 'm':
         case 'M':
@@ -219,17 +238,9 @@ export default function App() {
     }
     window.addEventListener('keydown', onKeyDown)
     return () => window.removeEventListener('keydown', onKeyDown)
-  }, [catalog.channels, columns, ordered, playing, play, setTheme, shortcutsOpen, step, theme, toggleFavorite])
+  }, [catalog.channels, columns, playing, playingVideo.id, play, setTheme, shortcutsOpen, step, theme, toggleFavorite])
 
-  const infoProps = {
-    channel: shownChannel,
-    video: shownVideo,
-    index: shown.index,
-    isPlaying: samePosition(shown, playing),
-    favorite: favorites.includes(shownChannel.number),
-    onPlay: () => play(shown),
-    onToggleFavorite: () => toggleFavorite(shownChannel.number),
-  }
+  const toolbar = <Toolbar theme={theme} onThemeChange={setTheme} onShowShortcuts={() => setShortcutsOpen(true)} />
 
   return (
     <div className="flex h-dvh flex-col overflow-hidden">
@@ -239,12 +250,12 @@ export default function App() {
       >
         番組表へスキップ
       </a>
-      <Header theme={theme} onThemeChange={setTheme} onShowShortcuts={() => setShortcutsOpen(true)} />
+      <h1 className="sr-only">アイプリチャンネル — CGライブ番組表</h1>
 
       {/* 上段：プレーヤー（左）と番組の詳細（右）。番組表をスクロールしても固定 */}
       <section
         aria-label="プレーヤー"
-        className="grid shrink-0 lg:h-[min(46dvh,calc((100vw-26rem)*0.5625))] lg:grid-cols-[minmax(0,1fr)_26rem] 2xl:h-[min(50dvh,calc((100vw-30rem)*0.5625))] 2xl:grid-cols-[minmax(0,1fr)_30rem]"
+        className="grid shrink-0 lg:h-[min(44dvh,calc((100vw-26rem)*0.5625))] lg:grid-cols-[minmax(0,1fr)_26rem] 2xl:h-[min(48dvh,calc((100vw-30rem)*0.5625))] 2xl:grid-cols-[minmax(0,1fr)_30rem]"
       >
         <div className="aspect-video lg:aspect-auto lg:h-full">
           <Player
@@ -257,42 +268,50 @@ export default function App() {
           />
         </div>
         <div className="min-h-0 max-lg:hidden">
-          <InfoPanel {...infoProps} onPointerEnter={holdPreview} onPointerLeave={endPreview} />
+          <InfoPanel
+            channel={shownChannel}
+            video={shownVideo}
+            index={shown.index}
+            isPlaying={samePosition(shown, playing)}
+            favorite={favoriteIds.has(shownVideo.id)}
+            toolbar={toolbar}
+            onPlay={() => play(shown)}
+            onToggleFavorite={() => toggleFavorite(shownVideo.id)}
+            onPointerEnter={holdPreview}
+            onPointerLeave={endPreview}
+          />
         </div>
       </section>
       <div className="lg:hidden">
         <InfoPanel
-          {...infoProps}
+          compact
           channel={playingChannel}
           video={playingVideo}
           index={playing.index}
           isPlaying
-          compact
+          favorite={favoriteIds.has(playingVideo.id)}
+          toolbar={toolbar}
+          onPlay={() => play(playing)}
+          onToggleFavorite={() => toggleFavorite(playingVideo.id)}
         />
       </div>
 
-      <SeriesTabs series={series} value={currentTab} favoriteCount={favorites.length} onChange={setTab} />
-
       {/* 下段：番組表（ここだけスクロール） */}
-      <main id="guide" className="flex min-h-0 flex-1 flex-col">
+      <main id="guide" className="flex min-h-0 flex-1 flex-col border-t border-line">
         <ProgramGuide
           columns={columns}
           playing={playing}
           preview={isValid(preview) ? preview : null}
-          favorites={favorites}
+          favoriteIds={favoriteIds}
           onPlay={play}
           onPreview={startPreview}
           onPreviewEnd={endPreview}
           onToggleFavorite={toggleFavorite}
+          onMoveFavorite={moveFavorite}
         />
       </main>
 
-      <footer className="shrink-0 truncate border-t border-line bg-bg px-3 py-1.5 text-oln-14N-100 text-muted lg:px-4">
-        非公式ファンサイトです。映像の権利は各権利者に帰属します。 ・ 番組データ更新：
-        <time dateTime={catalog.generatedAt}>{new Date(catalog.generatedAt).toLocaleDateString('ja-JP')}</time>
-      </footer>
-
-      <ShortcutsDialog open={shortcutsOpen} onClose={() => setShortcutsOpen(false)} />
+      <ShortcutsDialog open={shortcutsOpen} generatedAt={catalog.generatedAt} onClose={() => setShortcutsOpen(false)} />
     </div>
   )
 }

@@ -1,6 +1,8 @@
+import type { ReactNode } from 'react'
 import type { Channel, Video } from '../schema'
 import { channelStyle } from '../lib/colors'
 import { formatDate, formatDuration, splitLinks } from '../lib/format'
+import { FAVORITES } from '../lib/playlist'
 import { parseTitle } from '../lib/title'
 import { thumbnailUrl, watchUrl } from '../lib/youtube'
 import { ExternalIcon, PlayIcon, PlayingIcon, StarIcon } from './Icons'
@@ -13,6 +15,8 @@ interface Props {
   isPlaying: boolean
   favorite: boolean
   compact?: boolean
+  /** 右上に置く操作（キーボード操作ヘルプ・表示テーマ） */
+  toolbar: ReactNode
   onPlay(): void
   onToggleFavorite(): void
   onPointerEnter?(): void
@@ -27,6 +31,7 @@ export function InfoPanel({
   isPlaying,
   favorite,
   compact,
+  toolbar,
   onPlay,
   onToggleFavorite,
   onPointerEnter,
@@ -45,7 +50,11 @@ export function InfoPanel({
   )
   const channelBadge = (
     <span className="inline-flex items-center gap-1.5 rounded-4 bg-(--ch-bg) px-2 py-1 text-oln-14B-100 text-(--ch)">
-      <span className="tabular-nums">{channel.number}ch</span>
+      {channel.number === FAVORITES ? (
+        <StarIcon filled size={14} />
+      ) : (
+        <span className="tabular-nums">{channel.number}ch</span>
+      )}
       <span className="truncate">{channel.shortName}</span>
     </span>
   )
@@ -59,15 +68,18 @@ export function InfoPanel({
     return (
       <section
         aria-label="再生中の曲"
-        className="ch-scope border-b border-line px-4 py-3"
+        className="ch-scope border-b border-line px-3 py-2"
         style={channelStyle(channel.color)}
       >
-        <div className="flex flex-wrap items-center gap-2">
-          {status}
-          {channelBadge}
-          {position}
+        <div className="flex items-center gap-2">
+          <div className="flex min-w-0 flex-1 flex-wrap items-center gap-x-2 gap-y-1">
+            {status}
+            {channelBadge}
+            {position}
+          </div>
+          {toolbar}
         </div>
-        <p className="mt-2 truncate text-dns-16B-130 text-fg">
+        <p className="mt-1.5 truncate text-dns-16B-130 text-fg">
           {song}
           {performers && <span className="ml-2 text-dns-14N-130 text-muted">{performers}</span>}
         </p>
@@ -85,14 +97,17 @@ export function InfoPanel({
       style={channelStyle(channel.color)}
     >
       <div className="h-1 shrink-0 bg-(--ch)" aria-hidden="true" />
-      <div className="min-h-0 flex-1 overflow-y-auto overscroll-contain p-5">
-        <div className="flex flex-wrap items-center gap-2">
-          {status}
-          {channelBadge}
-          {position}
+      <div className="min-h-0 flex-1 overflow-y-auto overscroll-contain p-4">
+        <div className="flex items-start gap-2">
+          <div className="flex min-w-0 flex-1 flex-wrap items-center gap-2">
+            {status}
+            {channelBadge}
+            {position}
+          </div>
+          {toolbar}
         </div>
 
-        <div className="mt-4 flex gap-4">
+        <div className="mt-3 flex gap-4">
           <img
             src={thumbnailUrl(video.id)}
             alt=""
@@ -107,7 +122,7 @@ export function InfoPanel({
           </div>
         </div>
 
-        <div className="mt-4 flex flex-wrap items-center gap-3">
+        <div className="mt-3 flex flex-wrap items-center gap-3">
           {!isPlaying && (
             <button
               type="button"
@@ -125,7 +140,7 @@ export function InfoPanel({
             className="inline-flex min-h-10 items-center gap-2 rounded-8 border border-accent px-3 text-oln-14B-100 text-accent focus-ring hover:bg-accent-subtle"
           >
             <StarIcon filled={favorite} size={18} />
-            {favorite ? 'お気に入り登録済み' : 'チャンネルをお気に入り'}
+            {favorite ? 'お気に入り登録済み' : 'お気に入りに追加'}
           </button>
           <a
             href={watchUrl(video.id, channel.playlistId)}
@@ -140,7 +155,7 @@ export function InfoPanel({
         </div>
 
         {video.description && (
-          <div className="mt-5 border-t border-line pt-4">
+          <div className="mt-4 border-t border-line pt-3">
             <h3 className="sr-only">動画の説明</h3>
             <p className="text-dns-14N-130 leading-170 break-words whitespace-pre-line text-fg">
               {splitLinks(video.description).map((part, i) =>

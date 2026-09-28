@@ -3,17 +3,26 @@ import { CloseIcon } from './Icons'
 
 const shortcuts: [keys: string[], description: string][] = [
   [['↑', '↓', '←', '→'], '番組表の中を移動（Enter で再生）'],
+  [['F'], 'フォーカス中（または再生中）の曲をお気に入りに追加／解除'],
+  [['Shift', '↑', '↓'], 'お気に入り列で曲の順番を入れ替え'],
   [['N', 'P'], '次の曲 / 前の曲'],
   [['PgUp', 'PgDn'], '前 / 次のチャンネル（リモコンのチャンネル±も可）'],
   [['1', '〜', '9'], 'チャンネル番号の 1 曲目から再生'],
-  [['F'], '再生中のチャンネルをお気に入りに追加／解除'],
   [['M'], 'ミュートの切替'],
   [['T'], '表示テーマの切替'],
   [['Esc'], 'プレビューをやめて再生中の曲の詳細に戻る'],
   [['?'], 'このヘルプを表示'],
 ]
 
-export function ShortcutsDialog({ open, onClose }: { open: boolean; onClose(): void }) {
+export function ShortcutsDialog({
+  open,
+  generatedAt,
+  onClose,
+}: {
+  open: boolean
+  generatedAt: string
+  onClose(): void
+}) {
   const ref = useRef<HTMLDialogElement>(null)
 
   useEffect(() => {
@@ -29,13 +38,16 @@ export function ShortcutsDialog({ open, onClose }: { open: boolean; onClose(): v
       onClose={onClose}
       onClick={(e) => e.target === e.currentTarget && onClose()}
       aria-labelledby="shortcuts-title"
-      className="m-auto w-[min(32rem,calc(100vw-2rem))] rounded-12 border border-line bg-raised p-0 text-fg shadow-6 backdrop:bg-black/50"
+      className="m-auto max-h-[calc(100dvh-2rem)] w-[min(34rem,calc(100vw-2rem))] rounded-12 border border-line bg-raised p-0 text-fg shadow-6 backdrop:bg-black/50"
     >
       <div className="p-6">
         <div className="flex items-start justify-between gap-4">
-          <h2 id="shortcuts-title" className="text-std-20B-150">
-            キーボード操作
-          </h2>
+          <div>
+            <h2 id="shortcuts-title" className="text-std-20B-150">
+              アイプリチャンネル
+            </h2>
+            <p className="text-oln-14N-100 text-muted">CGライブ番組表 ・ 操作ガイド</p>
+          </div>
           <button
             type="button"
             onClick={onClose}
@@ -69,8 +81,14 @@ export function ShortcutsDialog({ open, onClose }: { open: boolean; onClose(): v
           ))}
         </dl>
         <p className="mt-4 text-std-16N-170 text-muted">
-          動画の上をクリックした直後は YouTube
-          プレーヤーが操作を受け取るため、画面の余白をクリックしてから操作してください。
+          曲の ☆ でお気に入り列に追加できます。お気に入り列ではドラッグ、▲▼ ボタン、Shift+↑↓
+          で順番を変えられます。動画の上をクリックした直後は YouTube
+          プレーヤーが操作を受け取るため、番組表をクリックしてからキー操作してください。
+        </p>
+        <p className="mt-4 border-t border-line pt-4 text-dns-14N-130 text-muted">
+          本サイトは非公式のファンサイトです。映像は各公式 YouTube
+          チャンネルが公開している動画を埋め込みで再生しており、権利は各権利者に帰属します。 番組データ更新：
+          <time dateTime={generatedAt}>{new Date(generatedAt).toLocaleDateString('ja-JP')}</time>
         </p>
       </div>
     </dialog>

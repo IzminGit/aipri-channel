@@ -2,7 +2,17 @@ import { describe, expect, it } from 'vitest'
 import type { Channel, Video } from '../schema'
 import { parseIsoDuration } from './duration'
 import { splitLinks } from './format'
-import { moveCursor, nextInChannel, prevInChannel, sortByPublished } from './playlist'
+import {
+  buildFavorites,
+  FAVORITES,
+  moveCursor,
+  moveItem,
+  nextInChannel,
+  originOf,
+  prevInChannel,
+  sortByPublished,
+  toggleId,
+} from './playlist'
 import { parseTitle } from './title'
 
 const video = (id: string, publishedAt: string): Video => ({
@@ -116,5 +126,33 @@ describe('parseTitle', () => {
 
   it('想定外の形式はそのまま', () => {
     expect(parseTitle('特別編')).toEqual({ song: '特別編', performers: '' })
+  })
+})
+
+describe('お気に入り', () => {
+  const chs = [channel(1, 3), channel(2, 2)]
+  const id = (c: number, i: number) => `v${c}-${i}`.padEnd(11, 'x')
+
+  it('ID の並び順で列を組み立て、存在しない動画は除く', () => {
+    const fav = buildFavorites(chs, [id(2, 1), 'missingxxxx', id(1, 0)])
+    expect(fav.number).toBe(FAVORITES)
+    expect(fav.videos.map((v) => v.id)).toEqual([id(2, 1), id(1, 0)])
+  })
+
+  it('元のチャンネルの位置を引ける', () => {
+    expect(originOf(chs, id(2, 1))).toEqual({ channel: 2, index: 1 })
+    expect(originOf(chs, 'missingxxxx')).toBeNull()
+  })
+
+  it('追加と解除', () => {
+    expect(toggleId(['a'], 'b')).toEqual(['a', 'b'])
+    expect(toggleId(['a', 'b'], 'a')).toEqual(['b'])
+  })
+
+  it('並び替え', () => {
+    expect(moveItem(['a', 'b', 'c', 'd'], 0, 2)).toEqual(['b', 'c', 'a', 'd'])
+    expect(moveItem(['a', 'b', 'c', 'd'], 3, 0)).toEqual(['d', 'a', 'b', 'c'])
+    expect(moveItem(['a', 'b'], 1, 9)).toEqual(['a', 'b'])
+    expect(moveItem(['a', 'b'], 0, 9)).toEqual(['b', 'a'])
   })
 })

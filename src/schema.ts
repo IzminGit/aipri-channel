@@ -20,7 +20,7 @@ export const channelConfigSchema = z.object({
   slug: z.string().regex(/^[a-z0-9-]+$/),
   name: z.string().min(1),
   shortName: z.string().min(1),
-  /** シリーズ名（番組表の絞り込みタブに使う） */
+  /** 作品シリーズ名 */
   series: z.string().min(1),
   color: z.enum(channelColors),
   playlistId: z.string().min(1),
