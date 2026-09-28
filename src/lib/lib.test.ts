@@ -3,6 +3,7 @@ import type { Channel, Video } from '../schema'
 import { parseIsoDuration } from './duration'
 import { splitLinks } from './format'
 import {
+  arrangeChannels,
   buildFavorites,
   FAVORITES,
   moveCursor,
@@ -29,6 +30,7 @@ const channel = (number: number, count: number): Channel => ({
   name: `ch${number}`,
   shortName: `ch${number}`,
   series: 'テスト',
+  playlistCreatedAt: '2026-01-01T00:00:00Z',
   color: 'magenta',
   playlistId: 'PLx',
   playlistTitle: 'x',
@@ -124,6 +126,36 @@ describe('parseTitle', () => {
     })
   })
 
+  it('プリキュア主題歌（最後の「」が曲名、区分を補足に）', () => {
+    expect(
+      parseTitle('「名探偵プリキュア！」オープニング主題歌「ハートにヒント！名探偵プリキュア！」(ノンテロップver)'),
+    ).toEqual({ song: 'ハートにヒント！名探偵プリキュア！', performers: 'オープニング主題歌 (ノンテロップver)' })
+  })
+
+  it('Lyric Video', () => {
+    expect(parseTitle('「キミからのEcho」/ 響カイト(CV：佐久間大介) Lyric Video')).toEqual({
+      song: 'キミからのEcho',
+      performers: '響カイト(CV：佐久間大介)',
+    })
+    expect(parseTitle('【アイカツアカデミー！】「AMBITION!」Official Lyric Video')).toEqual({
+      song: 'AMBITION!',
+      performers: '',
+    })
+  })
+
+  it('アイカツ！MV', () => {
+    expect(parseTitle('【スマートフォン用】アイカツスターズ！ミュージックビデオ『スタートライン！』をお届け♪')).toEqual(
+      { song: 'スタートライン！', performers: 'スマートフォン用' },
+    )
+  })
+
+  it('（うた：〇〇）形式', () => {
+    expect(parseTitle('【公式MV】レッツ！アイプリ（うた：ひまり）')).toEqual({
+      song: 'レッツ！アイプリ',
+      performers: 'ひまり',
+    })
+  })
+
   it('想定外の形式はそのまま', () => {
     expect(parseTitle('特別編')).toEqual({ song: '特別編', performers: '' })
   })
@@ -154,5 +186,27 @@ describe('お気に入り', () => {
     expect(moveItem(['a', 'b', 'c', 'd'], 3, 0)).toEqual(['d', 'a', 'b', 'c'])
     expect(moveItem(['a', 'b'], 1, 9)).toEqual(['a', 'b'])
     expect(moveItem(['a', 'b'], 0, 9)).toEqual(['b', 'a'])
+  })
+})
+
+describe('arrangeChannels', () => {
+  const ch = (number: number, series: string, created: string) => ({
+    ...channel(number, 0),
+    series,
+    playlistCreatedAt: created,
+  })
+  it('シリーズ順 → シリーズ内は作成日の新しい順に並べ、番号を振り直す', () => {
+    const out = arrangeChannels(
+      [
+        ch(10, 'アイカツ', '2024-01-01T00:00:00Z'),
+        ch(11, 'プリキュア', '2023-01-01T00:00:00Z'),
+        ch(12, 'プリティー', '2022-01-01T00:00:00Z'),
+        ch(13, 'プリキュア', '2025-01-01T00:00:00Z'),
+        ch(14, 'プリティー', '2026-01-01T00:00:00Z'),
+      ],
+      ['プリティー', 'プリキュア', 'アイカツ'],
+    )
+    expect(out.map((c) => c.slug)).toEqual(['ch14', 'ch12', 'ch13', 'ch11', 'ch10'])
+    expect(out.map((c) => c.number)).toEqual([1, 2, 3, 4, 5])
   })
 })

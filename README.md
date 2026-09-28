@@ -1,9 +1,10 @@
 # アイプリチャンネル — CGライブ番組表
 
-おねがいアイプリ・ひみつのアイプリ・アイドルランドプリパラの公式 CG ライブ（YouTube プレイリスト）を、
+プリティーシリーズ（アイプリ・プリパラ・プリマジ）、プリキュア、アイカツの公式 CG ライブ・主題歌・MV（YouTube プレイリスト）を、
 **テレビのチャンネルと番組表** に見立てて視聴できる非公式ファンサイトです。
 
 - 1 プレイリスト = 1 チャンネル（番組表の縦の列）、1 動画 = 1 番組（1 曲目、2 曲目…の行）
+- 列は左から **プリティーシリーズ → プリキュアシリーズ → アイカツシリーズ**、同じシリーズ内は **プレイリストの作成日が新しい順**（シリーズ名の帯と区切り線で区別）
 - 各チャンネルの曲は **動画の公開日が古い順** に並ぶ
 - レイアウトは [japantv.app](https://japantv.app/) を踏襲：上段にプレーヤー（左）と番組の詳細（右）を固定し、下段の番組表だけがスクロール（ヘッダーなしで番組表を広く表示。キーボード操作ヘルプと表示テーマは詳細パネル右上）
 - 番組表の曲をクリックで再生し、同じチャンネルの次の曲を連続再生（最終曲の次は 1 曲目へ）
@@ -45,22 +46,26 @@ src/
 
 ## チャンネル（番組）を追加する
 
-1. `channels.config.json` にエントリを追加して push
+1. `channels.config.json` の `channels` にエントリを追加して push
 
    ```json
    {
-     "number": 4,
+     "number": 22,
      "slug": "my-channel",
-     "name": "チャンネル名 CGライブ",
-     "shortName": "短い名前",
-     "series": "アイプリ",
-     "color": "orange",
+     "name": "チャンネル名（詳細表示用）",
+     "shortName": "番組表の列見出し",
+     "series": "アイカツシリーズ",
+     "color": "light-blue",
      "playlistId": "PLxxxxxxxxxxxxxxxx"
    }
    ```
 
-   `series` は作品シリーズ名です（現在は表示には使っていません）。
-   `color` は `blue` `light-blue` `cyan` `green` `lime` `yellow` `orange` `red` `magenta` `purple` から選択します。
+   - `series` は `channels.config.json` 冒頭の `series`（左からの並び順）にある名前を指定します。
+     新しいシリーズを作るときは `series` にも追加してください。
+   - 列の並び（シリーズ順 → プレイリスト作成日の新しい順）と表示上のチャンネル番号は自動で決まります。
+     `number` は重複しない値であれば何でも構いません。
+   - `color` は `blue` `light-blue` `cyan` `green` `lime` `yellow` `orange` `red` `magenta` `purple` から選択します
+     （現在はシリーズごとに プリティー=`magenta`・プリキュア=`orange`・アイカツ=`light-blue`）。
 
 2. GitHub Actions が YouTube Data API で動画一覧・再生時間を取得して `catalog.json` をコミットし、
    それを受けて Vercel が自動で再デプロイします。

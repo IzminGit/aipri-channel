@@ -1,11 +1,12 @@
 {
+  "series": ["プリティーシリーズ", "プリキュアシリーズ", "アイカツシリーズ"],
   "channels": [
     {
       "number": 1,
       "slug": "onegai-aipri",
       "name": "おねがいアイプリ CGライブ",
-      "shortName": "おねがいアイプリ",
-      "series": "アイプリ",
+      "shortName": "おねがいアイプリ CGライブ",
+      "series": "プリティーシリーズ",
       "color": "magenta",
       "playlistId": "PL6VN7enyUDE7L20ULWQ1rvatPPgDV9we4"
     },
@@ -13,19 +14,181 @@
       "number": 2,
       "slug": "himitsu-aipri",
       "name": "ひみつのアイプリ CGライブ",
-      "shortName": "ひみつのアイプリ",
-      "series": "アイプリ",
-      "color": "light-blue",
+      "shortName": "ひみつのアイプリ CGライブ",
+      "series": "プリティーシリーズ",
+      "color": "magenta",
       "playlistId": "PL6VN7enyUDE7osGtSwkHjEJpjDNnylB6u"
     },
     {
       "number": 3,
+      "slug": "himitsu-aipri-game-mv",
+      "name": "ひみつのアイプリ ゲームMV",
+      "shortName": "ひみつのアイプリ ゲームMV",
+      "series": "プリティーシリーズ",
+      "color": "magenta",
+      "playlistId": "PL6VN7enyUDE564sUwRgiKF8Otvn1U_bvS"
+    },
+    {
+      "number": 4,
+      "slug": "himitsu-aipri-oped",
+      "name": "ひみつのアイプリ OP/ED",
+      "shortName": "ひみつのアイプリ OP/ED",
+      "series": "プリティーシリーズ",
+      "color": "magenta",
+      "playlistId": "PL6VN7enyUDE6dNIIdzsxfWg6wunxeAx7o"
+    },
+    {
+      "number": 5,
       "slug": "idolland-pripara",
       "name": "アイドルランドプリパラ CGライブ",
       "shortName": "アイドルランドプリパラ",
-      "series": "プリパラ",
-      "color": "purple",
+      "series": "プリティーシリーズ",
+      "color": "magenta",
       "playlistId": "PLlH6DyUO5TnxpqqTI5A6i6cYYIpls-Sxo"
+    },
+    {
+      "number": 6,
+      "slug": "primagi",
+      "name": "ワッチャプリマジ！ CGライブ",
+      "shortName": "プリマジ CGライブ",
+      "series": "プリティーシリーズ",
+      "color": "magenta",
+      "playlistId": "PLHLXVxqL73-wCg8-hUB3VDey-gkw1TFL_"
+    },
+    {
+      "number": 7,
+      "slug": "meitantei-precure",
+      "name": "名探偵プリキュア！ 主題歌",
+      "shortName": "名探偵プリキュア！",
+      "series": "プリキュアシリーズ",
+      "color": "orange",
+      "playlistId": "PLq34MZPUzQ9mHNp4gU5UBIP2xL8G4fiwO"
+    },
+    {
+      "number": 8,
+      "slug": "kimiidol-precure",
+      "name": "キミとアイドルプリキュア♪ 主題歌",
+      "shortName": "キミとアイドルプリキュア♪ 主題歌",
+      "series": "プリキュアシリーズ",
+      "color": "orange",
+      "playlistId": "PLq34MZPUzQ9mMvKmMuvFTue0bX6hPGkxF"
+    },
+    {
+      "number": 9,
+      "slug": "kimiidol-precure-lyric",
+      "name": "キミとアイドルプリキュア♪ Lyric Video",
+      "shortName": "キミとアイドルプリキュア♪ Lyric",
+      "series": "プリキュアシリーズ",
+      "color": "orange",
+      "playlistId": "PLq34MZPUzQ9nTF8GPQiZ2GJ9CKv-CyLC-"
+    },
+    {
+      "number": 10,
+      "slug": "precure-theme-songs",
+      "name": "プリキュア テーマソング特集",
+      "shortName": "プリキュア テーマソング",
+      "series": "プリキュアシリーズ",
+      "color": "orange",
+      "playlistId": "PLq34MZPUzQ9kIAOYC7oWSXKQCCA0ZGcJi"
+    },
+    {
+      "number": 11,
+      "slug": "wonderful-precure",
+      "name": "わんだふるぷりきゅあ！ 主題歌",
+      "shortName": "わんだふるぷりきゅあ！",
+      "series": "プリキュアシリーズ",
+      "color": "orange",
+      "playlistId": "PLq34MZPUzQ9mhU2u1gv_fJ0Y3NkhPY0Ve"
+    },
+    {
+      "number": 12,
+      "slug": "hirogaru-sky-precure",
+      "name": "ひろがるスカイ！プリキュア 主題歌",
+      "shortName": "ひろがるスカイ！プリキュア",
+      "series": "プリキュアシリーズ",
+      "color": "orange",
+      "playlistId": "PLq34MZPUzQ9mJyCKcQMTyUpwhBPKmRAfr"
+    },
+    {
+      "number": 13,
+      "slug": "delicious-party-precure",
+      "name": "デリシャスパーティ♡プリキュア 主題歌",
+      "shortName": "デリシャスパーティ♡プリキュア",
+      "series": "プリキュアシリーズ",
+      "color": "orange",
+      "playlistId": "PLq34MZPUzQ9mTPRjSiQaPuxjYPjtABWod"
+    },
+    {
+      "number": 14,
+      "slug": "aikatsu-academy-stage",
+      "name": "アイカツアカデミー！ ステージムービー",
+      "shortName": "アイカツアカデミー！ ステージ",
+      "series": "アイカツシリーズ",
+      "color": "light-blue",
+      "playlistId": "PLtn7t5zzXw_gCTaNVIXVbPRSQZdYKQK1-"
+    },
+    {
+      "number": 15,
+      "slug": "aikatsu-academy-lyric",
+      "name": "アイカツアカデミー！ Official Lyric Video",
+      "shortName": "アイカツアカデミー！ Lyric",
+      "series": "アイカツシリーズ",
+      "color": "light-blue",
+      "playlistId": "PLtn7t5zzXw_gZdLTpl04KPwcX4swYhcuf"
+    },
+    {
+      "number": 16,
+      "slug": "aikatsu-planet",
+      "name": "アイカツプラネット！ MV",
+      "shortName": "アイカツプラネット！",
+      "series": "アイカツシリーズ",
+      "color": "light-blue",
+      "playlistId": "PLyqyx_I-liu3qvwdnEdt6GddyeyS9-uHh"
+    },
+    {
+      "number": 17,
+      "slug": "aikatsu-onparade",
+      "name": "アイカツオンパレード！ MV",
+      "shortName": "アイカツオンパレード！",
+      "series": "アイカツシリーズ",
+      "color": "light-blue",
+      "playlistId": "PLyqyx_I-liu1HPYnO0hDeCjLtnqngB44r"
+    },
+    {
+      "number": 18,
+      "slug": "aikatsu-friends",
+      "name": "アイカツフレンズ！ MV",
+      "shortName": "アイカツフレンズ！",
+      "series": "アイカツシリーズ",
+      "color": "light-blue",
+      "playlistId": "PLyqyx_I-liu0XyHA8MCUMYFq_QE-qskHm"
+    },
+    {
+      "number": 19,
+      "slug": "aikatsu-stars",
+      "name": "アイカツスターズ！ MV",
+      "shortName": "アイカツスターズ！",
+      "series": "アイカツシリーズ",
+      "color": "light-blue",
+      "playlistId": "PLyqyx_I-liu1sMghe6i_pwY47pRtMIw_r"
+    },
+    {
+      "number": 20,
+      "slug": "aikatsu",
+      "name": "アイカツ！ MV",
+      "shortName": "アイカツ！",
+      "series": "アイカツシリーズ",
+      "color": "light-blue",
+      "playlistId": "PLyqyx_I-liu1JaHGFCEmEAtKPiKxVOZAR"
+    },
+    {
+      "number": 21,
+      "slug": "aikatsu-music-video",
+      "name": "アイカツ！ ミュージックビデオ（全シリーズ）",
+      "shortName": "アイカツ！ MV 全シリーズ",
+      "series": "アイカツシリーズ",
+      "color": "light-blue",
+      "playlistId": "PLyqyx_I-liu0Bz2rhIKy91QgFG44FHDUX"
     }
   ]
 }
