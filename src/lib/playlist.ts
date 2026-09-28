@@ -57,3 +57,44 @@ export function sortByPublished(channel: Channel): Channel {
     videos: [...channel.videos].sort((a, b) => Date.parse(a.publishedAt) - Date.parse(b.publishedAt)),
   }
 }
+
+/** お気に入り列のチャンネル番号（実在のチャンネルは 1 以上） */
+export const FAVORITES = 0
+
+/** お気に入り（動画 ID の並び）から番組表の列を組み立てる。カタログにない動画は除く */
+export function buildFavorites(channels: Channel[], ids: string[]): Channel {
+  const byId = new Map(channels.flatMap((c) => c.videos.map((v) => [v.id, v] as const)))
+  return {
+    number: FAVORITES,
+    slug: 'favorites',
+    name: 'お気に入り',
+    shortName: 'お気に入り',
+    series: 'お気に入り',
+    color: 'yellow',
+    playlistId: '',
+    playlistTitle: 'お気に入り',
+    videos: ids.flatMap((id) => byId.get(id) ?? []),
+  }
+}
+
+/** 動画が属するチャンネル（お気に入り列ではなく元のプレイリスト）の位置 */
+export function originOf(channels: Channel[], videoId: string): Position | null {
+  for (const c of channels) {
+    const index = c.videos.findIndex((v) => v.id === videoId)
+    if (index !== -1) return { channel: c.number, index }
+  }
+  return null
+}
+
+export function toggleId(ids: string[], id: string): string[] {
+  return ids.includes(id) ? ids.filter((x) => x !== id) : [...ids, id]
+}
+
+/** 並び替え（from 番目を to 番目へ移動） */
+export function moveItem<T>(list: T[], from: number, to: number): T[] {
+  if (from === to || from < 0 || from >= list.length) return list
+  const next = [...list]
+  const [item] = next.splice(from, 1)
+  next.splice(Math.max(0, Math.min(to, next.length)), 0, item)
+  return next
+}

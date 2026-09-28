@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import type { ThemePreference } from '../components/Header'
+import type { ThemePreference } from '../components/Toolbar'
 import { useStoredState } from './useStoredState'
 
 const media = window.matchMedia('(prefers-color-scheme: dark)')

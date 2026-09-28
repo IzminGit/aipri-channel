@@ -108,3 +108,10 @@ export const PlayingIcon = (p: IconProps) => (
     <path d="M4 20V10h3v10H4Zm6.5 0V4h3v16h-3ZM17 20v-7h3v7h-3Z" />
   </Svg>
 )
+
+/** 上向きの山形（下向きは rotate-180 で使う） */
+export const ChevronIcon = (p: IconProps) => (
+  <Svg {...p}>
+    <path d="m12 8.6-6 6 1.4 1.4 4.6-4.6 4.6 4.6 1.4-1.4-6-6Z" />
+  </Svg>
+)
