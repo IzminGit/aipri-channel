@@ -100,8 +100,12 @@ export default function App() {
   useEffect(() => {
     const onKeyDown = (e: KeyboardEvent) => {
       if (e.ctrlKey || e.metaKey || e.altKey || e.isComposing) return
-      const target = e.target as HTMLElement
-      if (target.closest('input:not([type=radio]), textarea, select, [contenteditable=true]')) return
+      const target = e.target
+      if (
+        target instanceof Element &&
+        target.closest('input:not([type=radio]), textarea, select, [contenteditable=true]')
+      )
+        return
       if (shortcutsOpen && e.key !== '?') return
 
       const step = (dir: 1 | -1) => {
